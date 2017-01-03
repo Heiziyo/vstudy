@@ -1,0 +1,447 @@
+<!-- production -->
+<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/plupload/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="/Public/layer/layer.js"></script>
+
+<style>
+	ul li{ list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	#progress{
+		/*display: none;*/
+	}
+	#video-select{
+		margin: 0 auto;
+		padding-top: 260px;
+		width:170px;
+		height:300px;
+		background: url("/Public/assets/images/video.png") no-repeat center;
+	}
+	#select-v{
+		color: #fff;
+		background: #ff635c;
+		position: relative;
+		margin: 0 auto;
+		width: 140px;
+		height: 40px;
+		overflow: hidden;
+		border: 0;
+		outline: 0;
+		padding: 0;
+		line-height: 40px;
+		text-align: center;
+		font-size: 16px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	.form-horizontal .form-group{
+		margin-right: 0!important;
+		margin-left: 0!important;
+	}
+    #progress{
+		max-width: 700px;
+		margin: 20px auto;
+	}
+   .form-horizontal ,.col-sm-10,.col-sm-2, .col-xs-12, .col-xs-10{
+	position: relative;
+	min-height: 1px;
+	padding-left: 0!important;
+	padding-right:  0!important;
+}
+	.video-cancle{
+		cursor: pointer;
+		display: block;
+		width: 100%;
+	}
+	#poster-con{
+		position: relative;
+	}
+	#poster-con img,button{
+		display: block;
+		width: 164px;
+	}
+	#poster-con img{
+		width: 164px;
+		height: 118px;
+		padding-bottom: 26px;
+		vertical-align: middle;
+	}
+	#poster-con button{
+		border: none!important;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		margin-left: 0;
+		width: 164px;
+		height: 26px;
+		line-height: 26px;
+		font-size: 13px;
+		color: #fff;
+		background-color: rgba(0,0,0,.6);
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+	.video-uploader-upload-background {
+		height: 180px;
+		background: url(//mp.toutiao.com/static/v2/resource/pgc_web/static/style/image/purevideo_pic.dba9515.png) no-repeat center center;
+	}
+	.uploader-poster{
+		width: 170px;
+		height: 40px;
+		background: #FF635C;
+		color: #fff;
+		border-radius: 3px;
+		text-align: center;
+		line-height: 40px;
+		font-size: 16px;
+		font-weight: 500;
+		cursor: pointer;
+		position: absolute;
+		left:50%;
+		margin-left: -85px;
+	}
+	.poster-size{
+		color: #9e9e9e;
+		display: block;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	.poster-tips{
+		width: 620px;
+		font-size: 13px;
+		color: #f85959;
+		line-height: 20px;
+		border: solid 1px #e9e9e9;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		background-color: #f8f8f8;
+		padding: 12px 20px;
+		text-align: left;
+		margin: 30px auto 0;
+
+	}
+	.layui-layer-page .layui-layer-content{
+		overflow: visible;
+	}
+   .red{color: red!important;}  .green{color: green!important;}
+	.uploader-poster-box{
+		position: relative;
+	}
+	.uploader-poster{
+		z-index: 999;
+	}
+	.uploader-input-box{
+		position: absolute;
+		width: 170px;
+		height: 40px;
+		left: 50%;
+		margin-left: -85px;
+		background: none;
+	}
+	.uploader-input{
+		border: 0;
+		overflow: hidden;
+		display: block;
+		outline:none;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		cursor: pointer;
+	}
+	#poster-title {
+		display: block;
+		margin: 0 auto;
+		width: 260px;
+		padding-top: 60px;
+		font-size: 14px;
+		text-align: center;
+	}
+	#progressbar2{
+		width: 620px;
+		margin: 0 auto;
+	}
+	.close{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 30px;
+		height: 30px;
+		background: #000;
+		color: #fff;
+		text-align: center;
+		line-height: 30px;
+		font-size: 14px;
+	}
+	.close:hover{
+		color: #fff;
+	}
+	#test{
+		width: 700px;
+		height: 560px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: -240px;
+		margin-top: -280px;
+		background: #F2F2F2;
+		color: #fff;
+		z-index: 9999;
+		border: 1px solid #ddd;
+		border: 1px solid #999;
+		box-shadow: 2px 2px 10px #666;
+
+	}
+	.poster-container{
+		position:relative;
+		background: #000;
+	}
+	.poster-fadeback{
+		width: 100%;
+		text-align: center;
+	}
+	#mybox{
+		display: none;
+	}
+</style>
+
+<div class="row">
+	    <div style="" class="poster-container" id="poster-container">
+			<div id="test">
+			<div class="close">x</div>
+			<div class="video-uploader-upload-background"></div>
+			<div class="uploader-poster-box">
+				<div class="uploader-poster" id="uploader-poster" >上传封面 </div>
+				<div class="uploader-input-box"><input type="file" class="uploader-input" id="uploader-input" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"></div>
+				<h3 class="header blue lighter smaller center-block " >
+					<span id="poster-title"></span>
+				</h3>
+				<div id="progressbar2" class="ui-progressbar ui-widget ui-widget-content ui-corner-all progress progress-striped active " role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+					<div class="ui-progressbar-value ui-widget-header ui-corner-left progress-bar progress-bar-success" id="progress-width2" style="width: 0%;"></div>
+					</div>
+				</div>
+				<div class="poster-fadeback"></div>
+			<span class="poster-size">上传图片不超过5m</span>
+			<div class="poster-tips">提示：上传优质的封面，将有利于获得更多的推荐机会。请务必上传和视频内容相关、有引导价值的图片，如有作弊情况将被封号处理。</div>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<div class="video-con center">
+				<div id="video-select">
+					<div id="select-v">
+						上传视频
+					</div>
+				</div>
+				<!--<div id="filelist">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>-->
+				<div id="progress">
+					<div class="col-xs-12 col-center-block upload-video" style="z-index: 9">
+						<h3 class="header blue lighter smaller center-block col-xs-12">
+							<i class="ace-icon fa fa-spinner"></i>
+							<span id="video-title"></span>
+						</h3>
+						<div id="progressbar" class="ui-progressbar ui-widget ui-widget-content ui-corner-all progress progress-striped active  col-xs-10" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+							<div class="ui-progressbar-value ui-widget-header ui-corner-left progress-bar progress-bar-success" id="progress-width" style="width:0%;"></div>
+						</div>
+						<div  class="col-xs-2">
+							<a href="javascript:;" class="video-cancle">取消</a>
+						</div>
+						<div class="suc-tip" style="width: 100%; "></div>
+					</div><!-- ./col -->
+					<form class="form-horizontal" role="form"  method="post" action="{:U('addVideo')}" id="mybox">
+						<div class="form-group">
+							<label for="firstname" class="col-sm-2 ">视频名称</label>
+							<div class="col-sm-10 col-xs-12">
+								<input type="text" class="form-control" id="firstname" placeholder="请输入视频名称" name="v_name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="name" class="col-sm-2">课程名称</label>
+							<select class="col-sm-10 col-xs-12" id="select-type" name="v_coursename">
+								<option value="0">请选择课程</option>
+								<volist name="course" id="vo">
+									<option value="{$vo.course_id}" >{$vo.course_name}</option>
+								</volist>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="name" class="col-sm-2">课程章节</label>
+							<select class="col-sm-10 col-xs-12" id="select-fx" name="v_coursechapter">
+								<option value="0">请选择章节</option>
+							</select>
+						</div>
+						<div class="space-4"></div>
+						<div class="form-group">
+						<label for="name"  class="col-sm-2" >视频封面</label>
+						<div class="edit-input col-sm-10 col-xs-12" id="poster-con">
+						<img class="video-poster" src="http://p1.pstatp.com/large/9777/4010962160">
+						<button type="button" class="new-btn modify-poster" ga="2视频封面-纯视频">设置视频封面</button>
+						</div>
+						</div>
+						<div class="form-group">
+							<div class="center-block">
+								<button type="submit" class="btn btn-default">保存</button>
+								<input type="hidden" name="v_url" value="" id="vurl">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- PAGE CONTENT ENDS -->
+		</div><!-- /.col -->
+	</div><!-- /.row -->
+<!--[if !IE]> -->
+<script type="text/javascript">
+	window.jQuery || document.write("<script src='/Public/assets/js/jquery.min.js'>"+"<"+"/script>");
+</script>
+<!-- <![endif]-->
+<!--[if IE]>
+<script type="text/javascript">
+	window.jQuery || document.write("<script src='/Public/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<!---------------------视频上传------------------------------------->
+<script>
+	var uploader= new plupload.Uploader({
+		runtimes : 'html5,flash,silverlight,html4',
+		browse_button : ['select-v'], //触发文件选择对话框的按钮，为那个元素id
+		url : '{:U("upVideo")}', //服务器端的上传页面地址
+		filters : {
+			max_file_size : '1000G',
+			mime_types: [
+				{title: "files", extensions: "mpg,m4v,mp4,flv,3gp,mov,avi,rmvb,mkv,wmv"}
+			]
+		},
+		chunk_size: "5mb", //分片上传文件时，每片文件被切割成的大小，为数字时单位为字节。也可以使用一个带单位的字符串，如"200kb"。当该值为0时表示不使用分片上传功能
+		multi_selection:false,
+		init: {
+			FilesAdded: function(up, files) { //文件上传前
+				uploader.start();//启动
+				plupload.each(files, function(file) {
+					$("#video-select").hide();
+					$("#progress").show();
+					$("#video-title").append(file.name);
+				});
+				return false;
+			},
+			//上传过程中进度条显示
+			UploadProgress: function(up, file) {
+				//console.log(file.percent)
+				$("#progress-width").css("width",file.percent +"%");
+			},
+			//上传成功回调
+			UploadComplete: function (up, files) {
+//				if(response != "0")
+//				{
+//					$(".suc-tip").text("文件上传成功!").addClass("green");
+//					$(".video-cancle").hide();
+//				}
+			},
+			FileUploaded:function (up, file, info) {
+				var data = JSON.parse(info.response)
+				if (info.status == 200){
+					$('#mybox').show();
+					$("#vurl").val(data.result)
+				}
+			},
+			//上传失败回调
+			Error: function(event, queueID, fileObj) {
+				$(".suc-tip").text("文件上传失败!").addClass("red");
+				$(".video-cancle").hide();
+			},
+		}
+	});
+
+	//	视频取消上传
+	$(".video-cancle").on("click",function(){
+		layer.msg('确定取消上传吗？', {
+			time: 0 //不自动关闭
+			,btn: ['确定', '取消']
+			,yes: function(index){
+				layer.close(index);
+				console.log("取消上传！");
+				uploader.destroy();
+
+//				$("#progress-width").css("width","0%");
+//				$("#video-select").show();
+//				$("#html5_1b4b3dte35rk1182mp6s5317p74_container").show();
+			}
+		});
+
+	});
+	uploader.init();
+</script>
+
+<!-----------------封面上传------------------------------------->
+<script>
+	//	上传封面
+	var uploader_poster= new plupload.Uploader({
+		runtimes : 'html5,flash,silverlight',
+		browse_button : ['uploader-poster'], //触发文件选择对话框的按钮，为那个元素id
+		url : '{:U("upCover")}', //服务器端的上传页面地址
+		filters : {
+			max_file_size : '100m',
+			mime_types: [
+				{title : "Images files", extensions : "jpg,gif,png"}
+			]
+		},
+		multi_selection:false,
+		init: {
+			FilesAdded: function(up, files) { //文件上传前
+				uploader_poster.start();//启动
+				plupload.each(files, function(file) {
+					$("#uploader-poster").hide();
+					$("#poster-title").append(file.name);
+				});
+				return false;
+			},
+
+			//上传过程中进度条显示
+			UploadProgress: function(up, file) {
+				$("#progress-width2").css("width",file.percent +"%")
+			},
+			//上传成功回调
+			UploadComplete: function (event, queueID, fileObj, response, data) {
+				if(response != "0")
+				{
+					$(".poster-fadeback").text("文件上传成功!").addClass("green");
+				}
+			},
+			//上传失败回调
+			Error: function(event, queueID, fileObj) {
+				$(".poster-fadeback").text("文件上传失败!").addClass("red");
+			},
+		}
+	});
+	uploader_poster.init();
+	$("#poster-container").hide()
+	$("#poster-con .modify-poster").on("click",function(){
+		$("#poster-container").toggle();
+	});
+    $(".close").on("click",function () {
+		$("#poster-container").hide();
+	})
+</script>
+
+
+<!----------------获取下拉列表值------------------------>
+<script>
+	$(function () {
+		$("#select-type").change(function () {
+				var pid = $(this).val();
+				$("#select-fx").children().remove()
+				$.get('getCourseChapter',{pid:pid},function (data) {
+					console.log(data)
+					$.each(data,function (index,info) {
+						$("#select-fx").append("<option value='"+ info.cp_id +"'>"+ info.cp_name + "</option>");
+					})
+				},"json");
+		});
+	})
+</script>
+

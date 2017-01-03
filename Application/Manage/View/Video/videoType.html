@@ -1,0 +1,92 @@
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="widget-box widget-color-green2">
+				<div class="widget-header">
+					<h4 class="widget-title lighter smaller">视频分类</h4>
+				</div>
+
+				<div class="widget-body">
+					<div class="widget-main padding-8">
+						<div id="tree2" class="tree"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /section:plugins/fuelux.treeview -->
+		<script type="text/javascript">
+			var $assets = "/Public/assets";//this will be used in fuelux.tree-sampledata.js
+		</script>
+	</div>
+
+<!--[if !IE]> -->
+<script type="text/javascript">
+	window.jQuery || document.write("<script src='/Public/assets/js/jquery.min.js'>"+"<"+"/script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+	window.jQuery || document.write("<script src='/Public/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script type="text/javascript">
+	if('ontouchstart' in document.documentElement) document.write("<script src='/Public/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+<script src="/Public/assets/js/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="/Public/assets/js/fuelux/data/fuelux.tree-sample-demo-data.js"></script>
+<script src="/Public/assets/js/fuelux/fuelux.tree.min.js"></script>
+
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+	jQuery(function($){
+		var DataSourceTree = function (options) {
+			this.url = options.url;
+		}
+
+		DataSourceTree.prototype.data = function (options, callback) {
+			var self = this;
+			var $data = null;
+
+			var param = null
+
+			if (!("name" in options) && !("type" in options)) {
+				param = 0;//load the first level
+			}
+			else if ("type" in options && options.type == "folder") {
+				if ("additionalParameters" in options && "children" in options.additionalParameters) {
+					param = options.additionalParameters["c_pid"];
+				}
+			}
+			if (param != null) {
+				$.ajax({
+					url: this.url,
+					data: 'c_pid=' + param,
+					type: 'POST',
+					dataType: 'json',
+					success: function (response) {
+						if (response.status == "OK")
+							callback({ data: response.data })
+					},
+					error: function (response) {
+						//console.log(response);
+					}
+				})
+			}
+		};
+
+		$('#tree2').ace_tree({
+			dataSource: new DataSourceTree({ url: '{:U("getVideoCategory")}' }),
+			loadingHTML:'<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>',
+			'open-icon' : 'ace-icon fa fa-folder-open',
+			'close-icon' : 'ace-icon fa fa-folder',
+			'selectable' : false,
+			'selected-icon' : null,
+			'unselected-icon' : null
+		});
+	});
+</script>
