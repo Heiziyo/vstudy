@@ -49,6 +49,7 @@ class PublicModel extends Model{
         }
         $this->error = '用户名或密码错误';
         return false;
+
     }
 
 }
