@@ -1,0 +1,46 @@
+[ 2016-12-22T10:34:24+08:00 ] 27.18.95.116 /Manage/Video/addChapter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/v.lvyecms.com/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/v.lvyecms.com/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0006s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/v.lvyecms.com/ThinkPHP/Library/Think/Model.class.php 第 267 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/v.lvyecms.com/ThinkPHP/Library/Think/Db/Driver.class.php 第 802 行.
+SQL: INSERT INTO `vs_course_chapter` () VALUES () [ RunTime:0.0668s ]
+NOTIC: [2] Illegal string offset 'cp_id' /home/wwwroot/v.lvyecms.com/ThinkPHP/Library/Think/Model.class.php 第 328 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000205s ]
+
+[ 2016-12-22T10:34:28+08:00 ] 27.18.95.116 /Manage/Video/addChapter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000446s ]
+

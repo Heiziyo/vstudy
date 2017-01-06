@@ -37,7 +37,6 @@ class PublicController extends BaseController{
                 $this->error('登录失败！'.$userModel->getError());
             }
         }
-
         $this->display();
     }
 

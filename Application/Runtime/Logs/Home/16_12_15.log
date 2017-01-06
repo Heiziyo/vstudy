@@ -1,0 +1,52 @@
+[ 2016-12-15T21:25:14+08:00 ] 58.19.2.102 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 1 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 2 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 3 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013373s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2016-12-15T22:26:44+08:00 ] 58.19.2.102 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 1 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 2 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `vs_class_type` WHERE ( c_pid = 3 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014615s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
