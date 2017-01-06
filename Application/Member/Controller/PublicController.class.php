@@ -17,12 +17,12 @@ class PublicController extends BaseController{
         if(IS_POST){
             // 接受表单
             $userModel = D('Public');
-/*            $data=I('post.');
+/*          $data=I('post.');
             dump($data);exit;*/
             $data['user_name']=$_POST['user_name'];
             $data['user_pwd']=$_POST['user_pwd'];
             $data['code']=$_POST['code'];
-/*            $data1=$userModel->create($data);
+/*          $data1=$userModel->create($data);
             dump($data);exit;*/
             if($userModel->create($data,4)){
                 // 用户信息合法性检查
@@ -47,7 +47,7 @@ class PublicController extends BaseController{
         // 清除session数据
         session(null);
         // 清除cookie数据
-        setcookie('id','', time()-1, '/');
+        setcookie('user_id','', time()-1, '/');
         $this->success('退出成功！', U('Public/login'));
         exit();
     }
