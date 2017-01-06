@@ -21,8 +21,8 @@
 				</div>
 				<ul class="mynav">
 					<li><a href="/">首页</a></li>
-					<li><a href="shizhan.html">实战</a></li>
-					<li><a href="lujing.html">路径</a></li>
+					<li><a href="/">实战</a></li>
+					<li><a href="/">路径</a></li>
 					<li><a href="">问答</a></li>
 					<li><a href="">手记</a></li>
 				</ul>
@@ -516,12 +516,12 @@
 			<div class="footer-main">
 				<div class="footer-wrap idx-width">
 					<div class="footer-sns">
-						<a href="http://weibo.com/u/3306361973" class="footer-sns-weibo hide-text" target="_blank" title="新浪微博">新浪微博</a>
+						<a href="" class="footer-sns-weibo hide-text" target="_blank" title="新浪微博">新浪微博</a>
 						<a href="javascript:void(0);" class="footer-sns-weixin" target="_blank" title="微信">
 							<i class="footer-sns-weixin-expand"></i>
 						</a>
-						<a href="http://t.qq.com/mukewang999" class="footer-sns-qqweibo hide-text" target="_blank" title="腾讯微博">腾讯微博</a>
-						<a href="http://user.qzone.qq.com/1059809142/" class="footer-sns-qzone hide-text" target="_blank" title="QQ空间">QQ空间</a>
+						<a href="" class="footer-sns-qqweibo hide-text" target="_blank" title="腾讯微博">腾讯微博</a>
+						<a href="" class="footer-sns-qzone hide-text" target="_blank" title="QQ空间">QQ空间</a>
 					</div>
 				</div>
 				<div class="footer-link">

@@ -23,7 +23,7 @@ class PublicController extends BaseController{
             if($data){
 
                 $this->success('登录成功',U('Course/index'),1);
-
+                exit();
                 //setcookie('username','pwd');
             }else{
                 $this->error('用户名或密码错误','login',3);
