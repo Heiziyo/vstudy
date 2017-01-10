@@ -41,21 +41,26 @@ Purchase: http://wrapbootstrap.com
             <div class="registerbox-title">Register</div>
 
             <div class="registerbox-caption ">Please fill in your information</div>
-            <form action="" method="post">
+            <form action="" method="post" onsubmit="return checkForm(this);">
             <div class="registerbox-textbox">
-                <input type="text" class="form-control" placeholder="Username" />
+                <input type="text" class="form-control" id="name" name="user_name" placeholder="用户名" maxlength="20" />
             </div>
             <div class="registerbox-textbox">
-                <input type="password" class="form-control" placeholder="Enter Password" />
+                <input type="password" class="form-control" id="pwd" name="user_pwd" placeholder="密码" maxlength="12" />
             </div>
             <div class="registerbox-textbox">
-                <input type="password" class="form-control" placeholder="Confirm Password" />
+                <input type="password" class="form-control" id="rpwd" name="rpassword" placeholder="请再次输入密码" maxlength="12" />
             </div>
-            <hr class="wide" />
+            <!--<hr class="wide" />-->
             <div class="registerbox-textbox">
-                <input type="text" class="form-control" placeholder="Name" />
+                <input type="text" class="form-control" id="nc" name="user_nc" placeholder="昵称" maxlength="6" />
             </div>
-            <div class="registerbox-textbox">
+            <div style="position: relative;left:20px">
+                <input type="text" name="code" placeholder="验证码" id="code" style="width: 216px;height: 33px;" maxlength="4" />
+                <!-- 点击切换 -->
+                <img src="__CONTROLLER__/code" onclick="this.src='__CONTROLLER__/code/' + Math.random();" width="90" height="33" />
+            </div>
+<!--            <div class="registerbox-textbox">
                 <div class="row">
                     <div class="col-lg-6 col-sm-6 col-xs-6 padding-right-10">
                         <input type="text" class="form-control" placeholder="Month" />
@@ -67,7 +72,7 @@ Purchase: http://wrapbootstrap.com
                         <input type="text" class="form-control" placeholder="Year" />
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div class="registerbox-textbox no-padding-bottom">
                 <div class="checkbox">
                     <label>
@@ -103,6 +108,31 @@ Purchase: http://wrapbootstrap.com
         ga('create', 'UA-52103994-1', 'auto');
         ga('send', 'pageview');
 
+    </script>
+    <script>
+        function checkForm(form){
+            if(form.name.value==""){
+                alert("用户名不能为空！");
+                return false;
+            }
+            if(form.pwd.value==""){
+                alert("密码不能为空！");
+                return false;
+            }
+            if(form.code.value==""){
+                alert("验证码不能为空！");
+                return false;
+            }
+            if(form.nc.value==""){
+                alert("昵称不能为空！");
+                return false;
+            }
+            if(form.pwd.value!==form.rpwd.value){
+                alert("两次输入的密码不一致！");
+                return false;
+            }
+            return true;
+        }
     </script>
 </body>
 <!--Body Ends-->

@@ -10,7 +10,6 @@ Purchase: http://wrapbootstrap.com
 <head>
     <meta charset="utf-8" />
     <title>Dashboard</title>
-
     <meta name="description" content="Dashboard" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -347,7 +346,7 @@ Purchase: http://wrapbootstrap.com
                                     </li>
                                     <!--/Theme Selector Area-->
                                     <li class="dropdown-footer">
-                                        <a href="../Public/login">
+                                        <a href="javascript:;" onclick="jump()">
                                             Sign out
                                         </a>
                                     </li>
@@ -1987,8 +1986,14 @@ Purchase: http://wrapbootstrap.com
         ga('send', 'pageview');
 
     </script>
+    <script>
 
+        function jump(){
 
+            window.location.href="<?php echo U('Public/logout');?>";
+        }
+
+    </script>
 </body>
 <!--  /Body -->
 </html>
