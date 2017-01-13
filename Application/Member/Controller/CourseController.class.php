@@ -15,20 +15,24 @@ class  CourseController extends BaseController{
 
     public function index()
     {
-        $this->display();
+		$this->display();
     }
 
     //我的课程
     public function myCourse(){
 
     	$uid=$_SESSION['uid'];
+		//dump($uid);exit;
     	$pc=M('public_course');
     	$data=$pc->alias('pc')
-    			->field('pc_id,course_name,course_time,course_difficulty')
-    			->join('vs_course as c c.course_id=pc.course_id')
+    			->field('pc_id,user_id,course_name,course_time,course_difficulty')
+    			->join('vs_course as c on c.course_id=pc.course_id')
     			->where("pc.user_id=$uid")
     			->select();
+		//dump($data);exit;
+		$nc=M('public')->where("user_id=$uid")->select();
     	$this->assign('myCourse',$data);
+		$this->assign('nc',$nc);
     	$this->display();
     }
 
@@ -39,10 +43,13 @@ class  CourseController extends BaseController{
     	$pc=M('public_video');
     	$data1=$pc->alias('pv')
     			->field('pv_id,v_name')
-    			->join('vs_video as v v._id=pv.v_id')
+    			->join('vs_video as v on v.v_id=pv.v_id')
+				->join('vs_public as p on p.user_id=pv.user_id')
     			->where("pv.user_id=$uid")
     			->select();
+		$nc=M('public')->where("user_id=$uid")->select();
     	$this->assign('myVideo',$data1);
+		$this->assign('nc',$nc);
     	$this->display();
     }
 

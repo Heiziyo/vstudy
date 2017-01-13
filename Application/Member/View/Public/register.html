@@ -12,7 +12,7 @@ Purchase: http://wrapbootstrap.com
 <!--Head-->
 <head>
     <meta charset="utf-8" />
-    <title>Register Page</title>
+    <title>注册</title>
 
     <meta name="description" content="register page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,7 @@ Purchase: http://wrapbootstrap.com
     <link id="beyond-link" href="/Public/member/assets/css/beyond.min.css" rel="stylesheet" />
     <link href="/Public/member/assets/css/demo.min.css" rel="stylesheet" />
     <link href="/Public/member/assets/css/animate.min.css" rel="stylesheet" />
+    <link href="/Public/member/assets/css/style.css" rel="stylesheet" />
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
@@ -41,27 +42,32 @@ Purchase: http://wrapbootstrap.com
 <body>
     <div class="register-container animated fadeInDown">
         <div class="registerbox bg-white">
-            <div class="registerbox-title">Register</div>
+            <div class="registerbox-title">注册账号</div>
 
-            <div class="registerbox-caption ">Please fill in your information</div>
+            <div class="registerbox-caption">请输入您的帐号信息<a href="<?php echo U('Public/login')?>">已有账号？直接登录</a></div>
             <form action="" method="post" onsubmit="return checkForm(this);">
             <div class="registerbox-textbox">
-                <input type="text" class="form-control" id="name" name="user_name" placeholder="用户名" maxlength="20" />
+                <input type="text" class="form-control" id="name" name="user_name" placeholder="用户名至少为3位" maxlength="20" />
+
             </div>
             <div class="registerbox-textbox">
-                <input type="password" class="form-control" id="pwd" name="user_pwd" placeholder="密码" maxlength="12" />
+                <input type="text" class="form-control" id="email" name="user_email" placeholder="用户邮箱用于找回密码" maxlength="20" />
+            </div>
+            <div class="registerbox-textbox">
+                <input type="password" class="form-control" id="pwd" name="user_pwd" placeholder="密码6到12位数字或字母组成" maxlength="12" />
             </div>
             <div class="registerbox-textbox">
                 <input type="password" class="form-control" id="rpwd" name="rpassword" placeholder="请再次输入密码" maxlength="12" />
             </div>
             <!--<hr class="wide" />-->
             <div class="registerbox-textbox">
-                <input type="text" class="form-control" id="nc" name="user_nc" placeholder="昵称" maxlength="6" />
+                <input type="text" class="form-control" id="nc" name="user_nc" placeholder="昵称最多为6位" maxlength="6" />
             </div>
-            <div style="position: relative;left:20px">
-                <input type="text" name="code" placeholder="验证码" id="code" style="width: 216px;height: 33px;" maxlength="4" />
+            <div  class="registerbox-textbox">
+                <input type="text" class="form-control" name="code"  placeholder="验证码" id="code"  maxlength="4" />
                 <!-- 点击切换 -->
-                <img src="__CONTROLLER__/code" onclick="this.src='__CONTROLLER__/code/' + Math.random();" width="90" height="33" />
+                <img src="__CONTROLLER__/code" onclick="this.src='__CONTROLLER__/code/' + Math.random();" />
+                <a href="javascript:void(0);">点击图片切换验证码</a>
             </div>
 <!--            <div class="registerbox-textbox">
                 <div class="row">
@@ -76,22 +82,29 @@ Purchase: http://wrapbootstrap.com
                     </div>
                 </div>
             </div>-->
-            <div class="registerbox-textbox no-padding-bottom">
-                <div class="checkbox">
+            <div class="rcheckbox" >
+                <div>
                     <label>
-                        <input type="checkbox" class="colored-primary" checked="checked">
-                        <span class="text darkgray">I agree to the Company <a class="themeprimary">Terms of Service</a> and Privacy Policy</span>
+                        <input type="checkbox"  checked="checked">
+                        <span class="text blueberry">我同意《旅烨公开课用户协议》</span>
                     </label>
                 </div>
+                <div><input type="submit" class="btn btn-primary pull-left" value="完成"></div>
+
             </div>
-            <div class="registerbox-submit">
-                <input type="submit" class="btn btn-primary pull-right" value="SUBMIT">
-            </div>
+
             </form>
+            <div class="rfoot">
+                <span class="bigger-120">
+                 旅烨公开课 &copy; 2013-2017
+                </span>
+            </div>
         </div>
-        <div class="logobox">
-        </div>
+<!--        <div class="logobox">
+        </div>-->
+
     </div>
+
 
     <!--Basic Scripts-->
     <script src="/Public/member/assets/js/jquery-2.0.3.min.js"></script>
@@ -117,6 +130,9 @@ Purchase: http://wrapbootstrap.com
             if(form.name.value==""){
                 alert("用户名不能为空！");
                 return false;
+            }
+            if(form.name.value<6 || form.name.value>12){
+                alert("用户名为6到12位")
             }
             if(form.pwd.value==""){
                 alert("密码不能为空！");

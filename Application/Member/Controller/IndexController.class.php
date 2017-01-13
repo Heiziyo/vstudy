@@ -15,8 +15,9 @@ class IndexController extends BaseController{
 
     public function index(){
 
-		$uid=$_SESSION['uid']
+		$uid=$_SESSION['uid'];
 		$nc=M('public')->where("user_id=$uid")->select();
+        //dump($nc);exit;
 		$this->assign('nc',$nc);
         $this->display();
     }

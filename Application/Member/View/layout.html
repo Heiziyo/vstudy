@@ -58,7 +58,7 @@
 			<div class="navbar-header pull-left">
 				<a href="#" class="navbar-brand">
 					<small>
-						<img src="/Public/member/assets/img/logo.png" alt="" />
+						<i class="fa fa-globe" style="margin-top: 10px;margin-left:10px;"></i><span style="padding-left: 8px;">旅烨公开课</span>
 					</small>
 				</a>
 			</div>
@@ -297,35 +297,12 @@
 									<img src="/Public/member/assets/img/avatars/adam-jansen.jpg">
 								</div>
 								<section>
-									<h2><span class="profile"><span>David Stevenson</span></span></h2>
+									<h2><span class="profile"><span><volist name="nc" id="unc">{$unc.user_nc}</volist></span></span></h2>
 								</section>
 							</a>
 							<!--Login Area Dropdown-->
 							<ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-								<li class="username"><a>David Stevenson</a></li>
-								<li class="email"><a>David.Stevenson@live.com</a></li>
-								<!--Avatar Area-->
-								<li>
-									<div class="avatar-area">
-										<img src="/Public/member/assets/img/avatars/adam-jansen.jpg" class="avatar">
-										<span class="caption">Change Photo</span>
-									</div>
-								</li>
-								<!--Avatar Area-->
-				<li class="light-blue">
-					<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-						<img class="nav-user-photo" src="/Public/assets/avatars/user.jpg" alt="Jason's Photo" />
-						<span class="user-info">
-									<small>欢迎,</small>
-									<volist name="nc" id="vo">
-										{vo.user_nc}
-									</volist>
-								</span>
-
-						<i class="ace-icon fa fa-caret-down"></i>
-					</a>
-
-					<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li class="username"><a><volist name="nc" id="unc">{$unc.nc}</volist></a></li>
 						<li>
 							<a href="#">
 								<i class="ace-icon fa fa-cog"></i>
@@ -348,7 +325,7 @@
 								退出
 							</a>
 						</li>
-					</ul>
+
 				</li>
 							</ul>
 							<!--/Login Area Dropdown-->

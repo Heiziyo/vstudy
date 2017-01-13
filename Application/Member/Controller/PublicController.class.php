@@ -50,8 +50,9 @@ class PublicController extends BaseController{
             if($userModel->validate($userModel->_login_validate)->create($data,4)){
                 // 用户信息合法性检查
                 $status = $userModel->login();
+               // dump($status);exit;
                 if($status === true){
-                    $this->success('登录成功！',U('Course/index'));
+                    $this->success('登录成功！',U('Index/index'));
                     exit();
                 }else{
                     $status == 1 ? $this->error('用户名错误！') : $this->error('密码错误！');
@@ -72,13 +73,55 @@ class PublicController extends BaseController{
         exit();
     }
 
+    //找回密码
+    public function found(){
+
+        if(IS_POST){
+            //接受表单
+            $model=D('Public');
+            $info=I('post.');
+            //dump($info);exit;
+            if($model->validate($model->_found_validate)->create($info)){
+                $status=$model->found();
+                if($status === true){
+                    $this->success('验证成功',U('Public/reset'));exit();
+                }else{
+                    $status == 1 ? $this->error('用户名错误！') : $this->error('邮箱错误！');
+                }
+            }else{
+                $this->error('验证失败'.$model->getError());
+            }
+        }
+        $this->display();
+    }
+
+    //重置密码
+    public function reset(){
+
+        if(IS_POST){
+            $model=D('Public');
+            $data=I('post.');
+            if($model->validate($model->_reset_validate)->create($data)){
+                $status=$model->reset();
+                if($status === true){
+                    $this->success('修改成功！',U('Public/login'));exit();
+                }else{
+                    $this->error('修改失败！');
+                }
+            }else{
+                $this->error('验证失败'.$model->getError());
+            }
+        }
+        $this->display();
+    }
+
     //验证码
     public function code(){
         $config = array(
             'length' => 4,
             'useNoise' => true,
             'useCurve' => false,
-            'reset'  => true
+            'reset'  => true,
         );
 
         $Verify = new \Think\Verify($config);
