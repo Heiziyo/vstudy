@@ -12,21 +12,20 @@ use Common\Controller\BaseController;
 
 class IndexController extends BaseController{
 
-
+    public function getUserInfo(){
+        $uid=$_SESSION['uid'];
+        $nc=M('public')->where("user_id=$uid")->select();
+        return $nc;
+    }
     public function index(){
 
-		$uid=$_SESSION['uid'];
-		$nc=M('public')->where("user_id=$uid")->select();
-        //dump($nc);exit;
-		$this->assign('nc',$nc);
+		$this->assign('nc',$this->getUserInfo());
         $this->display();
     }
 
     public function profile(){
-        $uid=$_SESSION['uid'];
-        $nc=M('public')->where("user_id=$uid")->select();
-        //dump($nc);exit;
-        $this->assign('nc',$nc);
+
+        $this->assign('nc',$this->getUserInfo());
         $this->display();
     }
 
