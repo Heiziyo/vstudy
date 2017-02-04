@@ -22,5 +22,12 @@ class IndexController extends BaseController{
         $this->display();
     }
 
+    public function profile(){
+        $uid=$_SESSION['uid'];
+        $nc=M('public')->where("user_id=$uid")->select();
+        //dump($nc);exit;
+        $this->assign('nc',$nc);
+        $this->display();
+    }
 
 }

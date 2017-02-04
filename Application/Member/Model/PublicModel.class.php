@@ -69,20 +69,22 @@ class PublicModel extends Model{
         $data['user_pwd'] = md5( md5($data['user_pwd']) . $salt );
     }
 
+    // 验证码验证
     public function _checkCode($code){
-        // 验证码验证
         $verify = new \Think\Verify();
         return $verify->check($code);
     }
 
     //登录验证
     public function login(){
+        $salt=C('REG_SALT');
         $username = $this->user_name;
         $password = $this->user_pwd;
-        $where = array('user_name' => $username,'user_pwd' => $password);
+        $upassword=md5(md5($password).$salt);
+        $where = array('user_name' => $username,'user_pwd' => $upassword);
         $info = $this->where($where)->find();
         if($info){
-            if($info['user_pwd']==$password){
+            if($info['user_pwd']==$upassword){
                 $_SESSION['user_name']=$username;
                 $_SESSION['uid']=$info['user_id'];
                 $remember = I("post.remember");

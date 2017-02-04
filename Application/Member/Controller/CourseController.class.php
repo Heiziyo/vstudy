@@ -30,9 +30,7 @@ class  CourseController extends BaseController{
     			->where("pc.user_id=$uid")
     			->select();
 		//dump($data);exit;
-		$nc=M('public')->where("user_id=$uid")->select();
     	$this->assign('myCourse',$data);
-		$this->assign('nc',$nc);
     	$this->display();
     }
 
@@ -42,14 +40,12 @@ class  CourseController extends BaseController{
     	$uid=$_SESSION['uid'];
     	$pc=M('public_video');
     	$data1=$pc->alias('pv')
-    			->field('pv_id,v_name')
+    			->field('pv_id,v_name,v_url')
     			->join('vs_video as v on v.v_id=pv.v_id')
 				->join('vs_public as p on p.user_id=pv.user_id')
     			->where("pv.user_id=$uid")
     			->select();
-		$nc=M('public')->where("user_id=$uid")->select();
     	$this->assign('myVideo',$data1);
-		$this->assign('nc',$nc);
     	$this->display();
     }
 

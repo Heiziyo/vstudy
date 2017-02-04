@@ -40,19 +40,14 @@ class PublicController extends BaseController{
         if(IS_POST){
             // 接受表单
             $userModel=D('Public');
-/*          $data=I('post.');
-            dump($data);exit;*/
             $data['user_name']=$_POST['user_name'];
             $data['user_pwd']=$_POST['user_pwd'];
             $data['code']=$_POST['code'];
-/*          $data1=$userModel->create($data);
-            dump($data);exit;*/
             if($userModel->validate($userModel->_login_validate)->create($data,4)){
                 // 用户信息合法性检查
                 $status = $userModel->login();
-               // dump($status);exit;
                 if($status === true){
-                    $this->success('登录成功！',U('Index/index'));
+                    $this->success('登录成功！',U('/Home/Index/index'));
                     exit();
                 }else{
                     $status == 1 ? $this->error('用户名错误！') : $this->error('密码错误！');
@@ -69,7 +64,7 @@ class PublicController extends BaseController{
     {
         session(null);
         cookie(null);
-        $this->success('退出成功！', U('Public/login'));
+        $this->success('退出成功',U('Home/Index/index'));
         exit();
     }
 
