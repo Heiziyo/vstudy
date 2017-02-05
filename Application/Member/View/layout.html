@@ -304,7 +304,7 @@
 							<ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
 								<li class="username"><a><?php echo $_SESSION['user_name']?></a></li>
 						<li>
-							<a href="#">
+							<a href="{:U('User/index')}">
 								<i class="ace-icon fa fa-cog"></i>
 								个人设置
 							</a>
@@ -402,43 +402,6 @@
 						</li>
 					</ul>
 				</li>
-				<li>
-					<a href="#" class="menu-dropdown">
-						<i class="menu-icon glyphicon glyphicon-cog"></i>
-						<span class="menu-text"> 个人设置 </span>
-						<i class="menu-expand"></i>
-					</a>
-
-					<ul class="submenu">
-						<li>
-							<a href="{:U('User/setBindSNS')}">
-								<span class="menu-text">账号绑定</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="{:U('User/profile')}">
-								<span class="menu-text">个人信息</span>
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/record')}">
-								<span class="menu-text">操作记录</span>
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/realName')}">
-								<span class="menu-text">实名认证</span>
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/address')}">
-								<span class="menu-text">收货地址</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-
 			</ul>
 			<!-- /Sidebar Menu -->
 		</div>
