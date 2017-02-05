@@ -47,7 +47,7 @@ class PublicController extends BaseController{
                 // 用户信息合法性检查
                 $status = $userModel->login();
                 if($status === true){
-                    $this->success('登录成功！',U('/Home/Index/index'));
+                    $this->success('登录成功！',U('Course/Index'));
                     exit();
                 }else{
                     $status == 1 ? $this->error('用户名错误！') : $this->error('密码错误！');
@@ -64,7 +64,7 @@ class PublicController extends BaseController{
     {
         session(null);
         cookie(null);
-        $this->success('退出成功',U('Home/Index/index'));
+        $this->success('退出成功',U('Public/login'));
         exit();
     }
 

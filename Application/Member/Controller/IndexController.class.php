@@ -23,10 +23,4 @@ class IndexController extends BaseController{
         $this->display();
     }
 
-    public function profile(){
-
-        $this->assign('nc',$this->getUserInfo());
-        $this->display();
-    }
-
 }
