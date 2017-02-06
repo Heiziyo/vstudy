@@ -58,7 +58,11 @@
 			<div class="navbar-header pull-left">
 				<a href="#" class="navbar-brand">
 					<small>
+<<<<<<< HEAD
 						<img src="/Public/member/assets/img/logo.png" alt="" />
+=======
+						<i class="fa fa-globe" style="margin-top: 10px;margin-left:10px;"></i><span style="padding-left: 8px;">旅烨公开课</span>
+>>>>>>> origin/lyy
 					</small>
 				</a>
 			</div>
@@ -297,11 +301,16 @@
 									<img src="/Public/member/assets/img/avatars/adam-jansen.jpg">
 								</div>
 								<section>
+<<<<<<< HEAD
 									<h2><span class="profile"><span>David Stevenson</span></span></h2>
+=======
+									<h2><span class="profile"><span><?php echo $_SESSION['user_name']?></span></span></h2>
+>>>>>>> origin/lyy
 								</section>
 							</a>
 							<!--Login Area Dropdown-->
 							<ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+<<<<<<< HEAD
 								<li class="username"><a>David Stevenson</a></li>
 								<li class="email"><a>David.Stevenson@live.com</a></li>
 								<!--Avatar Area-->
@@ -339,6 +348,27 @@
 										退出
 									</a>
 								</li>
+=======
+								<li class="username"><a><?php echo $_SESSION['user_name']?></a></li>
+						<li>
+							<a href="#">
+								<i class="ace-icon fa fa-cog"></i>
+								个人设置
+							</a>
+						</li>
+
+
+						<li class="divider"></li>
+
+						<li>
+							<a href="<?php echo U('Public/logout')?>">
+								<i class="ace-icon fa fa-power-off"></i>
+								退出
+							</a>
+						</li>
+
+				</li>
+>>>>>>> origin/lyy
 							</ul>
 							<!--/Login Area Dropdown-->
 						</li>
@@ -408,18 +438,65 @@
 
 					<ul class="submenu">
 						<li>
+<<<<<<< HEAD
 							<a href="{:U('Course/index')}">
+=======
+							<a href="{:U('Course/myCourse')}">
+>>>>>>> origin/lyy
 								<span class="menu-text">我的课程</span>
 							</a>
 						</li>
 
 						<li>
+<<<<<<< HEAD
 							<a href="">
+=======
+							<a href="{:U('Course/myVideo')}">
+>>>>>>> origin/lyy
 								<span class="menu-text">我的视频</span>
 							</a>
 						</li>
 					</ul>
 				</li>
+<<<<<<< HEAD
+=======
+				<li>
+					<a href="#" class="menu-dropdown">
+						<i class="menu-icon glyphicon glyphicon-cog"></i>
+						<span class="menu-text"> 个人设置 </span>
+						<i class="menu-expand"></i>
+					</a>
+
+					<ul class="submenu">
+						<li>
+							<a href="{:U('User/setBindSNS')}">
+								<span class="menu-text">账号绑定</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="{:U('User/profile')}">
+								<span class="menu-text">个人信息</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('User/record')}">
+								<span class="menu-text">操作记录</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('User/realName')}">
+								<span class="menu-text">实名认证</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('User/address')}">
+								<span class="menu-text">收货地址</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+>>>>>>> origin/lyy
 
 			</ul>
 			<!-- /Sidebar Menu -->

@@ -1,0 +1,32 @@
+
+<div class="row">
+
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="bordered-blueberry">
+            <tr>
+                <th>
+                    编号
+                </th>
+                <th>
+                    视频名称
+                </th>
+            </tr>
+            </thead>
+
+                <tbody>
+                <volist name="myVideo" id="mv">
+                <tr>
+                    <td>
+                        {$mv.pv_id}
+                    </td>
+                    <td>
+                        <a href="{$mv.v_url}">{$mv.v_name}</a>
+                    </td>
+                </tr>
+                </volist>
+                </tbody>
+
+        </table>
+
+    </div>
+</div>

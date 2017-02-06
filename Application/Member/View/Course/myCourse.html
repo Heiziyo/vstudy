@@ -1,0 +1,45 @@
+<div class="row">
+
+        <table class="table table-hover table-striped table-bordered">
+                <thead class="bordered-blueberry">
+                <tr>
+                        <th>
+                                编号
+                        </th>
+                        <th>
+                                课程名称
+                        </th>
+                        <th>
+                                课程时长
+                        </th>
+                        <th>
+                                课程难易度
+                        </th>
+                </tr>
+                </thead>
+
+                        <tbody>
+                        <volist name="myCourse" id="mc">
+                        <tr>
+                                <td>
+                                        {$mc.pc_id}
+                                </td>
+                                <td>
+                                        {$mc.course_name}
+                                </td>
+                                <td>
+                                        {$mc.course_time}
+                                </td>
+                                <td>
+                                        {$mc.course_difficulty}
+                                </td>
+                        </tr>
+                        </volist>
+                        </tbody>
+
+        </table>
+
+
+
+
+</div>

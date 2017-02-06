@@ -172,7 +172,7 @@ class VideoController extends BaseController {
                 die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
             }
         }
-        while ($buff = fread($in, 4096)) {
+        while ($buff = fread($in, 00000)) {
             fwrite($out, $buff);
         }
         @fclose($out);
