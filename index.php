@@ -22,7 +22,7 @@ define('SITE_PATH',getcwd().'/');
 define('APP_PATH','./Application/');
 
 // 定义缓存路径
-define('RUNTIME_PATH',SITE_PATH.'#runtime');
+define('RUNTIME_PATH',SITE_PATH.'#runtime/');
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 

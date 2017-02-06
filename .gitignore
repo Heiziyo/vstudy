@@ -1,5 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
+#runtime
+#runtime/*
 .idea/*
 /Public
 /Application/Common/Conf
