@@ -119,7 +119,7 @@
 
 				<?php if(!empty($course_list)): if(is_array($course_list)): $i = 0; $__LIST__ = $course_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="content1">
 							<a href="<?php echo U('courseChapter',array('cvdid'=>$vo['course_id']));?>">
-								<img src="<?php echo ($vo["course_thumbnail"]); ?>"/>
+								<img src="<?php echo ($vo["course_thumb"]); ?>"/>
 								<div class="text1">
 									<h3><?php echo ($vo["course_name"]); ?></h3>
 									<p><?php echo (mb_substr($vo["course_desc"],0,40,'utf-8')); ?></p>

@@ -999,7 +999,6 @@ class Model {
      * @return mixed
      */
      public function create($data='',$type='') {
-         //dump($data);exit;
         // 如果没有传值默认取POST数据
         if(empty($data)) {
             $data   =   I('post.');

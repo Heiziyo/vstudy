@@ -12,29 +12,7 @@ use Common\Controller\BaseController;
 
 class PublicController extends BaseController{
 
-    //注册
-    public function register(){
 
-        if (IS_POST) {
-            //表单
-            $userModel = D('Public');
-            if ($userModel->create()) {
-                if ($userModel->add()) {
-                    $this->success('注册成功', U('Public/login'));
-                    exit;
-                } else {
-                    $this->error('注册失败,' . $userModel->getDbError());
-                }
-            }else{
-
-                $error = $userModel->getError();
-                $this->error('注册失败,' . $error);
-            }
-        }
-        $this->display();
-    }
-
-    //登录
     public function login(){
 
         if(IS_POST){
@@ -122,7 +100,7 @@ class PublicController extends BaseController{
             'reset'  => true,
         );
 
-        $Verify = new \Think\Verify($config);
-        $Verify->entry();
+
+        $this->display();
     }
 }

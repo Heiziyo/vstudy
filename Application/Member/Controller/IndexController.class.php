@@ -12,15 +12,17 @@ use Common\Controller\BaseController;
 
 class IndexController extends BaseController{
 
+
+    public function index(){
+
+
+		$this->assign('nc',$this->getUserInfo());
+
+        $this->display();
+    }
     public function getUserInfo(){
         $uid=$_SESSION['uid'];
         $nc=M('public')->where("user_id=$uid")->select();
         return $nc;
     }
-    public function index(){
-
-		$this->assign('nc',$this->getUserInfo());
-        $this->display();
-    }
-
 }

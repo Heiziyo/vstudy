@@ -15,7 +15,6 @@ class BaseController extends Controller{
 
         $act = array("addChapter",'videoList','addVideo','videoType');
         $this->assign('act',$act);
-
         if(isset($_COOKIE['uid']) && !$_SESSION['uid']){
             $m=M('Public');
             $where=array('user_name'=>$_COOKIE['user_name']);
