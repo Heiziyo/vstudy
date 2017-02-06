@@ -17,7 +17,7 @@ class UserController extends BaseController{
         if(IS_POST){
             $model=M('User');
             $data=I('post.');
-            if(!empty($data['user_email'])){
+            if(!empty($data['user_email']) && !empty($data['user_email'])){
                 if($model->validate($model->_email_validate)->create($data)){
                     $status=$model->email();
                     if($status === true){
