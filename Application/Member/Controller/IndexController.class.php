@@ -20,7 +20,6 @@ class IndexController extends BaseController{
     public function index(){
 
 		$this->assign('nc',$this->getUserInfo());
-
         $this->display();
     }
 

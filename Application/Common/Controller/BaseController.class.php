@@ -27,7 +27,9 @@ class BaseController extends Controller{
         }
         if(!isset($_SESSION['uid'])){
 
-            header('Public/login');
+           // header('Member/Public/login');
+
+            $this->error('登录','Member/Public/login');
         }
     }
 

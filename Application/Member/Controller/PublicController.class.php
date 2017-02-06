@@ -7,14 +7,35 @@
  */
 
 namespace Member\Controller;
-use Common\Controller\BaseController;
+use Think\Controller;
 
 
-class PublicController extends BaseController{
+class PublicController extends Controller{
 
+    //注册
+    public function register(){
 
+        if (IS_POST) {
+            //表单
+            $userModel = D('Public');
+            if ($userModel->create()) {
+                if ($userModel->add()) {
+                    $this->success('注册成功', U('Public/login'));
+                    exit;
+                } else {
+                    $this->error('注册失败,' . $userModel->getDbError());
+                }
+            }else{
+
+                $error = $userModel->getError();
+                $this->error('注册失败,' . $error);
+            }
+        }
+        $this->display();
+    }
+
+    //登录
     public function login(){
-
 
         if(IS_POST){
             // 接受表单
@@ -101,6 +122,7 @@ class PublicController extends BaseController{
             'reset'  => true,
         );
 
-        $this->display();
+        $Verify = new \Think\Verify($config);
+        $Verify->entry();
     }
 }

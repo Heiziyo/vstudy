@@ -1,6 +1,5 @@
-﻿<?php
-    {__NOLAYOUT__}
-?>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<?php
+ ?>
 <!DOCTYPE html>
 <!--
 Beyond Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3
@@ -52,7 +51,7 @@ Purchase: http://wrapbootstrap.com
             <div class="check">
                     <input type="text" name="code" placeholder="验证码" id="code" maxlength="4" />
                     <!-- 点击切换 -->
-                    <img src="__CONTROLLER__/code" onclick="this.src='__CONTROLLER__/code/' + Math.random();"/>
+                    <img src="/Member/Public/code" onclick="this.src='/Member/Public/code/' + Math.random();"/>
             </div>
             <div class="checkbox">
                 <label>

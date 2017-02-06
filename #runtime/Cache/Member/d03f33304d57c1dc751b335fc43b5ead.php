@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- Head -->
 <head>
@@ -13,8 +13,6 @@
 	<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
 	<link href="/Public/member/assets/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="/Public/member/assets/css/weather-icons.min.css" rel="stylesheet" />
-	<link href="/Public/assets/css/style.css" rel="stylesheet" />
-
 	<!--Fonts-->
 	<link href="http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
 	<!--Beyond styles-->
@@ -25,17 +23,6 @@
 	<link id="skin-link" href="" rel="stylesheet" type="text/css" />
 	<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
 	<script src="/Public/member/assets/js/skins.min.js"></script>
-	<script src="/Public/member/assets/js/jquery-2.0.3.min.js"></script>
-	<script src="/Public/member/assets/js/bootstrap.min.js"></script>
-	<!--Layer Scripts-->
-	<script src="/Public/member/assets/js/layer.js"></script>
-	<!--Beyond Scripts-->
-	<script src="/Public/member/assets/js/beyond.min.js"></script>
-	<!--Page Related Scripts-->
-	<!--Sparkline Charts Needed Scripts-->
-	<script src="/Public/member/assets/js/charts/sparkline/jquery.sparkline.js"></script>
-	<script src="/Public/member/assets/js/charts/sparkline/sparkline-init.js"></script>
-
 </head>
 <!-- /Head -->
 <!-- Body -->
@@ -71,7 +58,7 @@
 			<div class="navbar-header pull-left">
 				<a href="#" class="navbar-brand">
 					<small>
-						<i class="fa fa-globe" style="margin-top: 10px;margin-left:10px;"></i><span style="padding-left: 8px;">旅烨公开课</span>
+						<img src="/Public/member/assets/img/logo.png" alt="" />
 					</small>
 				</a>
 			</div>
@@ -310,52 +297,48 @@
 									<img src="/Public/member/assets/img/avatars/adam-jansen.jpg">
 								</div>
 								<section>
-									<h2><span class="profile"><span><?php echo $_SESSION['user_name']?></span></span></h2>
+									<h2><span class="profile"><span>David Stevenson</span></span></h2>
 								</section>
 							</a>
 							<!--Login Area Dropdown-->
 							<ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-								<li class="username"><a><?php echo $_SESSION['user_name']?></a></li>
-						<li>
-							<a href="{:U('User/setBindSNS')}">
-								<i class="ace-icon fa fa-cog"></i>
-								账号绑定
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/profile')}">
-								<i class="ace-icon fa fa-user"></i>
-								个人信息
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/record')}">
-								<i class="ace-icon fa fa-wrench"></i>
-								操作记录
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/realName')}">
-								<i class="ace-icon fa fa-globe"></i>
-								实名认证
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/address')}">
-								<i class="ace-icon fa fa-truck"></i>
-								收货地址
-							</a>
-						</li>
-						<li class="divider"></li>
-
-						<li>
-							<a href="<?php echo U('Public/logout')?>">
-								<i class="ace-icon fa fa-power-off"></i>
-								退出
-							</a>
-						</li>
-
-				</li>
+								<li class="username"><a>David Stevenson</a></li>
+								<li class="email"><a>David.Stevenson@live.com</a></li>
+								<!--Avatar Area-->
+								<li>
+									<div class="avatar-area">
+										<img src="/Public/member/assets/img/avatars/adam-jansen.jpg" class="avatar">
+										<span class="caption">Change Photo</span>
+									</div>
+								</li>
+								<!--Avatar Area-->
+								<li class="edit">
+									<a href="profile.html" class="pull-left">简况</a>
+									<a href="#" class="pull-right">设置</a>
+								</li>
+								<!--Theme Selector Area-->
+								<li class="theme-area">
+									<ul class="colorpicker" id="skin-changer">
+										<li><a class="colorpick-btn" href="#" style="background-color:#5DB2FF;" rel="/Public/member/assets/css/skins/blue.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#2dc3e8;" rel="/Public/member/assets/css/skins/azure.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#03B3B2;" rel="/Public/member/assets/css/skins/teal.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#53a93f;" rel="/Public/member/assets/css/skins/green.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#FF8F32;" rel="/Public/member/assets/css/skins/orange.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#cc324b;" rel="/Public/member/assets/css/skins/pink.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#AC193D;" rel="/Public/member/assets/css/skins/darkred.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#8C0095;" rel="/Public/member/assets/css/skins/purple.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#0072C6;" rel="/Public/member/assets/css/skins/darkblue.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#585858;" rel="/Public/member/assets/css/skins/gray.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#474544;" rel="/Public/member/assets/css/skins/black.min.css"></a></li>
+										<li><a class="colorpick-btn" href="#" style="background-color:#001940;" rel="/Public/member/assets/css/skins/deepblue.min.css"></a></li>
+									</ul>
+								</li>
+								<!--/Theme Selector Area-->
+								<li class="dropdown-footer">
+									<a href="login.html">
+										退出
+									</a>
+								</li>
 							</ul>
 							<!--/Login Area Dropdown-->
 						</li>
@@ -410,7 +393,7 @@
 			<ul class="nav sidebar-menu">
 				<!--Dashboard-->
 				<li class="active">
-					<a href="{:U('Member/Index/index')}">
+					<a href="<?php echo U('Member/Index/index');?>">
 						<i class="menu-icon glyphicon glyphicon-home"></i>
 						<span class="menu-text"> Dashboard </span>
 					</a>
@@ -425,18 +408,19 @@
 
 					<ul class="submenu">
 						<li>
-							<a href="{:U('Course/myCourse')}">
+							<a href="<?php echo U('Course/index');?>">
 								<span class="menu-text">我的课程</span>
 							</a>
 						</li>
 
 						<li>
-							<a href="{:U('Course/myVideo')}">
+							<a href="">
 								<span class="menu-text">我的视频</span>
 							</a>
 						</li>
 					</ul>
 				</li>
+
 			</ul>
 			<!-- /Sidebar Menu -->
 		</div>
@@ -478,7 +462,12 @@
 			<!-- /Page Header -->
 			<!-- Page Body -->
 			<div class="page-body">
-				{__CONTENT__}
+				<div class="row">
+
+
+
+
+</div>
 			</div>
 			<!-- /Page Body -->
 		</div>
@@ -488,7 +477,14 @@
 	<!-- Main Container -->
 </div>
 <!--Basic Scripts-->
-
+<script src="/Public/member/assets/js/jquery-2.0.3.min.js"></script>
+<script src="/Public/member/assets/js/bootstrap.min.js"></script>
+<!--Beyond Scripts-->
+<script src="/Public/member/assets/js/beyond.min.js"></script>
+<!--Page Related Scripts-->
+<!--Sparkline Charts Needed Scripts-->
+<script src="/Public/member/assets/js/charts/sparkline/jquery.sparkline.js"></script>
+<script src="/Public/member/assets/js/charts/sparkline/sparkline-init.js"></script>
 </body>
 <!--  /Body -->
 </html>
