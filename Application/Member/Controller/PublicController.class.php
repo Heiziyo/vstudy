@@ -15,9 +15,7 @@ class PublicController extends BaseController{
 
     public function login(){
 
-<<<<<<< HEAD
 
-=======
         if(IS_POST){
             // 接受表单
             $userModel=D('Public');
@@ -102,7 +100,6 @@ class PublicController extends BaseController{
             'useCurve' => false,
             'reset'  => true,
         );
->>>>>>> origin/lyy
 
         $this->display();
     }

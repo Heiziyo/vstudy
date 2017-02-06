@@ -19,12 +19,8 @@ class IndexController extends BaseController{
     }
     public function index(){
 
-<<<<<<< HEAD
-
-
-=======
 		$this->assign('nc',$this->getUserInfo());
->>>>>>> origin/lyy
+
         $this->display();
     }
 
