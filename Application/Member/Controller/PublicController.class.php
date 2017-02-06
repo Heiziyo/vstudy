@@ -7,17 +7,17 @@
  */
 
 namespace Member\Controller;
-use Common\Controller\BaseController;
+use Think\Controller;
 
 
-class PublicController extends BaseController{
+class PublicController extends Controller{
 
     //注册
     public function register(){
 
         if (IS_POST) {
             //表单
-            $userModel = D('Public');
+            $userModel = M('User');
             if ($userModel->create()) {
                 if ($userModel->add()) {
                     $this->success('注册成功', U('Public/login'));
@@ -39,13 +39,13 @@ class PublicController extends BaseController{
 
         if(IS_POST){
             // 接受表单
-            $userModel=D('Public');
+            $userModel=D('User');
             $data['user_name']=$_POST['user_name'];
             $data['user_pwd']=$_POST['user_pwd'];
             $data['code']=$_POST['code'];
             if($userModel->validate($userModel->_login_validate)->create($data,4)){
                 // 用户信息合法性检查
-                $status = $userModel->login();
+                $status = $userModel->signin();
                 if($status === true){
                     $this->success('登录成功！',U('Course/Index'));
                     exit();
@@ -76,7 +76,7 @@ class PublicController extends BaseController{
 
         if(IS_POST){
             //接受表单
-            $model=D('Public');
+            $model=D('User');
             $info=I('post.');
             //dump($info);exit;
             if($model->validate($model->_found_validate)->create($info)){
@@ -97,7 +97,7 @@ class PublicController extends BaseController{
     public function reset(){
 
         if(IS_POST){
-            $model=M('Public');
+            $model=D('User');
             $data=I('post.');
             if($model->validate($model->_reset_validate)->create($data)){
                 $status=$model->reset();

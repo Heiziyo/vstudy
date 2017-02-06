@@ -13,6 +13,8 @@
 	<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
 	<link href="/Public/member/assets/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="/Public/member/assets/css/weather-icons.min.css" rel="stylesheet" />
+	<link href="/Public/assets/css/style.css" rel="stylesheet" />
+
 	<!--Fonts-->
 	<link href="http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
 	<!--Beyond styles-->
@@ -23,6 +25,12 @@
 	<link id="skin-link" href="" rel="stylesheet" type="text/css" />
 	<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
 	<script src="/Public/member/assets/js/skins.min.js"></script>
+	<!--Basic Scripts-->
+	<script src="/Public/member/assets/js/jquery-2.0.3.min.js"></script>
+	<script src="/Public/member/assets/js/bootstrap.min.js"></script>
+	<!--Layer Scripts-->
+	<script src="/Public/member/assets/js/layer.js"></script>
+
 </head>
 <!-- /Head -->
 <!-- Body -->
@@ -304,13 +312,35 @@
 							<ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
 								<li class="username"><a><?php echo $_SESSION['user_name']?></a></li>
 						<li>
-							<a href="{:U('User/index')}">
+							<a href="{:U('User/setBindSNS')}">
 								<i class="ace-icon fa fa-cog"></i>
-								个人设置
+								账号绑定
 							</a>
 						</li>
-
-
+						<li>
+							<a href="{:U('User/profile')}">
+								<i class="ace-icon fa fa-user"></i>
+								个人信息
+							</a>
+						</li>
+						<li>
+							<a href="{:U('User/record')}">
+								<i class="ace-icon fa fa-wrench"></i>
+								操作记录
+							</a>
+						</li>
+						<li>
+							<a href="{:U('User/realName')}">
+								<i class="ace-icon fa fa-globe"></i>
+								实名认证
+							</a>
+						</li>
+						<li>
+							<a href="{:U('User/address')}">
+								<i class="ace-icon fa fa-truck"></i>
+								收货地址
+							</a>
+						</li>
 						<li class="divider"></li>
 
 						<li>
@@ -452,15 +482,14 @@
 	<!-- /Page Container -->
 	<!-- Main Container -->
 </div>
-<!--Basic Scripts-->
-<script src="/Public/member/assets/js/jquery-2.0.3.min.js"></script>
-<script src="/Public/member/assets/js/bootstrap.min.js"></script>
+
 <!--Beyond Scripts-->
 <script src="/Public/member/assets/js/beyond.min.js"></script>
 <!--Page Related Scripts-->
 <!--Sparkline Charts Needed Scripts-->
 <script src="/Public/member/assets/js/charts/sparkline/jquery.sparkline.js"></script>
 <script src="/Public/member/assets/js/charts/sparkline/sparkline-init.js"></script>
+
 </body>
 <!--  /Body -->
 </html>
