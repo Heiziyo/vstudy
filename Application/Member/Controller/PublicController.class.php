@@ -40,12 +40,15 @@ class PublicController extends BaseController{
         $this->display();
     }
 
+
     // 退出
     public function logout()
     {
         session(null);
-        cookie(null);
+        setcookie('user_name','',time()-1,'/');
+        setcookie('uid','',time()-1,'/');
         $this->success('退出成功',U('Public/login'));
+
         exit();
     }
 
@@ -75,7 +78,7 @@ class PublicController extends BaseController{
     public function reset(){
 
         if(IS_POST){
-            $model=D('Public');
+            $model=M('Public');
             $data=I('post.');
             if($model->validate($model->_reset_validate)->create($data)){
                 $status=$model->reset();

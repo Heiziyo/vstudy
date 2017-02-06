@@ -23,12 +23,6 @@ class UserModel extends Model{
         array('user_pwd','6,12','密码为6到12位','length')
     );
 
-    public function _before_update(&$data, $options)
-    {
-        $salt = C("REG_SALT");
-        $data['user_pwd'] = md5( md5($data['user_pwd']) . $salt );
-    }
-
     //邮箱
     public function email(){
 
@@ -48,7 +42,8 @@ class UserModel extends Model{
     public function pwd(){
 
         $id=$_SESSION['uid'];
-        $pwd=$this->user_pwd;
+        $salt = C("REG_SALT");
+        $pwd=md5(md5($this->user_pwd) . $salt);
         $where=array('user_id'=>$id);
         $data=$this->where($where)->find();
         if($data){

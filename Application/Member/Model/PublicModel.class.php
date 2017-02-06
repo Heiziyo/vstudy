@@ -63,12 +63,6 @@ class PublicModel extends Model{
         $data['user_pwd'] = md5( md5($data['user_pwd']) . $salt );
     }
 
-    public function _before_update(&$data, $options)
-    {
-        $salt = C("REG_SALT");
-        $data['user_pwd'] = md5( md5($data['user_pwd']) . $salt );
-    }
-
     // 验证码验证
     public function _checkCode($code){
         $verify = new \Think\Verify();
@@ -89,12 +83,15 @@ class PublicModel extends Model{
                 $_SESSION['uid']=$info['user_id'];
                 $remember = I("post.remember");
                 if(!empty($remember)){
-                    $ip=  get_client_ip();
-                    $value=$username."|".$ip;
-                    $value=encryption($value);
                     $time = time() + 86400 * 7;
-                    setcookie('remember', $value, $time, '/');
+                    setcookie('uid',$info['user_id'],$time,'/');
+                    setcookie('user_name',$info['user_name'],$time,'/');
                 }
+                $login_ip=$_SERVER['REMOTE_ADDR'];
+                $id=array('user_id'=>$info['user_id']);
+                $login_time=date('Y-m-d H:i:s');
+                $data=array('login_ip'=>$login_ip,'login_time'=>$login_time);
+                $this->where($id)->setField($data);
                 return true;
             }
         }
@@ -123,7 +120,8 @@ class PublicModel extends Model{
     public function reset(){
 
         $id=$_SESSION['uid'];
-        $pwd=$this->user_pwd;
+        $salt = C("REG_SALT");
+        $pwd=md5(md5($this->user_pwd) . $salt);
         $where=array('user_id'=>$id);
         $data=$this->where($where)->find();
         if($data){
