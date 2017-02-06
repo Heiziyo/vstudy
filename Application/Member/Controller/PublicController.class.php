@@ -17,7 +17,7 @@ class PublicController extends Controller{
 
         if (IS_POST) {
             //表单
-            $userModel = M('User');
+            $userModel = D('User');
             if ($userModel->create()) {
                 if ($userModel->add()) {
                     $this->success('注册成功', U('Public/login'));
