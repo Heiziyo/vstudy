@@ -1,0 +1,237 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><?php echo ($vchapter["course_name"]); ?></title>
+	<link rel="stylesheet" href="/Public/css/style.css">
+	<link rel="stylesheet" href="/Public/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/Public/css/idangerous.swiper.css"/>
+	<!--[if lt IE 9]>
+	<script src="/Public/js/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="container-center">
+
+	<!---------------------heder部分开始------------------>
+	<div class="header header2">
+		<div class="header-left">
+			<div class="logo">
+				<a href="/"><img src="/Public/images/logo2.png" /></a>
+			</div>
+			<ul class="mynav">
+				<li><a href="/">首页</a></li>
+				<li><a href="">实战</a></li>
+				<li><a href="">路径</a></li>
+				<li><a href="">问答</a></li>
+				<li><a href="">手记</a></li>
+			</ul>
+		</div>
+		<div class="header-right header-right2">
+			<div class="search">
+				<input class="search-input" data-suggest-trigger="suggest-trigger"
+				       placeholder="请输入想搜索的内容..." type="text" autocomplete="off">
+				<a>搜索</a>
+			</div>
+			<div class="app">
+				APP
+			</div>
+			<div class="erweima">
+				二维码
+			</div>
+			<div class="user">
+				<a href="" class="login">登录</a>
+				<a href="" class="register">注册</a>
+			</div>
+		</div>
+	</div>
+	<!---------------------heder部分结束------------------>
+
+	<!---------------------中心部分----------------------->
+	<div class="learnbox">
+		<div class="learnTop">
+			<div class="learnMain">
+				<div class="path">
+					<a href="<?php echo U('Course/Index/index');?>">课程</a>
+					<i class="path-split">\</i>
+					<a href="">前端开发</a>
+					<i class="path-split">\</i>
+					<a href="">JavaScript</a>
+					<i class="path-split">\</i>
+					<a href=""><span><?php echo ($vchapter["course_name"]); ?></span>
+					</a>
+				</div>
+				<div class="hd clearfix">
+					<h2 class="l"><?php echo ($vchapter["course_name"]); ?></h2>
+				</div>
+				<div class="learn-star">
+					<div class="star-left">
+						<div class="star-btn box-left">
+							<a href="">开始学习</a> &nbsp;&nbsp;
+							<a href=""> | </a>&nbsp;&nbsp;
+							<a href=""> &hearts; </a>
+						</div>
+						<div class="static-item box-left border-right">
+							<span class="meta">学习人数</span>
+							<span class="meta-value js-learn-num">25063</span>
+						</div>
+						<div class="static-item box-left border-right">
+							<span class="meta">难度级别</span>
+							<span class="meta-value js-learn-num">中级</span>
+						</div>
+						<div class="static-item box-left border-right">
+							<span class="meta">课程时长</span>
+							<span class="meta-value js-learn-num"><?php echo ($vchapter["course_time"]); ?>分</span>
+						</div>
+						<div class="static-item box-left">
+							<span class="meta">综合评分</span>
+							<span class="meta-value js-learn-num"><?php echo ($vchapter["course_score"]); ?></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="course-info-main clearfix">
+			<div class="content-left box-left">
+				<p class="auto-wrap">简介：<?php echo ($vchapter["course_desc"]); ?>
+				</p>
+				<ul class="course-menu clearfix">
+					<li><a class="ui-tabs-active active" id="learnOn" href=""><span>章节</span></a></li>
+					<li><a id="commentOn" class="" href=""><span>评论</span></a></li>
+					<li><a id="qaOn" class="" href=""><span>问答</span></a></li>
+					<li><a id="noteOn" class="" href=""><span>笔记</span></a></li>
+				</ul>
+				<div class="mod-chapters">
+					<?php if(is_array($vchapter["chapter"])): $i = 0; $__LIST__ = $vchapter["chapter"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="chapter  chapter-active">
+							<!-- 章节标题 -->
+							<h3>
+								<span class="icon-drop_down js-close js-open"><img src="/Public/images/arrow.png"></span>
+								<strong>
+									<i class="icon-chapter">=</i>  <?php echo ($vo["cp_name"]); ?>
+									<div class="icon-info chapter-info">
+										<i class="icon-drop_up triangle">i
+											<div class="chapter-introubox">
+												<div class="chapter-content" style="width: 280px; white-space: pre-line; text-align: center;">
+													本章节讲解什么是帧动画，常见几种帧动画实现方式及对比，JS实现帧动画原理和简单的帧动画实现。然后从需求分析，编程接口，调用方式和代码设计四
+													个方面去介绍如何去设计一个通用的帧动画库。
+												</div>
+											</div>
+										</i>
+									</div>
+								</strong>
+							</h3>
+							<!-- 章节标题 end -->
+							<!-- 章节小节 -->
+
+							<ul class="video">
+								<?php
+ $content = \Think\Think::instance("Course\Model\CourseModel"); $data = $content->getChapter($vo['cp_id']); if(empty($data)){ ?>
+								<li data-media-id="11812">
+									暂无！
+								</li>
+								<?php
+ }else{ foreach($data as $v){ ?>
+								<li data-media-id="11812">
+									<a href="<?php echo U('video',array(vid=>$v['v_id']));?>" class="J-media-item">
+										<i class="icon-video type"></i><?= $v['v_name']; ?>
+										<button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+									</a>
+									<!-- 未登录时 -->
+								</li>
+
+								<?php
+ } } ?>
+
+
+
+							</ul>
+							<!-- 章节小节 end -->
+						</div><?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+				</div>
+			</div>
+			<div class="content-right box-right">
+				<div class="part1">
+					<h4>讲师提示</h4>
+					<div class="teacher-info clearfix">
+						<a href="" target="_blank" class="headpic">
+							<img data-userid="3017249" class="js-usercard-dialog" src="http://img.mukewang.com/577baef700019c4501400140-80-80.jpg" width="80" height="80">
+						</a>
+						<span class="tit">
+				                <a href="" target="_blank">ustbhuangyi</a>
+				            </span>
+					</div>
+					<div class="course-info-tip">
+						<dl class="first">
+							<dt>课程须知</dt>
+							<dd class="autowrap">
+								1、对前端基础知识已经掌握（html、js、css）
+								2、对前端面向对象编程有一定了解
+							</dd>
+						</dl>
+						<dl>
+							<dt>老师告诉你能学到什么？</dt>
+							<dd class="autowrap">1、什么是帧动画及网页中常见的几种帧动画方式
+								2、原生 JS 实现帧动画的原理
+								3、如何设计一个通用的帧动画解决方案
+								4、了解类似 promise的设计思想（异步任务链式调用）
+								5、面向对象的开发方式和模块化开发思想
+								6、如何实现图片预加载模块
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="courseLink">
+					<h4>推荐课程</h4>
+					<ul>
+						<li><a href="">7天搞定Node.js微信公众号开发</a></li>
+						<li><a href="">方式开发 Web App全站</a></li>
+						<li><a href="">商城分类导航效果</a></li>
+						<li><a href="">7天搞定Node.js微信公众号开发</a></li>
+						<li><a href="">方式开发 Web App全站</a></li>
+						<li><a href="">商城分类导航效果</a></li>
+					</ul>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<!--------------------中心部分结束-------------------->
+
+	<!---------------------footer2------------------------>
+	<div class="footer2">
+		<div class="waper">
+			<div class="footerwaper clearfix">
+				<div class="followus r">
+					<a class="followus-weixin" href="javascript:;" target="_blank" title="微信">
+						<div class="flw-weixin-box"></div>
+					</a>
+					<a class="followus-weibo" href="" target="_blank" title="新浪微博"></a>
+					<a class="followus-qzone" href="" target="_blank" title="QQ空间"></a>
+				</div>
+				<div class="footer_intro l">
+					<div class="footer_link">
+						<ul>
+							<li><a href="" target="_blank">网站首页</a></li>
+							<li><a href="" target="_blank">人才招聘</a></li>
+							<li><a href="" target="_blank">联系我们</a></li>
+							<li><a href="" target="_blank">旅烨云</a></li>
+							<li><a href=" " target="_blank">关于我们</a></li>
+							<li><a href="" target="_blank">讲师招募</a></li>
+							<li><a href=" " target="_blank">意见反馈</a></li>
+							<li><a href="" target="_blank">友情链接</a></li>
+						</ul>
+					</div>
+					<p>版权所有 © 2011-2016 上海旅烨网络科技有限公司，严禁抄袭复制</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ----------footer2结束----------------------------->
+</div>
+</body>
+</html>
+<script src="/Public/js/jquery.min.js"></script>
+<script src="/Public/js/main.js"></script>
