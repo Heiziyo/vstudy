@@ -1,4 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<?php
+ ?>
+<!DOCTYPE html>
 <!--
 Beyond Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3
 Version: 1.0.0
@@ -9,7 +11,7 @@ Purchase: http://wrapbootstrap.com
 <!--Head-->
 <head>
     <meta charset="utf-8" />
-    <title>Login Page</title>
+    <title>登录</title>
 
     <meta name="description" content="login page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +30,7 @@ Purchase: http://wrapbootstrap.com
     <link id="beyond-link" href="/Public/member/assets/css/beyond.min.css" rel="stylesheet" />
     <link href="/Public/member/assets/css/demo.min.css" rel="stylesheet" />
     <link href="/Public/member/assets/css/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Public/member/assets/css/style.css">
     <link id="skin-link" href="" rel="stylesheet" type="text/css" />
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     <script src="/Public/member/assets/js/skins.min.js"></script>
@@ -37,55 +40,41 @@ Purchase: http://wrapbootstrap.com
 <body>
     <div class="login-container animated fadeInDown">
         <div class="loginbox bg-white">
-            <div class="loginbox-title">SIGN IN</div>
-            <div class="loginbox-social">
-                <div class="social-title ">Connect with Your Social Accounts</div>
-                <div class="social-buttons">
-                    <a href="" class="button-facebook">
-                        <i class="social-icon fa fa-facebook"></i>
-                    </a>
-                    <a href="" class="button-twitter">
-                        <i class="social-icon fa fa-twitter"></i>
-                    </a>
-                    <a href="" class="button-google">
-                        <i class="social-icon fa fa-google-plus"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="loginbox-or">
-                <div class="or-line"></div>
-                <div class="or">OR</div>
-            </div>
+            <div class="loginbox-title">登录</div>
             <form action="" method="post" onsubmit="return checkForm(this);">
             <div class="loginbox-textbox">
-                <input type="text" class="form-control" name="user_name" id="username" placeholder="用户名" />
+                <input type="text" class="form-control" name="user_name" id="username" placeholder="用户名" maxlength="20" />
             </div>
             <div class="loginbox-textbox">
-                <input type="password" class="form-control" name="user_pwd" id="password" placeholder="密码" />
+                <input type="password" class="form-control" name="user_pwd" id="password" placeholder="密码" maxlength="12" />
             </div>
-            <div style="position: relative;left:40px">
-                    <input type="text" name="code" placeholder="验证码" id="code" style="width: 125px;height: 33px;" />
+            <div class="check">
+                    <input type="text" name="code" placeholder="验证码" id="code" maxlength="4" />
                     <!-- 点击切换 -->
-                    <img src="/Member/Public/code" onclick="this.src='/Member/Public/code/' + Math.random();" width="90" height="33" />
+                    <img src="/Member/Public/code" onclick="this.src='/Member/Public/code/' + Math.random();"/>
             </div>
-            <div class="loginbox-forgot">
-                <a href="">Forgot Password?</a>
-            </div>
-            <div class="checkbox" style="position: relative;">
+            <div class="checkbox">
                 <label>
-                    <input type="checkbox" class="colored-primary" name="remember" value="on" id="remember">
+                    <input type="checkbox" name="remember" value="on" id="remember">
                     <label class="text darkgray" for="remember">记住密码</label>
+                    <a href="found.html">忘记密码？</a>
                 </label>
             </div>
             <div class="loginbox-submit">
-                <input type="submit" class="btn btn-primary btn-block" value="Login">
+                <input type="submit" class="btn btn-primary btn-block" value="登录">
             </div>
             </form>
-            <div class="loginbox-signup">
-                <a href="register.html">Sign Up With Email</a>
+            <div class="loginbox-submit" >
+                <a href="register.html" class="btn btn-primary btn-block" >注册</a>
             </div>
-        </div>
-        <div class="logobox">
+            <div class="foot">
+                <span class="bigger-120">
+                    旅烨公开课 &copy; 2013-2017
+                </span>
+            </div>
+            <!--        </div>
+                    <div class="logobox">
+                    </div>-->
         </div>
     </div>
 
@@ -113,17 +102,14 @@ Purchase: http://wrapbootstrap.com
         function checkForm(form){
             if(form.username.value==""){
                 alert("用户名不能为空！");
-                form.username.focus();
                 return false;
             }
             if(form.password.value==""){
                 alert("密码不能为空！");
-                form.password.focus();
                 return false;
             }
             if(form.code.value==""){
                 alert("验证码不能为空！");
-                form.code.focus();
                 return false;
             }
             return true;
@@ -132,7 +118,7 @@ Purchase: http://wrapbootstrap.com
             $(this).blur();
         });
 
-        $('#remember').click(function(e) {
+        $('#remember').click(function() {
             checkRemember($(this));
         });
 
