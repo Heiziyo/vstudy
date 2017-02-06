@@ -16,8 +16,8 @@ class BaseController extends Controller{
         $act = array("addChapter",'videoList','addVideo','videoType');
         $this->assign('act',$act);
 
-        if(isset($_COOKIE['uid']) && !$_SESSION['uid']){
-            $m=M('Public');
+        if(isset($_COOKIE['uid']) && isset($_COOKIE['user_name'])){
+            $m=D('User');
             $where=array('user_name'=>$_COOKIE['user_name']);
             if($id=$m->where($where)->getField('user_id')){
                 $_SESSION['uid']=$id;
@@ -28,7 +28,7 @@ class BaseController extends Controller{
         }
         if(!isset($_SESSION['uid'])){
 
-            header('Public/login');
+            redirect('Public/login');
         }
     }
 
