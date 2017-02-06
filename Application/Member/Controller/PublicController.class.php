@@ -14,10 +14,9 @@ class PublicController extends Controller{
 
     //注册
     public function register(){
-
         if (IS_POST) {
             //表单
-            $userModel = M('User');
+            $userModel = D('User');
             if ($userModel->create()) {
                 if ($userModel->add()) {
                     $this->success('注册成功', U('Public/login'));
@@ -67,7 +66,6 @@ class PublicController extends Controller{
         setcookie('user_name','',time()-1,'/');
         setcookie('uid','',time()-1,'/');
         $this->success('退出成功',U('Public/login'));
-
         exit();
     }
 
@@ -121,7 +119,6 @@ class PublicController extends Controller{
             'useCurve' => false,
             'reset'  => true,
         );
-
         $Verify = new \Think\Verify($config);
         $Verify->entry();
     }
