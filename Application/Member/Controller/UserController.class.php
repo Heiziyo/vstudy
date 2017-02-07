@@ -56,9 +56,17 @@ class UserController extends BaseController{
         if(IS_POST){
             $model=D('User');
             $data=I('post.');
-
+            if($model->validate($model->_person_validate)->create($data)){
+                $status=$model->person();
+                if($status===true){
+                    $this->success('修改成功！','profile');exit;
+                }else{
+                    $this->error('修改失败！','profile');
+                }
+            }else{
+                $this->error('验证失败'.$model->getError());
+            }
         }
-
         $this->display();
     }
 

@@ -170,17 +170,7 @@ function changeName(){
 
 }
 
+function getInfo(){
 
-function encryption($value,$type=0){
-    $key=md5(C('ENCRYPTION_KEY'));
-    if($type==0){
 
-        $value=$key^$value;
-        $value=  str_replace('=','',base64_encode($value));
-        return $value;
-    }else if($type==1){
-        $value=  base64_decode($value);
-        return $value^$key;
-    }
 }
-

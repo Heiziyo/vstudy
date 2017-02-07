@@ -5,11 +5,12 @@
 
     </div>
     <form action="" method="post">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION['uid']?>">
     <div>
         <div class="wlfg-wrap clearfix">
             <label class="label-name" for="nick">昵称：</label>
             <div class="rlf-group">
-                <input type="text" name="user_nc" id="nick" autocomplete="off" data-validate="require-nick" class="moco-form-control" placeholder="请输入昵称.">
+                <input type="text" name="user_nc" id="nick" autocomplete="off" data-validate="require-nick" class="moco-form-control" placeholder="请输入昵称">
                 <p class="rlf-tip-wrap errorHint color-red"></p>
             </div>
         </div>
@@ -17,21 +18,21 @@
             <label class="label-name" for="job">职位：</label>
             <div class="rlf-group">
                 <select class="moco-form-control rlf-select" name="user_job" hidefocus="true" id="job" data-validate="require-select">
-                    <option value="">请选择职位</option>
-                    <option value="13">学生</option>
-                    <option value="1">页面重构设计</option>
-                    <option value="6" selected="selected">Web前端工程师</option>
-                    <option value="5">JS工程师</option>
-                    <option value="8">PHP开发工程师</option>
-                    <option value="11">JAVA开发工程师</option>
-                    <option value="7">移动开发工程师</option>
-                    <option value="9">软件测试工程师</option>
-                    <option value="10">Linux系统工程师</option>
-                    <option value="2">交互设计师</option>
-                    <option value="3">产品经理</option>
-                    <option value="15">数据库工程师</option>
-                    <option value="4">UI设计师</option>
-                    <option value="16">全栈工程师</option>
+                    <option value="无职业" selected="selected">请选择职位</option>
+                    <option value="学生">学生</option>
+                    <option value="页面重构设计">页面重构设计</option>
+                    <option value="Web前端工程师">Web前端工程师</option>
+                    <option value="JS工程师">JS工程师</option>
+                    <option value="PHP开发工程师">PHP开发工程师</option>
+                    <option value="JAVA开发工程师">JAVA开发工程师</option>
+                    <option value="移动开发工程师">移动开发工程师</option>
+                    <option value="软件测试工程师">软件测试工程师</option>
+                    <option value="Linux系统工程师">Linux系统工程师</option>
+                    <option value="交互设计师">交互设计师</option>
+                    <option value="产品经理">产品经理</option>
+                    <option value="数据库工程师">数据库工程师</option>
+                    <option value="UI设计师">UI设计师</option>
+                    <option value="全栈工程师">全栈工程师</option>
                 </select>
                 <p class="rlf-tip-wrap errorHint color-red"></p>
             </div>
@@ -40,9 +41,9 @@
             <label class="label-name">城市：</label>
             <div class="rlf-group profile-address">
                 <div class="info">
-                    <select id="s_province" name="s_province"  class="moco-form-control"></select>  
-                    <select id="s_city" name="s_city"   class="moco-form-control"></select>  
-                    <select id="s_county" name="s_county"  class="moco-form-control"></select>
+                        <select id="s_province" name="user_province"  class="moco-form-control"></select>  
+                        <select id="s_city" name="user_city"   class="moco-form-control"></select>  
+                        <select id="s_county" name="user_country"  class="moco-form-control"></select>
                     <div id="show"></div>
                 </div>
                 <div class="cb"></div>
@@ -52,10 +53,10 @@
         <div class="wlfg-wrap clearfix">
             <label class="label-name h16 lh16">性别：</label>
             <div class="rlf-group rlf-radio-group">
-                <label class="lh16"><input type="radio" hidefocus="true" value="0" name="sex">保密</label>
-                <label class="lh16"><input type="radio" hidefocus="true" value="1" name="sex" checked="checked">男</label>
-                <label class="lh16"><input type="radio" hidefocus="true" value="2" name="sex">女</label>
-                <p class="rlf-tip-wrap errorHint color-red"></p>
+                    <label class="lh16"><input type="radio" hidefocus="true" value="保密" name="user_sex" checked="checked">保密</label>
+                    <label class="lh16"><input type="radio" hidefocus="true" value="男" name="user_sex">男</label>
+                    <label class="lh16"><input type="radio" hidefocus="true" value="女" name="user_sex">女</label>
+                    <p class="rlf-tip-wrap errorHint color-red"></p>
             </div>
         </div>
         <div class="wlfg-wrap clearfix">

@@ -18,6 +18,7 @@ class UserModel extends Model{
         array('user_email','email','邮箱地址错误',1),
         array('user_name','','用户名已经存在',1,'unique',1),
         array('user_nc','1,6','昵称最多为6位',1,'length',1),
+        array('user_nc','','昵称已存在',1,'unique',1),
         array('user_name','3,20','用户名至少为3位',1,'length',1),
         array('user_pwd','6,12','密码为6到12位',1,'length',1),
         array('rpassword','user_pwd','两次输入的密码不一致',1,'confirm'),
@@ -89,11 +90,6 @@ class UserModel extends Model{
                     setcookie('uid',$info['user_id'],$time,'/');
                     setcookie('user_name',$info['user_name'],$time,'/');
                 }
-                $login_ip=$_SERVER['REMOTE_ADDR'];
-                $id=array('user_id'=>$info['user_id']);
-                $login_time=date('Y-m-d H:i:s');
-                $data=array('login_ip'=>$login_ip,'login_time'=>$login_time);
-                $this->where($id)->setField($data);
                 return true;
             }
         }
@@ -176,6 +172,35 @@ class UserModel extends Model{
         $data=$this->where($where)->find();
         if($data){
             $this->where($where)->setField('user_pwd',$pwd);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public $_person_validate=array(
+
+        array('user_nc','require','昵称不能为空'),
+        array('user_nc','','昵称已存在',1,'unique'),
+        array('user_sign','0,128','个性签名字数最多为128',2,'length'),
+        array('user_province','require','地址不能为空'),
+        array('user_city','require','地址不能为空'),
+        array('user_country','require','地址不能为空'),
+    );
+
+    //个人信息
+    public function person(){
+        $info=I('post.');
+        $model=M('user_info');
+        $id=$_SESSION['uid'];
+        $where=array('user_id'=>$id);
+        $uid=$model->where($where)->getField('user_id');
+        if(!isset($uid)){
+            $model->add($info);
+            return true;
+        }
+        if(isset($uid)){
+            $model->where($where)->save($info);
             return true;
         }else{
             return false;
