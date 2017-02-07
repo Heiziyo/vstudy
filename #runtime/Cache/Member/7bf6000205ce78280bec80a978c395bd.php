@@ -476,6 +476,43 @@
 			<div class="page-body">
 				<div class="row">
 
+        <table class="table table-hover table-striped table-bordered">
+                <thead class="bordered-blueberry">
+                <tr>
+                        <th>
+                                编号
+                        </th>
+                        <th>
+                                课程名称
+                        </th>
+                        <th>
+                                课程时长
+                        </th>
+                        <th>
+                                课程难易度
+                        </th>
+                </tr>
+                </thead>
+
+                        <tbody>
+                        <?php if(is_array($myCourse)): $i = 0; $__LIST__ = $myCourse;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mc): $mod = ($i % 2 );++$i;?><tr>
+                                <td>
+                                        <?php echo ($mc["pc_id"]); ?>
+                                </td>
+                                <td>
+                                        <?php echo ($mc["course_name"]); ?>
+                                </td>
+                                <td>
+                                        <?php echo ($mc["course_time"]); ?>
+                                </td>
+                                <td>
+                                        <?php echo ($mc["course_difficulty"]); ?>
+                                </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </tbody>
+
+        </table>
+
 
 
 
