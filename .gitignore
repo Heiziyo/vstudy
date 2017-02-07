@@ -3,6 +3,6 @@
 .idea/*
 #runtime
 #runtime/*
-#runtime/Cache
+#runtime/Cache/*
 /Public
 /Application/Common/Conf
