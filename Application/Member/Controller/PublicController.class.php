@@ -7,10 +7,10 @@
  */
 
 namespace Member\Controller;
-use Think\Controller;
+use Common\Controller\LoginController;
 
 
-class PublicController extends Controller{
+class PublicController extends LoginController{
 
     //注册
     public function register(){
@@ -64,6 +64,7 @@ class PublicController extends Controller{
     public function logout()
     {
         session(null);
+        cookie(null);
         setcookie('user_name','',time()-1,'/');
         setcookie('uid','',time()-1,'/');
         $this->success('退出成功',U('Public/login'));
