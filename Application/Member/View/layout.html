@@ -412,20 +412,23 @@
 					</a>
 				</li>
 				<!--课程-->
-				<li>
+				<li class="open active">
 					<a href="#" class="menu-dropdown">
 						<i class="menu-icon glyphicon glyphicon-tasks"></i>
 						<span class="menu-text"> 我的课程 </span>
 						<i class="menu-expand"></i>
 					</a>
-
 					<ul class="submenu">
 						<li>
 							<a href="{:U('Course/myCourse')}">
 								<span class="menu-text">我的课程</span>
 							</a>
 						</li>
-
+						<li>
+							<a href="{:U('Course/courseType')}">
+								<span class="menu-text">课程分类</span>
+							</a>
+						</li>
 						<li>
 							<a href="{:U('Course/myVideo')}">
 								<span class="menu-text">我的视频</span>

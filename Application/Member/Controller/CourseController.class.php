@@ -48,5 +48,15 @@ class  CourseController extends BaseController{
     	$this->assign('myVideo',$data1);
     	$this->display();
     }
+    /*
+     * 课程分类
+     */
 
+    public function courseType()
+    {
+
+
+
+        $this->display();
+    }
 }
