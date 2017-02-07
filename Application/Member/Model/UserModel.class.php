@@ -17,6 +17,7 @@ class UserModel extends Model{
         array('user_email','','邮箱已被注册',1,'unique',1),
         array('user_email','email','邮箱地址错误',1),
         array('user_name','','用户名已经存在',1,'unique',1),
+        array('user_nc','1,6','昵称最多为6位',1,'length',1),
         array('user_name','3,20','用户名至少为3位',1,'length',1),
         array('user_pwd','6,12','密码为6到12位',1,'length',1),
         array('rpassword','user_pwd','两次输入的密码不一致',1,'confirm'),
@@ -143,22 +144,24 @@ class UserModel extends Model{
     //密码验证
     public $_pwd_validate = array(
 
-        array('user_pwd','6,12','密码为6到12位','length')
+        array('user_pwd','6,12','密码为6到12位',1,'length'),
+        array('rpassword','user_pwd','两次输入的密码不一致',1,'confirm'),
     );
 
     //邮箱
     public function email(){
 
+
         $id=$_SESSION['uid'];
-        $pwd=$this->user_pwd;
+
         $email=$this->user_email;
         $where=array('user_id'=>$id);
         $data=$this->where($where)->find();
-        if($data['user_pwd'] == $pwd){
+        if($data){
             $this->where($where)->setField('user_email',$email);
             return true;
         }else{
-            $this->error='密码错误！';
+
             return false;
         }
     }

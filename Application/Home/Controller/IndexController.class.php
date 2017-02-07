@@ -9,7 +9,7 @@ class IndexController extends Controller {
     }
 
     public function index(){
-
+        
         $this->assign('topCategory',$this->getTopCategory());
         $this->assign('childCategory',$this->getChildCategory());
         $this->display();

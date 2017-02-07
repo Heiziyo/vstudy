@@ -15,9 +15,11 @@ class UserController extends BaseController{
     public function setBindSNS(){
 
         if(IS_POST){
-            $model=M('User');
+
+            $model=D('User');
             $data=I('post.');
-            if(!empty($data['user_email']) && !empty($data['user_email'])){
+
+            if(!empty($data['user_email'])){
                 if($model->validate($model->_email_validate)->create($data)){
                     $status=$model->email();
                     if($status === true){
@@ -26,9 +28,12 @@ class UserController extends BaseController{
                     }else{
                         $this->error('修改失败');
                     }
+                }else{
+                    $this->error('验证失败'.$model->getError());
                 }
             }
             if(!empty($data['user_pwd'])){
+
                 if($model->validate($model->_pwd_validate)->create($data)){
                     $status=$model->pwd();
                     if($status === true){
@@ -37,6 +42,8 @@ class UserController extends BaseController{
                     }else{
                         $this->error('修改失败');
                     }
+                }else{
+                    $this->error('验证失败'.$model->getError());
                 }
             }
         }
@@ -45,6 +52,12 @@ class UserController extends BaseController{
 
     //个人信息
     public function profile(){
+
+        if(IS_POST){
+            $model=D('User');
+            $data=I('post.');
+
+        }
 
         $this->display();
     }

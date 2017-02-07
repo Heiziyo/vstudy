@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- Head -->
 <head>
@@ -13,8 +13,6 @@
 	<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
 	<link href="/Public/member/assets/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="/Public/member/assets/css/weather-icons.min.css" rel="stylesheet" />
-	<link href="/Public/member/assets/css/style1.css" rel="stylesheet" />
-
 	<!--Fonts-->
 	<link href="http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
 	<!--Beyond styles-->
@@ -25,29 +23,6 @@
 	<link id="skin-link" href="" rel="stylesheet" type="text/css" />
 	<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
 	<script src="/Public/member/assets/js/skins.min.js"></script>
-<<<<<<< HEAD
-=======
-	<!--Basic Scripts-->
->>>>>>> origin/lyy
-	<script src="/Public/member/assets/js/jquery-2.0.3.min.js"></script>
-	<script src="/Public/member/assets/js/bootstrap.min.js"></script>
-	<!--Layer Scripts-->
-	<script src="/Public/member/assets/js/layer.js"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<!--Beyond Scripts-->
-	<script src="/Public/member/assets/js/beyond.min.js"></script>
-	<!--Page Related Scripts-->
-	<!--Sparkline Charts Needed Scripts-->
-	<script src="/Public/member/assets/js/charts/sparkline/jquery.sparkline.js"></script>
-	<script src="/Public/member/assets/js/charts/sparkline/sparkline-init.js"></script>
-=======
->>>>>>> origin/lyy
-
-=======
-	<!--Area Scripts-->
-	<script src="/Public/member/assets/js/area.js"></script>
->>>>>>> lyy
 </head>
 <!-- /Head -->
 <!-- Body -->
@@ -329,35 +304,13 @@
 							<ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
 								<li class="username"><a><?php echo $_SESSION['user_name']?></a></li>
 						<li>
-							<a href="{:U('User/setBindSNS')}">
+							<a href="<?php echo U('User/index');?>">
 								<i class="ace-icon fa fa-cog"></i>
-								账号绑定
+								个人设置
 							</a>
 						</li>
-						<li>
-							<a href="{:U('User/profile')}">
-								<i class="ace-icon fa fa-user"></i>
-								个人信息
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/record')}">
-								<i class="ace-icon fa fa-wrench"></i>
-								操作记录
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/realName')}">
-								<i class="ace-icon fa fa-globe"></i>
-								实名认证
-							</a>
-						</li>
-						<li>
-							<a href="{:U('User/address')}">
-								<i class="ace-icon fa fa-truck"></i>
-								收货地址
-							</a>
-						</li>
+
+
 						<li class="divider"></li>
 
 						<li>
@@ -422,7 +375,7 @@
 			<ul class="nav sidebar-menu">
 				<!--Dashboard-->
 				<li class="active">
-					<a href="{:U('Member/Index/index')}">
+					<a href="<?php echo U('Member/Index/index');?>">
 						<i class="menu-icon glyphicon glyphicon-home"></i>
 						<span class="menu-text"> Dashboard </span>
 					</a>
@@ -437,13 +390,13 @@
 
 					<ul class="submenu">
 						<li>
-							<a href="{:U('Course/myCourse')}">
+							<a href="<?php echo U('Course/myCourse');?>">
 								<span class="menu-text">我的课程</span>
 							</a>
 						</li>
 
 						<li>
-							<a href="{:U('Course/myVideo')}">
+							<a href="<?php echo U('Course/myVideo');?>">
 								<span class="menu-text">我的视频</span>
 							</a>
 						</li>
@@ -490,7 +443,7 @@
 			<!-- /Page Header -->
 			<!-- Page Body -->
 			<div class="page-body">
-				{__CONTENT__}
+				
 			</div>
 			<!-- /Page Body -->
 		</div>
@@ -499,18 +452,15 @@
 	<!-- /Page Container -->
 	<!-- Main Container -->
 </div>
-<<<<<<< HEAD
 <!--Basic Scripts-->
-=======
-
+<script src="/Public/member/assets/js/jquery-2.0.3.min.js"></script>
+<script src="/Public/member/assets/js/bootstrap.min.js"></script>
 <!--Beyond Scripts-->
 <script src="/Public/member/assets/js/beyond.min.js"></script>
 <!--Page Related Scripts-->
 <!--Sparkline Charts Needed Scripts-->
 <script src="/Public/member/assets/js/charts/sparkline/jquery.sparkline.js"></script>
 <script src="/Public/member/assets/js/charts/sparkline/sparkline-init.js"></script>
->>>>>>> origin/lyy
-
 </body>
 <!--  /Body -->
 </html>
