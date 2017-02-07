@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- Head -->
 <head>
@@ -313,31 +313,31 @@
 							<ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
 								<li class="username"><a><?php echo $_SESSION['user_name']?></a></li>
 						<li>
-							<a href="{:U('User/setBindSNS')}">
+							<a href="<?php echo U('User/setBindSNS');?>">
 								<i class="ace-icon fa fa-cog"></i>
 								账号绑定
 							</a>
 						</li>
 						<li>
-							<a href="{:U('User/profile')}">
+							<a href="<?php echo U('User/profile');?>">
 								<i class="ace-icon fa fa-user"></i>
 								个人信息
 							</a>
 						</li>
 						<li>
-							<a href="{:U('User/record')}">
+							<a href="<?php echo U('User/record');?>">
 								<i class="ace-icon fa fa-wrench"></i>
 								操作记录
 							</a>
 						</li>
 						<li>
-							<a href="{:U('User/realName')}">
+							<a href="<?php echo U('User/realName');?>">
 								<i class="ace-icon fa fa-globe"></i>
 								实名认证
 							</a>
 						</li>
 						<li>
-							<a href="{:U('User/address')}">
+							<a href="<?php echo U('User/address');?>">
 								<i class="ace-icon fa fa-truck"></i>
 								收货地址
 							</a>
@@ -406,7 +406,7 @@
 			<ul class="nav sidebar-menu">
 				<!--Dashboard-->
 				<li class="active">
-					<a href="{:U('Member/Index/index')}">
+					<a href="<?php echo U('Member/Index/index');?>">
 						<i class="menu-icon glyphicon glyphicon-home"></i>
 						<span class="menu-text"> Dashboard </span>
 					</a>
@@ -421,13 +421,13 @@
 
 					<ul class="submenu">
 						<li>
-							<a href="{:U('Course/myCourse')}">
+							<a href="<?php echo U('Course/myCourse');?>">
 								<span class="menu-text">我的课程</span>
 							</a>
 						</li>
 
 						<li>
-							<a href="{:U('Course/myVideo')}">
+							<a href="<?php echo U('Course/myVideo');?>">
 								<span class="menu-text">我的视频</span>
 							</a>
 						</li>
@@ -474,7 +474,102 @@
 			<!-- /Page Header -->
 			<!-- Page Body -->
 			<div class="page-body">
-				{__CONTENT__}
+				<div class="page-body">
+
+    <div class="formBox">
+        <div class="common-title">个人信息</div>
+
+    </div>
+    <form action="" method="post">
+    <div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name" for="nick">昵称：</label>
+            <div class="rlf-group">
+                <input type="text" name="user_nc" id="nick" autocomplete="off" data-validate="require-nick" class="moco-form-control" placeholder="请输入昵称.">
+                <p class="rlf-tip-wrap errorHint color-red"></p>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name" for="job">职位：</label>
+            <div class="rlf-group">
+                <select class="moco-form-control rlf-select" name="user_job" hidefocus="true" id="job" data-validate="require-select">
+                    <option value="">请选择职位</option>
+                    <option value="13">学生</option>
+                    <option value="1">页面重构设计</option>
+                    <option value="6" selected="selected">Web前端工程师</option>
+                    <option value="5">JS工程师</option>
+                    <option value="8">PHP开发工程师</option>
+                    <option value="11">JAVA开发工程师</option>
+                    <option value="7">移动开发工程师</option>
+                    <option value="9">软件测试工程师</option>
+                    <option value="10">Linux系统工程师</option>
+                    <option value="2">交互设计师</option>
+                    <option value="3">产品经理</option>
+                    <option value="15">数据库工程师</option>
+                    <option value="4">UI设计师</option>
+                    <option value="16">全栈工程师</option>
+                </select>
+                <p class="rlf-tip-wrap errorHint color-red"></p>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name">城市：</label>
+            <div class="rlf-group profile-address">
+                <div class="info">
+                    <select id="s_province" name="s_province"  class="moco-form-control"></select>  
+                    <select id="s_city" name="s_city"   class="moco-form-control"></select>  
+                    <select id="s_county" name="s_county"  class="moco-form-control"></select>
+                    <div id="show"></div>
+                </div>
+                <div class="cb"></div>
+                <p class="rlf-tip-wrap errorHint color-red"></p>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name h16 lh16">性别：</label>
+            <div class="rlf-group rlf-radio-group">
+                <label class="lh16"><input type="radio" hidefocus="true" value="0" name="sex">保密</label>
+                <label class="lh16"><input type="radio" hidefocus="true" value="1" name="sex" checked="checked">男</label>
+                <label class="lh16"><input type="radio" hidefocus="true" value="2" name="sex">女</label>
+                <p class="rlf-tip-wrap errorHint color-red"></p>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name" for="aboutme">个性签名：</label>
+            <div class="rlf-group">
+                <div class="pr">
+                    <textarea name="user_sign" id="aboutme" rows="5" class="noresize js-sign moco-form-control"></textarea>
+                    <p class="numCanInput js-numCanInput ">还可以输入128个字符</p>
+                </div>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name" ></label>
+            <div class="rlf-group">
+                <input type="submit" class="btn btn-blue" value="保　存">
+            </div>
+        </div>
+        </div>
+        </form>
+    </div>
+<script type="text/javascript">_init_area();</script>
+
+<script>
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        (function(){
+            window.scrollReveal = new scrollReveal({reset: true});
+        })();
+    };
+
+    var Gid  = document.getElementById ;
+    var showArea = function(){
+        Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" +
+                Gid('s_city').value + " - 县/区" +
+                Gid('s_county').value + "</h3>"
+    }
+    //Gid('s_county').setAttribute('onchange','showArea()');
+
+</script>
 			</div>
 			<!-- /Page Body -->
 		</div>

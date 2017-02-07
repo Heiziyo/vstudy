@@ -40,8 +40,13 @@
 					二维码
 				</div>
 				<div class="user">
-					<a href="javascript:;" class="login">登录</a>
-					<a href="javascript:;" class="register login">注册</a>
+					<?php if(!empty($_SESSION['user_name'])){ ?>
+					欢迎&nbsp;&nbsp;&nbsp;<a href="<?php echo U('/Member/Index/index')?>"><?php echo $_SESSION['user_name']?></a>
+					<a href="<?php echo U('/Member/Public/logout')?>">退出</a>
+					<?php }else{?>
+					<a href="<?php echo U('/Member/Public/login')?>" class="login">登录</a>
+					<a href="<?php echo U('/Member/Public/register')?>" class="register">注册</a>
+					<?php }?>
 				</div>
 			</div>
 		</div>
