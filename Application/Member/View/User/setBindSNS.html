@@ -2,7 +2,7 @@
     <div class="common_title">
         账号绑定
         <span class="title-tips">完成<b class="color-red">3/4</b></span>
-        <a href="/about/faq" class="pull-right" target="_blank"><i class="icon-ques-revert"></i>常见问题</a>
+        <a href="#" class="pull-right"><i class="icon-ques-revert"></i>常见问题</a>
     </div>
     <div class="setting">
         <div class="contentBox">
@@ -11,10 +11,10 @@
                     <div class="left"><i class="fa fa-envelope-o"></i></div>
                     <div class="center">
                         <p><span class="font1">邮箱</span>
-				                            <span class="font3">
-				                            1213222@qq.com
-				                                <input class="hide" id="jsMail" value="1213287572@qq.com">已绑定 ，但</span> <span class="font4">未验证
-				                            </span>
+                            <span class="font3">
+                                <volist name="email" id="e">{$e.user_email}</volist>
+                                <input class="hide" id="jsMail">已绑定 ，但</span> <span class="font4">未验证
+                            </span>
                         </p>
                         <p class="font2">可用邮箱找回密码</p>
                     </div>
@@ -27,7 +27,7 @@
                     <div class="left"><i class="fa fa-mobile"></i></div>
                     <div class="center">
                         <p> <span class="font1">手机</span> <span class="font4" id="jsPhone">未绑定（绑定手机可得1积分）</span></p>
-                        <p class="font2">可用手机号加密码登录慕课网，可通过手机号找回密码</p>
+                        <p class="font2">可用手机号加密码登录，可通过手机号找回密码</p>
                     </div>
                     <div class="right">
                         <a href="javascript:void(0);" class="binding moco-btn moco-btn-normal js-bindphone">立即绑定</a>

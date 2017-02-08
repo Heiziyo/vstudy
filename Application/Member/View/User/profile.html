@@ -7,10 +7,11 @@
     <form action="" method="post">
         <input type="hidden" name="user_id" value="<?php echo $_SESSION['uid']?>">
     <div>
+        <volist name="userInfo" id="ui">
         <div class="wlfg-wrap clearfix">
             <label class="label-name" for="nick">昵称：</label>
             <div class="rlf-group">
-                <input type="text" name="user_nc" id="nick" autocomplete="off" data-validate="require-nick" class="moco-form-control" placeholder="请输入昵称">
+                <input type="text" name="user_nc" id="nick" autocomplete="off" data-validate="require-nick" class="moco-form-control" placeholder="{$ui.user_nc}">
                 <p class="rlf-tip-wrap errorHint color-red"></p>
             </div>
         </div>
@@ -74,6 +75,7 @@
                 <input type="submit" class="btn btn-blue" value="保　存">
             </div>
         </div>
+        </volist>
         </div>
         </form>
     </div>

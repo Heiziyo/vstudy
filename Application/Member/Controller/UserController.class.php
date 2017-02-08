@@ -47,6 +47,8 @@ class UserController extends BaseController{
                 }
             }
         }
+        $email=M('user')->field('user_email')->where(array('user_id'=>$_SESSION['uid']))->select();
+        $this->assign('email',$email);
         $this->display();
     }
 
@@ -67,12 +69,19 @@ class UserController extends BaseController{
                 $this->error('验证失败'.$model->getError());
             }
         }
+        $userInfo=M('user_info')->where(array('user_id'=>$_SESSION['uid']))->select();
+        $this->assign('userInfo',$userInfo);
         $this->display();
     }
 
     //操作记录
     public function record(){
 
+        $id=$_SESSION['uid'];
+        $model=M('user_opreate');
+        $data=$model->where(array('user_id'=>$id))->select();
+        //dump($data);exit;
+        $this->assign('record',$data);
         $this->display();
     }
 

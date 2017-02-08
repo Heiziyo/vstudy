@@ -6,7 +6,7 @@
         <div class="page-settings">
             <div class="common-title">
                 操作记录<span class="title-tips">通过查看登录时间、登录地点和设备可以判断账号是否正常</span>
-                <a href="javascript:void(0)" class="pull-right js-update-psw">不是我登录的？</a>
+                <a href="javascript:void(0)" id="pwd" class="pull-right js-update-psw">不是我登录的？</a>
             </div>
             <div class="line"></div>
             <div class="setting ">
@@ -18,24 +18,14 @@
                             <th>IP</th>
                             <th>登录设备</th>
                         </tr>
+                        <volist name="record" id="r" empty="暂无记录">
                         <tr>
-                            <td>2017.02.06 09:36</td>
-                            <td>武汉</td>
-                            <td>59.174.169.247</td>
-                            <td>web</td>
+                                <td>{$r.login_time}</td>
+                                <td>{$r.login_address}</td>
+                                <td>{$r.login_ip}</td>
+                                <td>{$r.login_machine}</td>
                         </tr>
-                        <tr>
-                            <td>2017.02.05 13:57</td>
-                            <td>武汉</td>
-                            <td>27.18.24.238</td>
-                            <td>web</td>
-                        </tr>
-                        <tr>
-                            <td>2017.01.03 21:49</td>
-                            <td>上海</td>
-                            <td>180.153.159.59</td>
-                            <td>web</td>
-                        </tr>
+                        </volist>
                         </tbody></table>
                 </div>
             </div>
@@ -45,3 +35,14 @@
 
 
 </div>
+<script>
+$('#pwd').on('click', function(){
+layer.open({
+title: '修改密码',
+type: 1,
+area: ['488px', '200px'],
+shadeClose: true, //点击遮罩关闭
+content: '\<\div style="padding:20px;"><form action="{:U('setBindSNS')}" method="post">新密码：<input type="password" name="user_pwd"><br />确认新密码：<input type="password" name="rpassword"><br /><input type="submit" value="提交"></form>\<\/div>'
+});
+});
+</script>
