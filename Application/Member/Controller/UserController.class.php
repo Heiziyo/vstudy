@@ -69,7 +69,7 @@ class UserController extends BaseController{
                 $this->error('验证失败'.$model->getError());
             }
         }
-        $userInfo=M('user_info')->where(array('user_id'=>$_SESSION['uid']))->select();
+        $userInfo=M('user')->where(array('user_id'=>$_SESSION['uid']))->select();
         $this->assign('userInfo',$userInfo);
         $this->display();
     }

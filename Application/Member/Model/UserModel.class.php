@@ -191,16 +191,19 @@ class UserModel extends Model{
     //个人信息
     public function person(){
         $info=I('post.');
+        $nc=$_POST['user_nc'];
         $model=M('user_info');
         $id=$_SESSION['uid'];
         $where=array('user_id'=>$id);
+        $this->where($where)->setField('user_nc',$nc);
         $uid=$model->where($where)->getField('user_id');
+        $data=array('user_id','user_job','user_province','user_city','user_country','user_sex','user_sign');
         if(!isset($uid)){
-            $model->add($info);
+            $model->field($data)->add($info);
             return true;
         }
         if(isset($uid)){
-            $model->where($where)->save($info);
+            $model->where($where)->field($data)->save($info);
             return true;
         }else{
             return false;
