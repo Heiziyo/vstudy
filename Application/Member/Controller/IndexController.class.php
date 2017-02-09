@@ -17,6 +17,7 @@ class IndexController extends BaseController{
         $nc=D('user')->where("user_id=$uid")->select();
         return $nc;
     }
+
     public function index(){
 
 		$this->assign('nc',$this->getUserInfo());

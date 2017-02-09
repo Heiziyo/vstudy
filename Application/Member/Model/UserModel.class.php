@@ -197,7 +197,20 @@ class UserModel extends Model{
         $where=array('user_id'=>$id);
         $this->where($where)->setField('user_nc',$nc);
         $uid=$model->where($where)->getField('user_id');
-        $data=array('user_id','user_job','user_province','user_city','user_country','user_sex','user_sign');
+        if($_FILES['user_photo']['error']!=4){
+            //调用函数，
+            $infos = uploadOneImage('user_photo','user');
+            //p($info);exit;
+            if($infos['status']==1){
+                //上传成功
+                $info['user_photo']=$infos['img'][0];
+                $info['user_thumb']=$infos['img'][1];
+            }else{
+                $this->error = $infos['error'];
+                return false;
+            }
+        }
+        $data=array('user_id','user_job','user_province','user_city','user_country','user_sex','user_sign','user_photo','user_thumb');
         if(!isset($uid)){
             $model->field($data)->add($info);
             return true;
@@ -208,5 +221,6 @@ class UserModel extends Model{
         }else{
             return false;
         }
+
     }
 }

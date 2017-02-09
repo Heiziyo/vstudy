@@ -4,7 +4,7 @@
         <div class="common-title">个人信息</div>
 
     </div>
-    <form action="" method="post">
+    <form enctype="multipart/form-data" action="" method="post">
         <input type="hidden" name="user_id" value="<?php echo $_SESSION['uid']?>">
     <div>
         <volist name="userInfo" id="ui">
@@ -59,6 +59,11 @@
                     <label class="lh16"><input type="radio" hidefocus="true" value="女" name="user_sex">女</label>
                     <p class="rlf-tip-wrap errorHint color-red"></p>
             </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
+            <label class="label-name">头像：</label>
+            <div class="rlf-group rlf-radio-group"><input type="file" name="user_photo"></div>
         </div>
         <div class="wlfg-wrap clearfix">
             <label class="label-name" for="aboutme">个性签名：</label>

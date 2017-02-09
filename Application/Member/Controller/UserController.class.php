@@ -79,7 +79,7 @@ class UserController extends BaseController{
 
         $id=$_SESSION['uid'];
         $model=M('user_opreate');
-        $data=$model->where(array('user_id'=>$id))->select();
+        $data=$model->where(array('user_id'=>$id))->order('op_id desc')->limit(5)->select();
         //dump($data);exit;
         $this->assign('record',$data);
         $this->display();
