@@ -1,53 +1,106 @@
-<div class="row">
-	<div class="col-lg-12 col-sm-12 col-xs-12">
-		<div class="widget radius-bordered">
-			<div class="widget-header">
-				<span class="widget-caption">Widget with Small Buttons</span>
-				<div class="widget-buttons buttons-bordered">
-					<button class="btn btn-default btn-sm">Cancel</button>
-				</div>
-				<div class="widget-buttons buttons-bordered">
-					<button class="btn btn-default btn-sm">Save</button>
-				</div>
-			</div>
-			<div class="widget-body">
-				<div class="row">
-					<div class="col-lg-12 col-sm-12 col-xs-12">
-						<div class="row">
-							<div class="col-lg-6 col-sm-6 col-xs-12">
-								<div class="widget">
-									<div class="widget-header bordered-bottom bordered-blue">
-										<span class="widget-caption">Basic Form</span>
-									</div>
-									<div class="widget-body">
-										<div>
-											<form role="form">
-												<div class="form-group">
-													<label for="exampleInputEmail1">Email address</label>
-													<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-												</div>
-												<div class="form-group">
-													<label for="exampleInputPassword1">Password</label>
-													<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-												</div>
-												<div class="form-group">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span class="text">Remember me next time.</span>
-														</label>
-													</div>
-												</div>
-												<button type="submit" class="btn btn-blue">Submit</button>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+    <TITLE> ZTREE DEMO </TITLE>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="/Public/css/zTreeStyle.css" type="text/css">
+    <style>
+        body {
+            background-color: white;
+            margin:0; padding:0;
+            text-align: center;
+        }
+        div, p, table, th, td {
+            list-style:none;
+            margin:0; padding:0;
+            color:#333; font-size:12px;
+            font-family:dotum, Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+        }
+        #testIframe {margin-left: 10px;}
+    </style>
+    <script type="text/javascript" src="/Public/js/jquery.ztree.core.js"></script>
+    <SCRIPT type="text/javascript" >
+        <!--
+        var zTree;
+        var demoIframe;
+
+        var setting = {
+            view: {
+                dblClickExpand: false,
+                showLine: true,
+                selectedMulti: false
+            },
+            data: {
+                simpleData: {
+                    enable:true,
+                    idKey: "id",
+                    pIdKey: "pid",
+                    rootPId: ""
+                }
+            },
+            callback: {
+                beforeClick: function(treeId, treeNode) {
+                    var zTree = $.fn.zTree.getZTreeObj("tree");
+                    if (treeNode.isParent) {
+                        zTree.expandNode(treeNode);
+                        return false;
+                    } else {
+                        demoIframe.attr("src",treeNode.file + ".html");
+                        return true;
+                    }
+                }
+            }
+        };
+
+        var zNodes;
+
+        $.ajax({
+            url:"{:U('courseType')}",
+            type: "get",
+            async: false,
+            dataType:"json",
+            success: function (data) {
+                zNodes=data;
+            },
+            error: function (){
+                alert('请求失败');
+            },
+        });
+
+        $(document).ready(function(){
+            var t = $("#tree");
+            t = $.fn.zTree.init(t, setting, zNodes);
+            demoIframe = $("#testIframe");
+            demoIframe.bind("load", loadReady);
+//            var zTree = $.fn.zTree.getZTreeObj("tree");
+//            zTree.selectNode(zTree.getNodeByParam("id", 101));
+
+        });
+
+        function loadReady() {
+            var bodyH = demoIframe.contents().find("body").get(0).scrollHeight,
+                    htmlH = demoIframe.contents().find("html").get(0).scrollHeight,
+                    maxH = Math.max(bodyH, htmlH), minH = Math.min(bodyH, htmlH),
+                    h = demoIframe.height() >= maxH ? minH:maxH ;
+            if (h < 530) h = 530;
+            demoIframe.height(h);
+        }
+
+        //-->
+    </SCRIPT>
+</HEAD>
+
+<BODY>
+<TABLE border=0 height=600px align=left>
+    <TR>
+        <TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+            <ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+        </TD>
+        <TD width=100% align=left valign=top>
+            <IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=600px SRC="{:U('courseType')}"></IFRAME>
+        </TD>
+    </TR>
+</TABLE>
+
+</BODY>
+</HTML>
