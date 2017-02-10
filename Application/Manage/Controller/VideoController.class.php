@@ -11,6 +11,12 @@ use Think\Controller;
 use Common\Controller\BaseController;
 
 class VideoController extends BaseController {
+    public function _initialize(){
+        if(!session('?manager_name')){
+            $this->display('Index/login');
+            die();
+        }
+    }
 
     public function videoType(){
 

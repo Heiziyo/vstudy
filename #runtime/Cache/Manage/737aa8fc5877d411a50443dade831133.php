@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -62,7 +62,7 @@
 		<!-- /section:basics/sidebar.mobile.toggle -->
 		<div class="navbar-header pull-left">
 			<!-- #section:basics/navbar.layout.brand -->
-			<a href="{:U('Manage/Index/index')}" class="navbar-brand">
+			<a href="<?php echo U('Manage/Index/index');?>" class="navbar-brand">
 				<small>
 					<i class="fa fa-leaf"></i>
 					旅烨公开课
@@ -330,7 +330,7 @@
 						<img class="nav-user-photo" src="/Public/assets/avatars/user.jpg" alt="Jason's Photo" />
 						<span class="user-info">
 									<small>欢迎,</small>
-									{$Think.session.manager_name}
+									<?php echo (session('manager_name')); ?>
 								</span>
 
 						<i class="ace-icon fa fa-caret-down"></i>
@@ -354,7 +354,7 @@
 						<li class="divider"></li>
 
 						<li>
-							<a href="{:U('Index/logout')}">
+							<a href="<?php echo U('Index/logout');?>">
 								<i class="ace-icon fa fa-power-off"></i>
 								退出
 							</a>
@@ -417,7 +417,7 @@
 
 		<ul class="nav nav-list">
 			<li class="active">
-				<a href="{:U('Manage/Index/index')}">
+				<a href="<?php echo U('Manage/Index/index');?>">
 					<i class="menu-icon fa fa-tachometer"></i>
 					<span class="menu-text"> Dashboard </span>
 				</a>
@@ -425,7 +425,7 @@
 				<b class="arrow"></b>
 			</li>
 
-			<li <if condition="in_array(ACTION_NAME,$act)" > class="active open hsub"</if>>
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="menu-icon fa fa-desktop"></i>
 				<span class="menu-text">视频管理</span>
@@ -436,7 +436,7 @@
 			<b class="arrow"></b>
 
 			<ul class="submenu">
-				<li  <if condition="in_array(ACTION_NAME,$act)" > class="active open hsub"</if>>
+				<li  <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
 				<a href="#" class="dropdown-toggle">
 					<i class="menu-icon fa fa-caret-right"></i>
 					视频相关设置
@@ -446,16 +446,16 @@
 				<b class="arrow"></b>
 
 				<ul class="submenu">
-					<li <if condition="ACTION_NAME eq 'videoType'" > class="active"</if> >
-					<a href="{:U('Video/videoType')}">
+					<li <?php if(ACTION_NAME == 'videoType'): ?>class="active"<?php endif; ?> >
+					<a href="<?php echo U('Video/videoType');?>">
 						<i class="menu-icon fa fa-caret-right"></i>
 						视频分类
 					</a>
 
 					<b class="arrow"></b>
 					</li>
-					<li <if condition="ACTION_NAME eq 'addChapter'" > class="active"</if>>
-					<a href="{:U('Video/addChapter')}">
+					<li <?php if(ACTION_NAME == 'addChapter'): ?>class="active"<?php endif; ?>>
+					<a href="<?php echo U('Video/addChapter');?>">
 						<i class="menu-icon fa fa-caret-right"></i>
 						添加课程
 					</a>
@@ -465,8 +465,8 @@
 				</ul>
 				</li>
 
-				<li <if condition="ACTION_NAME eq ''" > class="active" </if>>
-				<a href="{:U('Video/videoList')}">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Video/videoList');?>">
 					<i class="menu-icon fa fa-caret-right"></i>
 					视频列表
 				</a>
@@ -474,10 +474,9 @@
 				<b class="arrow"></b>
 				</li>
 				<?php
-
-					?>
-				<li <if condition="ACTION_NAME eq 'addVideo'" > class="active"</if>>
-				<a href="{:U('Video/addVideo')}">
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Video/addVideo');?>">
 					<i class="menu-icon fa fa-caret-right"></i>
 					添加视频
 				</a>
@@ -487,7 +486,7 @@
 			</ul>
 			</li>
 
-			<li <if condition="in_array(ACTION_NAME,$act)" > class="active open hsub"</if>>
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="menu-icon fa fa-user"></i>
 				<span class="menu-text">会员管理</span>
@@ -497,8 +496,8 @@
 
 			<b class="arrow"></b>
 			<ul class="submenu">
-				<li <if condition="ACTION_NAME eq 'userList'" > class="active"</if>>
-				<a href="{:U('User/userList')}">
+				<li <?php if(ACTION_NAME == 'userList'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('User/userList');?>">
 					<i class="menu-icon fa fa-caret-right"></i>
 					会员列表
 				</a>
@@ -531,7 +530,7 @@
 			<ul class="breadcrumb">
 				<li>
 					<i class="ace-icon fa fa-home home-icon"></i>
-					<a href="{:U('Manage/Index/index')}">Home</a>
+					<a href="<?php echo U('Manage/Index/index');?>">Home</a>
 				</li>
 				<li class="active">Dashboard</li>
 			</ul><!-- /.breadcrumb -->
@@ -639,7 +638,7 @@
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
 			</div><!-- /.ace-settings-container -->
-		{__CONTENT__}
+		
 		</div>
 	</div>
 	</div><!-- /.main-content -->

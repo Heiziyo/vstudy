@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -62,7 +62,7 @@
 		<!-- /section:basics/sidebar.mobile.toggle -->
 		<div class="navbar-header pull-left">
 			<!-- #section:basics/navbar.layout.brand -->
-			<a href="{:U('Manage/Index/index')}" class="navbar-brand">
+			<a href="<?php echo U('Manage/Index/index');?>" class="navbar-brand">
 				<small>
 					<i class="fa fa-leaf"></i>
 					旅烨公开课
@@ -330,7 +330,7 @@
 						<img class="nav-user-photo" src="/Public/assets/avatars/user.jpg" alt="Jason's Photo" />
 						<span class="user-info">
 									<small>欢迎,</small>
-									{$Think.session.manager_name}
+									<?php echo (session('manager_name')); ?>
 								</span>
 
 						<i class="ace-icon fa fa-caret-down"></i>
@@ -354,7 +354,7 @@
 						<li class="divider"></li>
 
 						<li>
-							<a href="{:U('Index/logout')}">
+							<a href="<?php echo U('Index/logout');?>">
 								<i class="ace-icon fa fa-power-off"></i>
 								退出
 							</a>
@@ -417,7 +417,7 @@
 
 		<ul class="nav nav-list">
 			<li class="active">
-				<a href="{:U('Manage/Index/index')}">
+				<a href="<?php echo U('Manage/Index/index');?>">
 					<i class="menu-icon fa fa-tachometer"></i>
 					<span class="menu-text"> Dashboard </span>
 				</a>
@@ -425,7 +425,7 @@
 				<b class="arrow"></b>
 			</li>
 
-			<li <if condition="in_array(ACTION_NAME,$act)" > class="active open hsub"</if>>
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="menu-icon fa fa-desktop"></i>
 				<span class="menu-text">视频管理</span>
@@ -436,7 +436,7 @@
 			<b class="arrow"></b>
 
 			<ul class="submenu">
-				<li  <if condition="in_array(ACTION_NAME,$act)" > class="active open hsub"</if>>
+				<li  <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
 				<a href="#" class="dropdown-toggle">
 					<i class="menu-icon fa fa-caret-right"></i>
 					视频相关设置
@@ -446,16 +446,16 @@
 				<b class="arrow"></b>
 
 				<ul class="submenu">
-					<li <if condition="ACTION_NAME eq 'videoType'" > class="active"</if> >
-					<a href="{:U('Video/videoType')}">
+					<li <?php if(ACTION_NAME == 'videoType'): ?>class="active"<?php endif; ?> >
+					<a href="<?php echo U('Video/videoType');?>">
 						<i class="menu-icon fa fa-caret-right"></i>
 						视频分类
 					</a>
 
 					<b class="arrow"></b>
 					</li>
-					<li <if condition="ACTION_NAME eq 'addChapter'" > class="active"</if>>
-					<a href="{:U('Video/addChapter')}">
+					<li <?php if(ACTION_NAME == 'addChapter'): ?>class="active"<?php endif; ?>>
+					<a href="<?php echo U('Video/addChapter');?>">
 						<i class="menu-icon fa fa-caret-right"></i>
 						添加课程
 					</a>
@@ -465,8 +465,8 @@
 				</ul>
 				</li>
 
-				<li <if condition="ACTION_NAME eq ''" > class="active" </if>>
-				<a href="{:U('Video/videoList')}">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Video/videoList');?>">
 					<i class="menu-icon fa fa-caret-right"></i>
 					视频列表
 				</a>
@@ -474,10 +474,9 @@
 				<b class="arrow"></b>
 				</li>
 				<?php
-
-					?>
-				<li <if condition="ACTION_NAME eq 'addVideo'" > class="active"</if>>
-				<a href="{:U('Video/addVideo')}">
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Video/addVideo');?>">
 					<i class="menu-icon fa fa-caret-right"></i>
 					添加视频
 				</a>
@@ -487,7 +486,7 @@
 			</ul>
 			</li>
 
-			<li <if condition="in_array(ACTION_NAME,$act)" > class="active open hsub"</if>>
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
 			<a href="#" class="dropdown-toggle">
 				<i class="menu-icon fa fa-user"></i>
 				<span class="menu-text">会员管理</span>
@@ -497,8 +496,8 @@
 
 			<b class="arrow"></b>
 			<ul class="submenu">
-				<li <if condition="ACTION_NAME eq 'userList'" > class="active"</if>>
-				<a href="{:U('User/userList')}">
+				<li <?php if(ACTION_NAME == 'userList'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('User/userList');?>">
 					<i class="menu-icon fa fa-caret-right"></i>
 					会员列表
 				</a>
@@ -531,7 +530,7 @@
 			<ul class="breadcrumb">
 				<li>
 					<i class="ace-icon fa fa-home home-icon"></i>
-					<a href="{:U('Manage/Index/index')}">Home</a>
+					<a href="<?php echo U('Manage/Index/index');?>">Home</a>
 				</li>
 				<li class="active">Dashboard</li>
 			</ul><!-- /.breadcrumb -->
@@ -639,7 +638,144 @@
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
 			</div><!-- /.ace-settings-container -->
-		{__CONTENT__}
+		<div class="row">
+    <div class="col-xs-12">
+        <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th class="center">
+                    <label class="position-relative">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl"></span>
+                    </label>
+                </th>
+                <th>用户名</th>
+                <th class="hidden-480">昵称</th>
+
+                <th>
+                    <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                    注册时间
+                </th>
+                <th class="hidden-480">状态</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <?php if(is_array($user)): $i = 0; $__LIST__ = $user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+                <td class="center">
+                    <label class="position-relative">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl"></span>
+                    </label>
+                </td>
+
+                <td>
+                    <a href="#"><?php echo ($v["user_name"]); ?></a>
+                </td>
+                <td class="hidden-480"><?php echo ($v["user_nc"]); ?></td>
+                <td><?php echo ($v["regist_time"]); ?></td>
+                <td class="hidden-480">
+                    <?php if($v["status"] == show): ?><span class="label label-sm label-success arrowed-in"><?php echo ($v["status"]); ?></span>
+                    <?php else: ?>
+                        <span class="label label-sm label-danger arrowed-in"><?php echo ($v["status"]); ?></span><?php endif; ?>
+                </td>
+                <td>
+                    <div class="hidden-sm hidden-xs btn-group">
+                        <!--<button class="btn btn-xs btn-success">-->
+                        <?php if($v["status"] == none): ?><a href="<?php echo U('changeStatus',['id'=>$v['user_id'],'status'=>$v['status']]);?>">正常</a>
+                            <!--<i class="ace-icon fa fa-check bigger-120"></i>-->
+                        <?php else: ?>
+                            <a href="<?php echo U('changeStatus',['id'=>$v['user_id'],'status'=>$v['status']]);?>">禁用</a>
+                            <!--<i class="ace-icon fa fa-cross bigger-120"></i>--><?php endif; ?>
+                        <!--</button>-->
+
+                        /<span style="cursor:pointer;" class="view">预览</span>
+                        <input type="hidden" value="<?php echo ($v["user_id"]); ?>">
+                        <!--<button class="btn btn-xs btn-info">-->
+                            <!--<i class="ace-icon fa fa-eye bigger-120"></i>-->
+                        <!--</button>-->
+                    </div>
+
+                    <div class="hidden-md hidden-lg">
+                        <div class="inline position-relative">
+                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="#" class="tooltip-info" data-rel="tooltip" title="Check">
+                                        <span class="blue">
+                                            <?php if($v["status"] == none): ?><a href="<?php echo U('changeStatus',['id'=>$v['user_id'],'status'=>$v['status']]);?>">正常</a>
+                                                <!--<i class="ace-icon fa fa-check bigger-120"></i>-->
+                                            <?php else: ?>
+                                                <a href="<?php echo U('changeStatus',['id'=>$v['user_id'],'status'=>$v['status']]);?>">禁用</a>
+                                                <!--<i class="ace-icon fa fa-cross bigger-120"></i>--><?php endif; ?>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="tooltip-success" data-rel="tooltip" title="View">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-eye bigger-120"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">用户信息</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="name"></p>
+                            <p class="email"></p>
+                            <p class="nc"></p>
+                            <p class="regist"></p>
+                            <p class="ip"></p>
+                            <p class="login"></p>
+                            <p class="status"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </tbody>
+        </table>
+    </div><!-- /.span -->
+</div><!-- /.row -->
+<script>
+    $(function(){
+        $('.view').click(function(){
+            var id = $(this).next().val();
+            var url = "<?php echo U('view');?>";
+            $.post(url,{id:id},
+                    function(data){
+                        $('.name').text('用户名：'+data.data.user_name);
+                        $('.email').text('邮箱：'+data.data.user_email);
+                        $('.nc').text('昵称：'+data.data.user_nc);
+                        $('.regist').text('注册时间：'+data.data.regist_time);
+                        $('.ip').text('登录IP：'+data.data.login_ip);
+                        $('.login').text('登录时间：'+data.data.login_time);
+                        $('.status').text('状态：'+data.data.status);
+                    });
+            $('#myModal').modal({});
+        })
+    })
+</script>
 		</div>
 	</div>
 	</div><!-- /.main-content -->
