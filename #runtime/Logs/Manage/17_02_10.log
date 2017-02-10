@@ -803,3 +803,150 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2017-02-10T11:15:57+08:00 ] 127.0.0.1 /Manage/User/userList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_user`  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 439 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 439 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 489 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 489 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-10T11:16:00+08:00 ] 127.0.0.1 /Manage/User/userList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_user`  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 439 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 439 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 489 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 489 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-10T11:16:02+08:00 ] 127.0.0.1 /Manage/User/userList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_user`  [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 439 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 439 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 489 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 489 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 679 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 686 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 710 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

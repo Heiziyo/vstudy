@@ -424,11 +424,11 @@
 								<span class="menu-text">我的课程</span>
 							</a>
 						</li>
-						<li>
-							<a href="<?php echo U('Course/courseType');?>">
-								<span class="menu-text">课程分类</span>
-							</a>
-						</li>
+						<!--<li>-->
+							<!--<a href="<?php echo U('Course/courseType');?>">-->
+								<!--<span class="menu-text">课程分类</span>-->
+							<!--</a>-->
+						<!--</li>-->
 						<li>
 							<a href="<?php echo U('Course/myVideo');?>">
 								<span class="menu-text">我的视频</span>

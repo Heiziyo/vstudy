@@ -576,7 +576,7 @@
             <ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
         </TD>
         <TD width=100% align=left valign=top>
-            <IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=600px SRC="<?php echo U('courseType');?>"></IFRAME>
+            <IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=600px SRC="<?php echo U('course');?>"></IFRAME>
         </TD>
     </TR>
 </TABLE>
