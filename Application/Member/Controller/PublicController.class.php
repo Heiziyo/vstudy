@@ -65,28 +65,6 @@ class PublicController extends LoginController{
         $this->display();
     }
 
-    public function log(){
-        $mobile = parent::isMobile(); //实例化该方法
-        if($mobile=="true"){
-            $login_machine='mobile';
-        }else{
-            $login_machine='web';
-        }
-        if(isset($_SESSION['uid'])){
-            $model=M('user_opreate');
-            $login_ip='27.18.95.175';
-            $login_time=date('Y-m-d H:i:s');
-            $taobaoIP = 'http://ip.taobao.com/service/getIpInfo.php?ip='.$login_ip;
-            $IPinfo = json_decode(file_get_contents($taobaoIP));
-            $province = $IPinfo->data->region;
-            $city = $IPinfo->data->city;
-            $address = $province.$city;
-            $data=array('user_id'=>$_SESSION['uid'],'login_ip'=>$login_ip,'login_time'=>$login_time,'login_address'=>$address,'login_machine'=>$login_machine);
-            $model->add($data);
-        }
-    }
-
-
     // 退出
     public function logout()
     {
