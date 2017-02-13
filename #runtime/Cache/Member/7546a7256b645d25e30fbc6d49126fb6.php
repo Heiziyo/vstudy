@@ -477,9 +477,54 @@
 			<!-- /Page Header -->
 			<!-- Page Body -->
 			<div class="page-body">
-				<div class="row">
+				<div class="page-body">
 
 
+    <div class="setting-right-wrap wrap-boxes settings">
+
+        <div class="page-settings">
+            <div class="common-title">
+                操作记录<span class="title-tips">通过查看操作类型、登录时间、登录地点和设备可以判断账号是否正常</span>
+                <a href="javascript:void(0)" class="pull-right js-update-psw">不是我登录的？</a>
+            </div>
+            <div class="line"></div>
+            <div class="setting ">
+                <div class="contentBox">
+                    <table class="oplog-list">
+                        <tbody><tr>
+                            <th>类型</th>
+                            <th>登录时间</th>
+                            <th>城市</th>
+                            <th>IP</th>
+                            <th>登录设备</th>
+                        </tr>
+                        <tr>
+                            <td>修改个人信息</td>
+                            <td>2017.02.06 09:36</td>
+                            <td>武汉</td>
+                            <td>59.174.169.247</td>
+                            <td>web</td>
+                        </tr>
+                        <tr>
+                            <td>账号登录</td>
+                            <td>2017.02.05 13:57</td>
+                            <td>武汉</td>
+                            <td>27.18.24.238</td>
+                            <td>web</td>
+                        </tr>
+                        <tr>
+                            <td>账号登录</td>
+                            <td>2017.01.03 21:49</td>
+                            <td>上海</td>
+                            <td>180.153.159.59</td>
+                            <td>web</td>
+                        </tr>
+                        </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 </div>

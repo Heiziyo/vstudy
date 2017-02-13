@@ -15,6 +15,9 @@
                         <th>
                                 课程难易度
                         </th>
+                        <th>
+                                操作
+                        </th>
                 </tr>
                 </thead>
 
@@ -33,13 +36,14 @@
                                 <td>
                                         {$mc.course_difficulty}
                                 </td>
+                                <td>
+                                        <a href="{:U('deleteMyCourse',['pc_id'=>$mc['pc_id']])}">删除</a>
+                                </td>
                         </tr>
                         </volist>
                         </tbody>
 
         </table>
-
-
-
-
+        <br>
+        <a href="{:U('addMyCourse')}" class="btn btn-primary btn-lg">添加课程</a>
 </div>

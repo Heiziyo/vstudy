@@ -494,6 +494,9 @@
                         <th>
                                 课程难易度
                         </th>
+                        <th>
+                                操作
+                        </th>
                 </tr>
                 </thead>
 
@@ -511,14 +514,15 @@
                                 <td>
                                         <?php echo ($mc["course_difficulty"]); ?>
                                 </td>
+                                <td>
+                                        <a href="<?php echo U('deleteMyCourse',['pc_id'=>$mc['pc_id']]);?>">删除</a>
+                                </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody>
 
         </table>
-
-
-
-
+        <br>
+        <a href="<?php echo U('addMyCourse');?>" class="btn btn-primary btn-lg">添加课程</a>
 </div>
 			</div>
 			<!-- /Page Body -->

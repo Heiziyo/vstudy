@@ -489,6 +489,15 @@
                 <th>
                     视频名称
                 </th>
+                <th>
+                    课程名称
+                </th>
+                <th>
+                    课程章节
+                </th>
+                <th>
+                    操作
+                </th>
             </tr>
             </thead>
 
@@ -500,12 +509,25 @@
                     <td>
                         <a href="<?php echo ($mv["v_url"]); ?>"><?php echo ($mv["v_name"]); ?></a>
                     </td>
+                    <td>
+                        <?php echo ($mv["course_name"]); ?>
+                    </td>
+                    <td>
+                        <?php echo ($mv["cp_name"]); ?>
+                    </td>
+                    <td>
+                        <a href="<?php echo U('deleteMyVideo',['pv_id'=>$mv['pv_id']]);?>">删除</a>
+                    </td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>
 
         </table>
 
     </div>
+
+    <br>
+    <!-- Button trigger modal -->
+    <a href="" class="btn btn-primary btn-lg">添加视频</a>
 </div>
 			</div>
 			<!-- /Page Body -->

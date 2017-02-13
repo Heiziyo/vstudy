@@ -477,12 +477,84 @@
 			<!-- /Page Header -->
 			<!-- Page Body -->
 			<div class="page-body">
-				<div class="row">
-
-
-
-
-</div>
+				<style>
+    th,td{
+        padding-bottom:10px;
+    }
+    th{
+        padding-left:200px;
+        padding-right:20px;
+    }
+</style>
+<h1 style="display:inline;color:lightskyblue;">添加课程</h1>
+&nbsp;<i class="ace-icon fa fa-angle-double-right"></i>&nbsp;
+<span style="font-size:15px">包含课程章节</span><br>
+<hr>
+<form method="post" action="<?php echo U('addMyCourse');?>" enctype="multipart/form-data">
+    <table style="margin-left:100px">
+        <tr class="tr">
+            <th>课程名称</th>
+            <td style="width:500px"><input type="text" name="course_name" class="form-control" placeholder="课程名称"></td>
+        </tr>
+        <tr class="tr">
+            <th>课程分类</th>
+            <td><select name="course_type" class="form-control type">
+                <option value="">请选择课程分类</option>
+                <?php if(is_array($type)): $i = 0; $__LIST__ = $type;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["c_id"]); ?>"><?php echo ($v["c_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+            </select></td>
+        </tr>
+        <tr class="tr">
+            <th>课程方向</th>
+            <td><select name="course_forword" class="form-control">
+                <option class="forword" value="">请选择课程方向</option>
+            </select></td>
+        </tr>
+        <tr class="tr">
+            <th>难度级别</th>
+            <td><select name="course_difficulty" class="form-control">
+                <option value="">请选择难度级别</option>
+                <option value="1">入门</option>
+                <option value="2">中等难度</option>
+                <option value="3">高级进阶</option>
+            </select></td>
+        </tr>
+        <tr class="tr">
+            <th>课程时长</th>
+            <td style="width:500px"><input type="text" name="course_time" class="form-control" placeholder="课程时长"></td>
+        </tr>
+        <tr class="tr">
+            <th>综合评分</th>
+            <td style="width:500px"><input type="text" name="course_score" class="form-control" placeholder="综合评分"></td>
+        </tr>
+        <tr class="tr">
+            <th>章节名称</th>
+            <td style="width:500px"><input type="text" name="course_chapter" class="form-control" placeholder="章节名称"></td>
+        </tr>
+        <tr class="tr">
+            <th>课程简介</th>
+            <td><textarea name="course_desc" cols="30" rows="10" class="form-control"></textarea></td>
+        </tr>
+        <tr class="tr">
+            <th>课程封面</th>
+            <td style="width:500px"><input type="file" name="course_thumbnail" class="form-control"></td>
+        </tr>
+        <tr class="tr">
+            <th></th>
+            <td><input type="submit" value="submit" class="btn btn-default"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    $(".type").bind("change",function(){
+        var cid = $('.type').val();
+        var url = "<?php echo U('getCourseForword');?>";
+        $.get(url,{cid:cid},
+            function(data){
+                $('.forword').nextAll().remove();
+                $('.forword').after(data.data);
+            })
+    })
+</script>
 			</div>
 			<!-- /Page Body -->
 		</div>

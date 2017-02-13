@@ -10,6 +10,15 @@
                 <th>
                     视频名称
                 </th>
+                <th>
+                    课程名称
+                </th>
+                <th>
+                    课程章节
+                </th>
+                <th>
+                    操作
+                </th>
             </tr>
             </thead>
 
@@ -22,6 +31,15 @@
                     <td>
                         <a href="{$mv.v_url}">{$mv.v_name}</a>
                     </td>
+                    <td>
+                        {$mv.course_name}
+                    </td>
+                    <td>
+                        {$mv.cp_name}
+                    </td>
+                    <td>
+                        <a href="{:U('deleteMyVideo',['pv_id'=>$mv['pv_id']])}">删除</a>
+                    </td>
                 </tr>
                 </volist>
                 </tbody>
@@ -29,4 +47,8 @@
         </table>
 
     </div>
+
+    <br>
+    <!-- Button trigger modal -->
+    <a href="" class="btn btn-primary btn-lg">添加视频</a>
 </div>

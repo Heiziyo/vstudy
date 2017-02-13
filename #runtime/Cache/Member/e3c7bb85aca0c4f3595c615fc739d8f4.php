@@ -477,12 +477,102 @@
 			<!-- /Page Header -->
 			<!-- Page Body -->
 			<div class="page-body">
-				<div class="row">
+				<div class="page-body">
 
+    <div class="formBox">
+        <div class="common-title">个人信息</div>
 
+    </div>
+    <form action="" method="post">
+    <div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name" for="nick">昵称：</label>
+            <div class="rlf-group">
+                <input type="text" name="user_nc" id="nick" autocomplete="off" data-validate="require-nick" class="moco-form-control" placeholder="请输入昵称.">
+                <p class="rlf-tip-wrap errorHint color-red"></p>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name" for="job">职位：</label>
+            <div class="rlf-group">
+                <select class="moco-form-control rlf-select" name="user_job" hidefocus="true" id="job" data-validate="require-select">
+                    <option value="">请选择职位</option>
+                    <option value="13">学生</option>
+                    <option value="1">页面重构设计</option>
+                    <option value="6" selected="selected">Web前端工程师</option>
+                    <option value="5">JS工程师</option>
+                    <option value="8">PHP开发工程师</option>
+                    <option value="11">JAVA开发工程师</option>
+                    <option value="7">移动开发工程师</option>
+                    <option value="9">软件测试工程师</option>
+                    <option value="10">Linux系统工程师</option>
+                    <option value="2">交互设计师</option>
+                    <option value="3">产品经理</option>
+                    <option value="15">数据库工程师</option>
+                    <option value="4">UI设计师</option>
+                    <option value="16">全栈工程师</option>
+                </select>
+                <p class="rlf-tip-wrap errorHint color-red"></p>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name">城市：</label>
+            <div class="rlf-group profile-address">
+                <div class="info">
+                    <select id="s_province" name="s_province"  class="moco-form-control"></select>  
+                    <select id="s_city" name="s_city"   class="moco-form-control"></select>  
+                    <select id="s_county" name="s_county"  class="moco-form-control"></select>
+                    <div id="show"></div>
+                </div>
+                <div class="cb"></div>
+                <p class="rlf-tip-wrap errorHint color-red"></p>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name h16 lh16">性别：</label>
+            <div class="rlf-group rlf-radio-group">
+                <label class="lh16"><input type="radio" hidefocus="true" value="0" name="sex">保密</label>
+                <label class="lh16"><input type="radio" hidefocus="true" value="1" name="sex" checked="checked">男</label>
+                <label class="lh16"><input type="radio" hidefocus="true" value="2" name="sex">女</label>
+                <p class="rlf-tip-wrap errorHint color-red"></p>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name" for="aboutme">个性签名：</label>
+            <div class="rlf-group">
+                <div class="pr">
+                    <textarea name="user_sign" id="aboutme" rows="5" class="noresize js-sign moco-form-control"></textarea>
+                    <p class="numCanInput js-numCanInput ">还可以输入128个字符</p>
+                </div>
+            </div>
+        </div>
+        <div class="wlfg-wrap clearfix">
+            <label class="label-name" ></label>
+            <div class="rlf-group">
+                <input type="submit" class="btn btn-blue" value="保　存">
+            </div>
+        </div>
+        </div>
+        </form>
+    </div>
+<script type="text/javascript">_init_area();</script>
 
+<script>
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        (function(){
+            window.scrollReveal = new scrollReveal({reset: true});
+        })();
+    };
 
-</div>
+    var Gid  = document.getElementById ;
+    var showArea = function(){
+        Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" +
+                Gid('s_city').value + " - 县/区" +
+                Gid('s_county').value + "</h3>"
+    }
+    //Gid('s_county').setAttribute('onchange','showArea()');
+
+</script>
 			</div>
 			<!-- /Page Body -->
 		</div>
