@@ -477,58 +477,109 @@
 			<!-- /Page Header -->
 			<!-- Page Body -->
 			<div class="page-body">
-				
-<div class="row">
+				<div class="page-body">
+    <div class="common_title">
+        账号绑定
+        <span class="title-tips">完成<b class="color-red">3/4</b></span>
+        <a href="/about/faq" class="pull-right" target="_blank"><i class="icon-ques-revert"></i>常见问题</a>
+    </div>
+    <div class="setting">
+        <div class="contentBox">
+            <div class="bingd">
+                <div class="itemBox">
+                    <div class="left"><i class="fa fa-envelope-o"></i></div>
+                    <div class="center">
+                        <p><span class="font1">邮箱</span>
+				                            <span class="font3">
+				                            1213222@qq.com
+				                                <input class="hide" id="jsMail" value="1213287572@qq.com">已绑定 ，但</span> <span class="font4">未验证
+				                            </span>
+                        </p>
+                        <p class="font2">可用邮箱找回密码</p>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:;" class="change js-change moco-btn moco-btn-normal mr12" changetype="email" id="email" >更改</a>
+                        <a href="javascript:;" class="verify js-verify moco-btn moco-btn-normal">立即验证</a>
+                    </div>
+                </div>
+                <div class="itemBox">
+                    <div class="left"><i class="fa fa-mobile"></i></div>
+                    <div class="center">
+                        <p> <span class="font1">手机</span> <span class="font4" id="jsPhone">未绑定（绑定手机可得1积分）</span></p>
+                        <p class="font2">可用手机号加密码登录慕课网，可通过手机号找回密码</p>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:void(0);" class="binding moco-btn moco-btn-normal js-bindphone">立即绑定</a>
+                    </div>
+                </div>
 
-        <table class="table table-hover table-striped table-bordered">
-            <thead class="bordered-blueberry">
-            <tr>
-                <th>
-                    编号
-                </th>
-                <th>
-                    视频名称
-                </th>
-                <th>
-                    课程名称
-                </th>
-                <th>
-                    课程章节
-                </th>
-                <th>
-                    操作
-                </th>
-            </tr>
-            </thead>
+                <div class="itemBox">
+                    <div class="left">	<i class=" fa fa-key"></i></div>
+                    <div class="center">
+                        <p> <span class="font1">密码</span> 已设置</p>
+                        <p class="font2">用于保护账号信息和登录安全</p>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:void(0);" class="moco-btn moco-btn-normal js-changePWD" id="pwd">修改</a>
+                    </div>
+                </div>
 
-                <tbody>
-                <?php if(is_array($myVideo)): $i = 0; $__LIST__ = $myVideo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mv): $mod = ($i % 2 );++$i;?><tr>
-                    <td>
-                        <?php echo ($mv["pv_id"]); ?>
-                    </td>
-                    <td>
-                        <a href="<?php echo ($mv["v_url"]); ?>"><?php echo ($mv["v_name"]); ?></a>
-                    </td>
-                    <td>
-                        <?php echo ($mv["course_name"]); ?>
-                    </td>
-                    <td>
-                        <?php echo ($mv["cp_name"]); ?>
-                    </td>
-                    <td>
-                        <a href="<?php echo U('deleteMyVideo',['pv_id'=>$mv['pv_id']]);?>">删除</a>
-                    </td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                </tbody>
+                <div class="itemBox bb0 h380">
+                    <div class="left">	<i class="fa fa-comments-o"></i></div>
+                    <div class="center">
+                        <p class="font1">社交帐号</p>
+                        <p class="font2">绑定第三方帐号，可以直接登录，还可以将内容同步到以下平台，与更多好友分享</p>
+                        <div class="accountBox">
+                            <div class="inner-i-box">
+                                <i class="fa fa-weixin fa-4x"></i>
+                                <p class="mr87 bind-name">微信</p>
+                                <p class="mr87 red">未绑定</p>
+                                <a href="" aria-role="button" hidefocus="true" class="moco-btn-normal rlf-btn-green btn js-bind mr87">添加绑定</a>
+                            </div>
+                            <div class="inner-i-box">
+                                <i class="fa fa-weibo fa-4x"></i>
+                                <p class="mr87 bind-name">微博</p>
+                                <p class="mr87 red">未绑定</p>
+                                <a href="" aria-role="button" hidefocus="true" class="moco-btn-normal rlf-btn-green btn js-bind mr87">添加绑定</a>
 
-        </table>
+                            </div>
+                            <div class="inner-i-box">
+                                <i class="fa fa-qq fa-4x"></i>
+                                <p class="mr87 bind-name">QQ</p>
+                                <p class="mr87 bind-status">已绑定 </p>
+                                <a data-unbind="qq" class="moco-btn-normal rlf-btn-green btn" href="javascript:void(0)">解除绑定</a>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">	</div>
+                    <div class="cb"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <br>
-    <!-- Button trigger modal -->
-    <a href="<?php echo U('addMyVideo');?>" class="btn btn-primary btn-lg">添加视频</a>
 </div>
+<script>
+    $('#email').on('click', function(){
+        layer.open({
+            title: '修改邮箱',
+            type: 1,
+            area: ['488px', '200px'],
+            shadeClose: true, //点击遮罩关闭
+            content: '\<\div style="padding:20px;"><form action="" method="post">新邮箱地址：<input type="text" name="user_email"><br /><input type="submit" value="提交"></form>\<\/div>'
+        });
+    });
+    $('#pwd').on('click', function(){
+        layer.open({
+            title: '修改密码',
+            type: 1,
+            area: ['488px', '200px'],
+            shadeClose: true, //点击遮罩关闭
+            content: '\<\div style="padding:20px;"><form action="" method="post">新密码：<input type="password" name="user_pwd"><br />确认新密码：<input type="password" name="rpassword"><br /><input type="submit" value="提交"></form>\<\/div>'
+        });
+    });
+</script>
 			</div>
 			<!-- /Page Body -->
 		</div>

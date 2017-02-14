@@ -9,12 +9,14 @@ class UserController extends Controller {
         }
     }
 
+    /*用户列表*/
     public function userList(){
         $user = M('user') -> select();
         $this -> assign('user',$user);
         $this -> display();
     }
 
+    /*更改用户状态*/
     public function changeStatus(){
         $uid = I('get.id');
         $status = I('get.status');
@@ -31,6 +33,7 @@ class UserController extends Controller {
         }
     }
 
+    /*用户预览*/
     public function view(){
         if(IS_AJAX){
             $uid = I('post.id');

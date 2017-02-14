@@ -99,7 +99,9 @@ class VideoController extends BaseController {
     public function getCourseForword(){
         $mod = M("Class_type");
         $pid = I('get.pid');
-        $courseforword = $mod->where("c_pid = ".$pid )->select();
+        if($pid != 0){
+            $courseforword = $mod->where("c_pid = ".$pid )->select();
+        }
         die(json_encode( $courseforword));
     }
     //获取课程
@@ -195,7 +197,7 @@ class VideoController extends BaseController {
         die('{"jsonrpc" : "2.0", "result" : "'.C('VIDEOS_PATH').$filePath.'", "id" : "id"}');
     }
     //视频上传
-    public function upChapter(){
+    /*public function upChapter(){
         header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
         header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
         header("Cache-Control: no-store, no-cache, must-revalidate");
@@ -265,7 +267,7 @@ class VideoController extends BaseController {
         }else{
             die('{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to upload"}, "id" : "id"}');
         }
-    }
+    }*/
     //视频封面
     public function upCover(){
         // Make sure file is not cached (as it happens for example on iOS devices)
