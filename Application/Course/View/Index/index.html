@@ -123,19 +123,21 @@
 
 				<if condition="!empty($course_list)">
 					<volist name="course_list" id="vo">
-						<div class="content1">
-							<a href="{:U('courseChapter',array('cvdid'=>$vo['course_id']))}">
-								<img src="{$vo.course_thumbnail}"/>
-								<div class="text1">
-									<h3>{$vo.course_name}</h3>
-									<p>{$vo.course_desc|mb_substr=0,40,'utf-8'}</p>
-								</div>
-								<h3 class="bottom_text">
-									<span class="box-left">{$vo.course duration}</span>
-									<span class=" box-right">{$vo.course duration}</span>
-								</h3>
-							</a>
-						</div>
+						<if condition="$vo['status'] eq show">
+							<div class="content1">
+								<a href="{:U('courseChapter',array('cvdid'=>$vo['course_id']))}">
+									<img src="{$vo.course_thumbnail}"/>
+									<div class="text1">
+										<h3>{$vo.course_name}</h3>
+										<p>{$vo.course_desc|mb_substr=0,40,'utf-8'}</p>
+									</div>
+									<h3 class="bottom_text">
+										<span class="box-left">{$vo.course duration}</span>
+										<span class=" box-right">{$vo.course duration}</span>
+									</h3>
+								</a>
+							</div>
+						</if>
 					</volist>
 				<else />
 

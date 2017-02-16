@@ -4,7 +4,7 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
 
-        if(session('?manager_name')){
+        if(session('?manager_id')){
             $this->display();
         }else{
             $this->display('login');
@@ -21,7 +21,7 @@ class IndexController extends Controller {
         $n = $user -> where($where) -> find();
         if($n){
             if(md5($login['pwd']) == $n['manager_pwd']){
-                session('manager_name',$login['name']);
+                session('manager_id',$n['manager_id']);
                 $this -> success('登录成功！','index');
             }else{
                 $this -> error('密码错误！');

@@ -1,0 +1,33 @@
+<style>
+    th,td{
+        padding-bottom:20px;
+    }
+</style>
+<table>
+<form action="{:U('updateCategory')}" method="post">
+    <input type="hidden" name="c_id" value="{$forword.c_id}"><br><br>
+    <tr>
+        <th>所属分类：</th>
+        <td>
+            <select name="c_pid">
+                <option value="{$forword.c_pid}">{$forword.c_pname}</option>
+                <volist name="cate" id="v">
+                    <option value="{$v.c_id}">{$v.c_name}</option>
+                </volist>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th>课程方向名称：</th>
+        <td><input type="text" name="c_name" value="{$forword.c_name}"></td>
+    </tr>
+    <tr>
+        <th>别称：</th>
+        <td><input type="text" name="catdir" value="{$forword.catdir}"></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><input class="btn btn-default" type="submit" value="提交"></td>
+    </tr>
+</form>
+</table>

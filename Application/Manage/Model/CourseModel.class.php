@@ -9,8 +9,13 @@ namespace Manage\Model;
 use Think\Model;
 
 
-class VideoModel extends Model{
-    protected $tableName = 'course';
+class CourseModel extends Model{
+    protected $arr = array(
+        '1' => '入门',
+        '2' => '中等难度',
+        '3' => '高级进阶',
+    );
+
     protected $_validate = array(
         array('course_name','require','课程名称必须！'), //默认情况下用正则进行验证
     );
@@ -37,5 +42,12 @@ class VideoModel extends Model{
             return false;
         }
         return true;
+    }
+
+    //预览课程
+    public function view($cid){
+        $list = $this -> find($cid);
+        $list['course_difficulty'] = $this -> arr[$list['course_difficulty']];
+        return $list;
     }
 }

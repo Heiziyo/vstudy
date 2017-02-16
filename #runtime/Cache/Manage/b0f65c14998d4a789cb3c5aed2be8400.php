@@ -509,6 +509,38 @@
 				</li>
 			</ul>
 			</li>
+
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
+			<a href="#" class="dropdown-toggle">
+				<i class="menu-icon fa fa-file"></i>
+				<span class="menu-text">分类管理</span>
+
+				<b class="arrow fa fa-angle-down"></b>
+			</a>
+
+			<b class="arrow"></b>
+
+			<ul class="submenu">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/categoryList');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					分类列表
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+				<?php
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/addCategory');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					添加分类
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+			</ul>
+			</li>
 		</ul><!-- /.nav-list -->
 
 		<!-- #section:basics/sidebar.layout.minimize -->
@@ -641,7 +673,37 @@
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
 			</div><!-- /.ace-settings-container -->
-		
+		<style>
+    th,td{
+        padding-bottom:20px;
+    }
+</style>
+<table>
+<form action="<?php echo U('updateCategory');?>" method="post">
+    <input type="hidden" name="c_id" value="<?php echo ($forword["c_id"]); ?>"><br><br>
+    <tr>
+        <th>所属分类：</th>
+        <td>
+            <select name="c_pid">
+                <option value="<?php echo ($forword["c_pid"]); ?>"><?php echo ($forword["c_pname"]); ?></option>
+                <?php if(is_array($cate)): $i = 0; $__LIST__ = $cate;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["c_id"]); ?>"><?php echo ($v["c_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th>课程方向名称：</th>
+        <td><input type="text" name="c_name" value="<?php echo ($forword["c_name"]); ?>"></td>
+    </tr>
+    <tr>
+        <th>别称：</th>
+        <td><input type="text" name="catdir" value="<?php echo ($forword["catdir"]); ?>"></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><input class="btn btn-default" type="submit" value="提交"></td>
+    </tr>
+</form>
+</table>
 		</div>
 	</div>
 	</div><!-- /.main-content -->

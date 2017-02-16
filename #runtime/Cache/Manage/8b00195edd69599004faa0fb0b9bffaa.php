@@ -436,35 +436,6 @@
 			<b class="arrow"></b>
 
 			<ul class="submenu">
-				<li  <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
-				<a href="#" class="dropdown-toggle">
-					<i class="menu-icon fa fa-caret-right"></i>
-					视频相关设置
-					<b class="arrow fa fa-angle-down"></b>
-				</a>
-
-				<b class="arrow"></b>
-
-				<ul class="submenu">
-					<li <?php if(ACTION_NAME == 'videoType'): ?>class="active"<?php endif; ?> >
-					<a href="<?php echo U('Video/videoType');?>">
-						<i class="menu-icon fa fa-caret-right"></i>
-						视频分类
-					</a>
-
-					<b class="arrow"></b>
-					</li>
-					<li <?php if(ACTION_NAME == 'addChapter'): ?>class="active"<?php endif; ?>>
-					<a href="<?php echo U('Video/addChapter');?>">
-						<i class="menu-icon fa fa-caret-right"></i>
-						添加课程
-					</a>
-
-					<b class="arrow"></b>
-					</li>
-				</ul>
-				</li>
-
 				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
 				<a href="<?php echo U('Video/videoList');?>">
 					<i class="menu-icon fa fa-caret-right"></i>
@@ -488,6 +459,38 @@
 
 			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
 			<a href="#" class="dropdown-toggle">
+				<i class="menu-icon fa fa-calendar-o"></i>
+				<span class="menu-text">课程管理</span>
+
+				<b class="arrow fa fa-angle-down"></b>
+			</a>
+
+			<b class="arrow"></b>
+
+			<ul class="submenu">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Course/courseList');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					课程列表
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+				<?php
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Course/addChapter');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					添加课程
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+			</ul>
+			</li>
+
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
+			<a href="#" class="dropdown-toggle">
 				<i class="menu-icon fa fa-user"></i>
 				<span class="menu-text">会员管理</span>
 
@@ -500,6 +503,38 @@
 				<a href="<?php echo U('User/userList');?>">
 					<i class="menu-icon fa fa-caret-right"></i>
 					会员列表
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+			</ul>
+			</li>
+
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
+			<a href="#" class="dropdown-toggle">
+				<i class="menu-icon fa fa-file"></i>
+				<span class="menu-text">分类管理</span>
+
+				<b class="arrow fa fa-angle-down"></b>
+			</a>
+
+			<b class="arrow"></b>
+
+			<ul class="submenu">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/categoryList');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					分类列表
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+				<?php
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/addCategory');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					添加分类
 				</a>
 
 				<b class="arrow"></b>
@@ -649,390 +684,81 @@
 						<span class="lbl"></span>
 					</label>
 				</th>
-				<th>Domain</th>
-				<th>Price</th>
-				<th class="hidden-480">Clicks</th>
-
-				<th>
-					<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-					Update
-				</th>
-				<th class="hidden-480">Status</th>
-
+				<th>视频名称</th>
+				<th>讲师</th>
+				<th>课程名称</th>
+				<th>章节名称</th>
+				<th>状态</th>
 				<th></th>
 			</tr>
 			</thead>
 
 			<tbody>
-			<tr>
-				<td class="center">
-					<label class="position-relative">
-						<input type="checkbox" class="ace" />
-						<span class="lbl"></span>
-					</label>
-				</td>
+			<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+					<td class="center">
+						<label class="position-relative">
+							<input type="checkbox" class="ace" />
+							<span class="lbl"></span>
+						</label>
+					</td>
 
-				<td>
-					<a href="#">ace.com</a>
-				</td>
-				<td>$45</td>
-				<td class="hidden-480">3,330</td>
-				<td>Feb 12</td>
-
-				<td class="hidden-480">
-					<span class="label label-sm label-warning">Expiring</span>
-				</td>
-
-				<td>
-					<div class="hidden-sm hidden-xs btn-group">
-						<button class="btn btn-xs btn-success">
-							<i class="ace-icon fa fa-check bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-info">
-							<i class="ace-icon fa fa-pencil bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-danger">
-							<i class="ace-icon fa fa-trash-o bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-warning">
-							<i class="ace-icon fa fa-flag bigger-120"></i>
-						</button>
-					</div>
-
-					<div class="hidden-md hidden-lg">
-						<div class="inline position-relative">
-							<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-								<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-							</button>
-
-							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-								<li>
-									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																			<span class="blue">
-																				<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																			<span class="green">
-																				<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																			<span class="red">
-																				<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-							</ul>
+					<td>
+						<a href="<?php echo ($v["v_url"]); ?>"><?php echo ($v["v_name"]); ?></a>
+					</td>
+					<td><?php echo ($v["user_name"]); ?></td>
+					<td><?php echo ($v["course_name"]); ?></td>
+					<td><?php echo ($v["cp_name"]); ?></td>
+					<td class="hidden-480">
+						<?php if($v["status"] == show): ?><span class="label label-sm label-success arrowed-in"><?php echo ($v["status"]); ?></span>
+							<?php else: ?>
+							<span class="label label-sm label-danger arrowed-in"><?php echo ($v["status"]); ?></span><?php endif; ?>
+					</td>
+					<td>
+						<div class="hidden-sm hidden-xs btn-group">
+							<!--<button class="btn btn-xs btn-success">-->
+							<?php if($v["status"] == hide): ?><a href="<?php echo U('changeStatus',['id'=>$v['v_id']]);?>">显示</a>
+								<!--<i class="ace-icon fa fa-check bigger-120"></i>-->
+								<?php else: ?>
+								<a href="<?php echo U('changeStatus',['id'=>$v['v_id']]);?>">隐藏</a>
+								<!--<i class="ace-icon fa fa-cross bigger-120"></i>--><?php endif; ?>
+							<!--</button>-->
+							<!--<button class="btn btn-xs btn-info">-->
+							<!--<i class="ace-icon fa fa-eye bigger-120"></i>-->
+							<!--</button>-->
 						</div>
-					</div>
-				</td>
-			</tr>
 
-			<tr>
-				<td class="center">
-					<label class="position-relative">
-						<input type="checkbox" class="ace" />
-						<span class="lbl"></span>
-					</label>
-				</td>
+						<div class="hidden-md hidden-lg">
+							<div class="inline position-relative">
+								<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+									<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+								</button>
 
-				<td>
-					<a href="#">base.com</a>
-				</td>
-				<td>$35</td>
-				<td class="hidden-480">2,595</td>
-				<td>Feb 18</td>
+								<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+									<li>
+										<a href="#" class="tooltip-info" data-rel="tooltip" title="Check">
+                                        <span class="blue">
+                                            <?php if($v["status"] == hide): ?><a href="<?php echo U('changeStatus',['id'=>$v['v_id']]);?>">显示</a>
+												<!--<i class="ace-icon fa fa-check bigger-120"></i>-->
+												<?php else: ?>
+												<a href="<?php echo U('changeStatus',['id'=>$v['v_id']]);?>">隐藏</a>
+												<!--<i class="ace-icon fa fa-cross bigger-120"></i>--><?php endif; ?>
+                                        </span>
+										</a>
+									</li>
 
-				<td class="hidden-480">
-					<span class="label label-sm label-success">Registered</span>
-				</td>
-
-				<td>
-					<div class="hidden-sm hidden-xs btn-group">
-						<button class="btn btn-xs btn-success">
-							<i class="ace-icon fa fa-check bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-info">
-							<i class="ace-icon fa fa-pencil bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-danger">
-							<i class="ace-icon fa fa-trash-o bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-warning">
-							<i class="ace-icon fa fa-flag bigger-120"></i>
-						</button>
-					</div>
-
-					<div class="hidden-md hidden-lg">
-						<div class="inline position-relative">
-							<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-								<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-							</button>
-
-							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-								<li>
-									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																			<span class="blue">
-																				<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																			<span class="green">
-																				<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																			<span class="red">
-																				<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-							</ul>
+									<li>
+										<a href="#" class="tooltip-success" data-rel="tooltip" title="View">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-eye bigger-120"></i>
+                                        </span>
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
+					</td>
+				</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
-			<tr>
-				<td class="center">
-					<label class="position-relative">
-						<input type="checkbox" class="ace" />
-						<span class="lbl"></span>
-					</label>
-				</td>
-
-				<td>
-					<a href="#">max.com</a>
-				</td>
-				<td>$60</td>
-				<td class="hidden-480">4,400</td>
-				<td>Mar 11</td>
-
-				<td class="hidden-480">
-					<span class="label label-sm label-warning">Expiring</span>
-				</td>
-
-				<td>
-					<div class="hidden-sm hidden-xs btn-group">
-						<button class="btn btn-xs btn-success">
-							<i class="ace-icon fa fa-check bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-info">
-							<i class="ace-icon fa fa-pencil bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-danger">
-							<i class="ace-icon fa fa-trash-o bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-warning">
-							<i class="ace-icon fa fa-flag bigger-120"></i>
-						</button>
-					</div>
-
-					<div class="hidden-md hidden-lg">
-						<div class="inline position-relative">
-							<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-								<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-							</button>
-
-							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-								<li>
-									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																			<span class="blue">
-																				<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																			<span class="green">
-																				<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																			<span class="red">
-																				<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</td>
-			</tr>
-
-			<tr>
-				<td class="center">
-					<label class="position-relative">
-						<input type="checkbox" class="ace" />
-						<span class="lbl"></span>
-					</label>
-				</td>
-
-				<td>
-					<a href="#">best.com</a>
-				</td>
-				<td>$75</td>
-				<td class="hidden-480">6,500</td>
-				<td>Apr 03</td>
-
-				<td class="hidden-480">
-					<span class="label label-sm label-inverse arrowed-in">Flagged</span>
-				</td>
-
-				<td>
-					<div class="hidden-sm hidden-xs btn-group">
-						<button class="btn btn-xs btn-success">
-							<i class="ace-icon fa fa-check bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-info">
-							<i class="ace-icon fa fa-pencil bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-danger">
-							<i class="ace-icon fa fa-trash-o bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-warning">
-							<i class="ace-icon fa fa-flag bigger-120"></i>
-						</button>
-					</div>
-
-					<div class="hidden-md hidden-lg">
-						<div class="inline position-relative">
-							<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-								<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-							</button>
-
-							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-								<li>
-									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																			<span class="blue">
-																				<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																			<span class="green">
-																				<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																			<span class="red">
-																				<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</td>
-			</tr>
-
-			<tr>
-				<td class="center">
-					<label class="position-relative">
-						<input type="checkbox" class="ace" />
-						<span class="lbl"></span>
-					</label>
-				</td>
-
-				<td>
-					<a href="#">pro.com</a>
-				</td>
-				<td>$55</td>
-				<td class="hidden-480">4,250</td>
-				<td>Jan 21</td>
-
-				<td class="hidden-480">
-					<span class="label label-sm label-success">Registered</span>
-				</td>
-
-				<td>
-					<div class="hidden-sm hidden-xs btn-group">
-						<button class="btn btn-xs btn-success">
-							<i class="ace-icon fa fa-check bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-info">
-							<i class="ace-icon fa fa-pencil bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-danger">
-							<i class="ace-icon fa fa-trash-o bigger-120"></i>
-						</button>
-
-						<button class="btn btn-xs btn-warning">
-							<i class="ace-icon fa fa-flag bigger-120"></i>
-						</button>
-					</div>
-
-					<div class="hidden-md hidden-lg">
-						<div class="inline position-relative">
-							<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-								<i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-							</button>
-
-							<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-								<li>
-									<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																			<span class="blue">
-																				<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																			<span class="green">
-																				<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																			<span class="red">
-																				<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																			</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</td>
-			</tr>
 			</tbody>
 		</table>
 	</div><!-- /.span -->

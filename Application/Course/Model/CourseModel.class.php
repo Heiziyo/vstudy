@@ -14,7 +14,7 @@ class CourseModel extends Model{
 
     public function getChapter($chapterid){
         $model = M('video');
-        $info = $model->where('v_coursechapter = '.$chapterid)->select();
+        $info = $model->where(['v_coursechapter'=>$chapterid,'status'=>'show'])->select();
         return $info;
     }
 

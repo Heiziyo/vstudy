@@ -641,7 +641,312 @@
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
 			</div><!-- /.ace-settings-container -->
-		
+		<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/plupload/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="/Public/layer/layer.js"></script>
+<style>
+	li{list-style-type: none;}
+	.red{color: red;}
+	.add-course-container{
+
+	}
+	.add-course-list{
+		border-top: 1px solid #ccc;
+		margin-top: 20px;
+		padding-top: 10px;
+		padding-left: 0;
+	}
+	.course-li{
+		margin-bottom: 10px;
+		float: left;
+		margin-right: 20px;
+		margin-left: 10px;
+	}
+	#course-add{
+		margin-left: 20px;
+	}
+	.course-del:hover{
+		color: red;
+	}
+	@media screen and (max-width: 768px) {
+		#course-add{margin-left: 0;}
+		#input-course{margin-left: 0!important;}
+	}
+
+	.uploader-poster-box{
+		position: relative;
+		margin-bottom: 30px;
+	}
+	.uploader-poster{
+		z-index: 999;
+		cursor: pointer;
+		text-indent: 14px;
+		font-size: 14px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border: none;
+		width: 140px;
+		margin-left: 14px;
+		background-color: rgba(0,0,0,.6);
+		color: #fff;
+	}
+
+	.uploader-input-box{
+		position: absolute;
+		width: 170px;
+		height: 40px;
+		left: 50%;
+		margin-left: -85px;
+		background: none;
+	}
+	.uploader-input{
+		border: 0;
+		overflow: hidden;
+		display: block;
+		outline:none;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		cursor: pointer;
+	}
+	#poster-title {
+		display: block;
+		margin: 0 auto;
+		width: 260px;
+		padding-top: 60px;
+		font-size: 14px;
+		text-align: center;
+	}
+	#progressbar2{
+		width: 620px;
+		margin: 0 auto;
+	}
+	.form-actions{
+		border-top: none;
+		background: none;
+	}
+	.poster-fadeback{
+		text-align: center;
+	}
+</style>
+<div class="page-content-area">
+	<div class="page-header">
+		<h1>
+			添加课程
+			<small>
+				<i class="ace-icon fa fa-angle-double-right"></i>
+				包含课程章节
+			</small>
+		</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- PAGE CONTENT BEGINS -->
+			<form class="form-horizontal" role="form" method="post" action="">
+				<!-- #section:elements.form -->
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 课程名称 </label>
+					<div class="col-sm-9">
+						<input type="text" id="form-field-1" placeholder="课程名称" class="col-xs-10 col-sm-5" name="course_name"  />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right" for="form-field-1">课程分类</label>
+					<div class="col-sm-9">
+						<select class="col-sm-3 col-xs-12" id="select-type" name="course_type">
+							<option value="0">请选择课程分类</option>
+							<?php if(is_array($coursetype)): $i = 0; $__LIST__ = $coursetype;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["c_id"]); ?>" ><?php echo ($vo["c_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right" for="form-field-1">课程方向</label>
+					<div class="col-sm-9">
+						<select class="col-sm-3 col-xs-12" id="select-fx" name="course_forword">
+							<option value="0">请选择方向</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> 难度级别 </label>
+					<div class="col-sm-3">
+						<select class="form-control" id="form-field-select-1" name="course_difficulty">
+							<option value="0">请选择难度级别</option>
+							<option value="1">入门</option>
+							<option value="2">中等难度</option>
+							<option value="3">高级进阶</option>
+						</select>
+					</div>
+				</div>
+				<!-- /section:elements.form -->
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 课程时长 </label>
+					<div class="col-sm-9">
+						<input type="text" id="form-field-2" placeholder="课程时长" class="col-xs-10 col-sm-5" name="course_time" value="" />
+						<span class="help-inline col-xs-12 col-sm-7">
+							<span class="middle">按照分钟计算</span>
+						</span>
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> 综合评分 </label>
+					<div class="col-sm-9">
+						<input type="text" id="form-field-1" placeholder="综合评分" class="col-xs-10 col-sm-5" name="course_score" />
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group add-course-container">
+					<label class="col-sm-3 control-label no-padding-right" for="form-field-tags">章节名称</label>
+					<div >
+						<div class="pos-rel" >
+							<input class="typeahead scrollable col-sm-3 col-xs-12 col-xs-offset-0" style="margin-left:12px;" id="input-course" type="text" placeholder="请输入章节名称" name="course_chapter[]" />
+						</div>
+					</div>
+					<button type="button" class="btn btn-default col-sm-2 col-xs-offset-0 col-xs-12" id="course-add">添加</button>
+					<span class="course-tips col-sm-2 col-xs-12"  style=" height:37px; line-height: 37px; margin-left: 20px; display: block;"></span>
+					<div class="add-course-list  col-sm-8 col-sm-offset-3 col-xs-12 ">
+					</div>
+				</div>
+				<div class="space-4"></div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> 课程简介 </label>
+					<div class="col-sm-9">
+						<textarea name="course_desc" cols="100" rows="10"></textarea>
+					</div>
+				</div>
+
+
+				<div id="test">
+					<div class="video-uploader-upload-background"></div>
+					<div class="uploader-poster-box">
+						<div class="form-group">
+							<label for="name"  class="col-sm-2 col-sm-offset-1" style="text-align: right;padding-right: 0;" >章节封面</label>
+							<div class="edit-input col-sm-8  col-xs-12" style="position: relative">
+								<img id="poster-img" class="video-poster" src="http://p1.pstatp.com/large/9777/4010962160" width="140" height="92">
+								<button type="button" id="uploader-poster" class="new-btn modify-poster uploader-poster" ga="2章节封面-纯视频">上传章节封面</button>
+							</div>
+						</div>
+						<div class="uploader-input-box"><input type="file" class="uploader-input" id="uploader-input" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"></div>
+						<h3 class="header blue lighter smaller center-block " >
+							<span id="poster-title" ></span>
+						</h3>
+						<div id="progressbar2" class="ui-progressbar ui-widget ui-widget-content ui-corner-all progress progress-striped active " role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+							<div class="ui-progressbar-value ui-widget-header ui-corner-left progress-bar progress-bar-success" id="progress-width2" style="width: 0%;"></div>
+						</div>
+						<div class="poster-fadeback"> </div>
+					</div>
+				</div>
+
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<button class="btn btn-info" type="submit">
+							<i class="ace-icon fa fa-check bigger-110"></i>
+							保存
+						</button>
+						<input type="hidden" name="course_thumbnail" id="course_thumbnail" value="">
+						&nbsp; &nbsp; &nbsp;
+						<button class="btn" type="reset">
+							<i class="ace-icon fa fa-undo bigger-110"></i>
+							重置
+						</button>
+					</div>
+				</div>
+			</form>
+			<!-- PAGE CONTENT ENDS -->
+		</div><!-- /.col -->
+	</div><!-- /.row -->
+</div><!-- /.page-content-area -->
+<script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+
+
+<script>
+	$(function () {
+		$("#course-add").on("click",function(){
+			var addCourse=$("#input-course").val();
+			if(addCourse==""){
+				$(".course-tips").text("请先输入！").addClass("red")
+			}
+			else{
+				var vv=$("<input class='ss' type='text' name='course_chapter[] '><i class='glyphicon glyphicon-remove course-del'></i>");
+				vv.val(addCourse);
+				var hh=$("<li class='course-li'></li>");
+				$(hh).append(vv);
+				$(".add-course-list").append(hh);
+				$(".course-tips").text("");
+			};
+		});
+
+		$(".add-course-list").on("click",".course-del", function() {
+			$(this).parents(".course-li").remove().stop().remove();
+		});
+		})
+</script>
+
+
+<!----------------获取下拉列表值------------------------>
+<script>
+	$(function () {
+		$("#select-type").change(function () {
+			var pid = $(this).val();
+			$("#select-fx").children().remove()
+			$.get('getCourseForword',{pid:pid},function (data) {
+				$.each(data,function (index,info) {
+					$("#select-fx").append("<option value='"+ info.c_id +"'>"+ info.c_name + "</option>");
+				})
+			},"json");
+		});
+	})
+</script>
+<script>
+	//	上传封面
+	var uploader_poster= new plupload.Uploader({
+		runtimes : 'html5,flash,silverlight',
+		browse_button : ['uploader-poster'], //触发文件选择对话框的按钮，为那个元素id
+		url : '<?php echo U("upChapter");?>', //服务器端的上传页面地址
+		filters : {
+			max_file_size : '100m',
+			mime_types: [
+				{title : "Images files", extensions : "jpg,gif,png"}
+			]
+		},
+		multi_selection:false,
+		init: {
+			FilesAdded: function(up, files) { //文件上传前
+				uploader_poster.start();//启动
+				console.log("图片上传启动");
+				plupload.each(files, function(file) {
+					$("#uploader-poster").hide();
+					$("#poster-title").append(file.name);
+				});
+				return false;
+			},
+
+			//上传过程中进度条显示
+			UploadProgress: function(up, file) {
+				$("#progress-width2").css("width",file.percent +"%")
+			},
+			//上传成功回调
+			FileUploaded: function (up, file, info) {
+				var data = JSON.parse(info.response)
+				if(info.status == 200)
+				{
+					$(".poster-fadeback").text("文件上传成功!").addClass("green");
+					$('#poster-img').attr('src',data.result)
+					$('#course_thumbnail').val(data.result)
+				}
+			},
+			//上传失败回调
+			Error: function(event, queueID, fileObj) {
+				$(".poster-fadeback").text("文件上传失败!").addClass("red");
+			},
+		}
+	});
+	uploader_poster.init();
+</script>
+
 		</div>
 	</div>
 	</div><!-- /.main-content -->

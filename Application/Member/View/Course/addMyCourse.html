@@ -52,6 +52,11 @@
         <tr class="tr">
             <th>章节名称</th>
             <td style="width:500px"><input type="text" name="course_chapter" class="form-control" placeholder="章节名称"></td>
+            <td><span style="cursor:pointer;" class="form-control add">添加</span></td>
+        </tr>
+        <tr class="tr">
+            <th></th>
+            <td class="ch"></td>
         </tr>
         <tr class="tr">
             <th>课程简介</th>
@@ -76,5 +81,14 @@
                 $('.forword').nextAll().remove();
                 $('.forword').after(data.data);
             })
+    })
+
+    $('.add').click(function(){
+        var ch = $("input[name='course_chapter']").val();
+        if(ch != ''){
+            $('.ch').append(ch+',');
+        }
+        var cc = $('.tr .ch').html();
+        $("input[name='course_chapter']").val(cc);
     })
 </script>

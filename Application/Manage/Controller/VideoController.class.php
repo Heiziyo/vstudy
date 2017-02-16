@@ -12,14 +12,13 @@ use Common\Controller\BaseController;
 
 class VideoController extends BaseController {
     public function _initialize(){
-        if(!session('?manager_name')){
+        if(!session('?manager_id')){
             $this->display('Index/login');
             die();
         }
     }
 
     public function videoType(){
-
 
         $this->display();
     }
@@ -52,12 +51,63 @@ class VideoController extends BaseController {
         return $child;
     }
 
+    //视频列表
     public function videoList(){
-
-        $this->display();
+        $v = M('video');
+        $data=$v->alias('v')
+            ->field('v_id,v_name,user_name,course_name,cp_name,v_url,v.status')
+            ->join('vs_course as c on c.course_id=v.v_coursename')
+            ->join('vs_course_chapter as cc on cc.cp_id=v.v_coursechapter')
+            ->join('vs_user as u on u.user_id=v.u_id')
+            ->select();
+        $this -> assign('data',$data);
+        $this -> display();
     }
+
+    //修改视频状态
+    public function changeStatus(){
+        $v = M('video');
+        $vid = I('get.id');
+        $video = $v -> find($vid);
+        if($video['status'] == 'show'){
+            $data['status'] = 'hide';
+            if($v -> where(['v_id'=>$vid]) -> save($data)){
+                $uid = $video['u_id'];
+                if(M('user_video') -> where(['user_id'=>$uid,'v_id'=>$vid]) -> delete()){
+                    $this -> success('修改状态成功！',U('videoList'));
+                }else{
+                    $this -> error('用户视频删除失败！',U('videoList'));
+                }
+            }else{
+                $this -> error('修改状态失败！',U('videoList'));
+            }
+        }else{
+            $data['status'] = 'show';
+            if($v -> where(['v_id'=>$vid]) -> save($data)){
+                $uc['user_id'] = $video['u_id'];
+                $uc['v_id'] = $vid;
+                if(M('user_video') -> add($uc)){
+                    $this -> success('修改状态成功！',U('videoList'));
+                }else{
+                    $this -> error('用户视频添加失败！',U('videoList'));
+                }
+            }else{
+                $this -> error('修改状态失败！',U('videoList'));
+            }
+        }
+    }
+
+    //获取课程
+    public function getCourse(){
+        $mod = M("Course");
+        $course = $mod->select();
+        return $course;
+    }
+
     public function addVideo(){
         if (IS_POST){
+            $_POST['u_id'] = session('manager_id');
+            $_POST['status'] = 'show';
             $data = I("post.");
             if (M('video')->add($data)){
                 $this->success("添加成功");
@@ -69,58 +119,7 @@ class VideoController extends BaseController {
             $this->display();
         }
     }
-    //添加课程和章节
-    public function addChapter(){
-        $vModel = D("Video");
-        if (IS_POST){
-           $data = I('post.');
-           if ($vModel->create()){
-                if ($vModel->addCouser($data)){
-                    $this->success("添加成功！");
-                }else{
-                    $this->error("添加出错！");
-                }
-           }else{
-               $this->error($vModel->getError());
-           }
-        }else{
-            $this->assign("coursetype",$this->getCourseType());
-            $this->display();
-        }
-    }
-    //获取课程类型
-    public function getCourseType(){
-        $mod = M("Class_type");
-        $course = $mod->where("c_pid = 0" )->select();
-        return $course;
-    }
 
-    //获取课程方向
-    public function getCourseForword(){
-        $mod = M("Class_type");
-        $pid = I('get.pid');
-        if($pid != 0){
-            $courseforword = $mod->where("c_pid = ".$pid )->select();
-        }
-        die(json_encode( $courseforword));
-    }
-    //获取课程
-    public function getCourse(){
-        $mod = M("Course");
-        $course = $mod->select();
-        return $course;
-    }
-    //获取子分类
-    public function getCourseChapter(){
-        $mod = M("Course_chapter");
-        $pid = I("get.pid");
-        $vchapter = M('Course')->where("course_id = ".$pid)->find();
-        //章节
-        $cid = rtrim($vchapter['course_chapter'],",");
-        $vchapter= M('Course_chapter')->where("cp_id in (".$cid.")")->order("cp_id asc")->select();
-        echo json_encode($vchapter);
-
-    }
     //视频上传
     public function upVideo(){
         header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
@@ -196,78 +195,7 @@ class VideoController extends BaseController {
         }
         die('{"jsonrpc" : "2.0", "result" : "'.C('VIDEOS_PATH').$filePath.'", "id" : "id"}');
     }
-    //视频上传
-    /*public function upChapter(){
-        header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-        header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
-        header("Cache-Control: no-store, no-cache, must-revalidate");
-        header("Cache-Control: post-check=0, pre-check=0", false);
-        header("Pragma: no-cache");
-        @set_time_limit(5 * 60);
-        $targetDir = "chaptCover/".date("Ymd",time());
-        $cleanupTargetDir = true;
-        $maxFileAge = 5 * 3600;
-        if (!is_dir($targetDir)) {
-            @mkdir($targetDir,0777,true);
-        }
-        if (isset($_REQUEST["name"])) {
-            $fileName = $_REQUEST["name"];
-        } elseif (!empty($_FILES)) {
-            $fileName = $_FILES["file"]["name"];
-        } else {
-            $fileName = uniqid("file_");
-        }
 
-        $filePath = $targetDir . DIRECTORY_SEPARATOR . $fileName;
-        $chunk = isset($_REQUEST["chunk"]) ? intval($_REQUEST["chunk"]) : 0;
-        $chunks = isset($_REQUEST["chunks"]) ? intval($_REQUEST["chunks"]) : 0;
-        if ($cleanupTargetDir) {
-            if (!is_dir($targetDir) || !$dir = opendir($targetDir)) {
-                die('{"jsonrpc" : "2.0", "error" : {"code": 100, "message": "Failed to open temp directory."}, "id" : "id"}');
-            }
-            while (($file = readdir($dir)) !== false) {
-                $tmpfilePath = $targetDir . DIRECTORY_SEPARATOR . $file;
-                if ($tmpfilePath == "{$filePath}.part") {
-                    continue;
-                }
-                if (preg_match('/\.part$/', $file) && (filemtime($tmpfilePath) < time() - $maxFileAge)) {
-                    @unlink($tmpfilePath);
-                }
-            }
-            closedir($dir);
-        }
-        if (!$out = @fopen("{$filePath}.part", $chunks ? "ab" : "wb")) {
-            die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');
-        }
-        if (!empty($_FILES)) {
-            if ($_FILES["file"]["error"] || !is_uploaded_file($_FILES["file"]["tmp_name"])) {
-                die('{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to move uploaded file."}, "id" : "id"}');
-            }
-            if (!$in = @fopen($_FILES["file"]["tmp_name"], "rb")) {
-                die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
-            }
-        } else {
-            if (!$in = @fopen("php://input", "rb")) {
-                die('{"jsonrpc" : "2.0", "error" : {"code": 101, "message": "Failed to open input stream."}, "id" : "id"}');
-            }
-        }
-        while ($buff = fread($in, 4096)) {
-            fwrite($out, $buff);
-        }
-        @fclose($out);
-        @fclose($in);
-        if (!$chunks || $chunk == $chunks - 1) {
-            rename("{$filePath}.part", $filePath);
-        }
-        $path =$filePath;
-        if (isset($path)){
-            if (oss_upload($path)){
-                die('{"jsonrpc" : "2.0", "result" : "'.C('VIDEOS_PATH').$filePath.'", "id" : "id"}');
-            }
-        }else{
-            die('{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to upload"}, "id" : "id"}');
-        }
-    }*/
     //视频封面
     public function upCover(){
         // Make sure file is not cached (as it happens for example on iOS devices)

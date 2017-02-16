@@ -509,6 +509,38 @@
 				</li>
 			</ul>
 			</li>
+
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
+			<a href="#" class="dropdown-toggle">
+				<i class="menu-icon fa fa-file"></i>
+				<span class="menu-text">分类管理</span>
+
+				<b class="arrow fa fa-angle-down"></b>
+			</a>
+
+			<b class="arrow"></b>
+
+			<ul class="submenu">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/categoryList');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					分类列表
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+				<?php
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/addCategory');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					添加分类
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+			</ul>
+			</li>
 		</ul><!-- /.nav-list -->
 
 		<!-- #section:basics/sidebar.layout.minimize -->
@@ -641,7 +673,145 @@
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
 			</div><!-- /.ace-settings-container -->
-		
+		<div class="row">
+  <div class="col-xs-12">
+    <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+      <thead>
+      <tr>
+        <th class="center">
+          <label class="position-relative">
+            <input type="checkbox" class="ace" />
+            <span class="lbl"></span>
+          </label>
+        </th>
+        <th>编号</th>
+        <th style="width:800px;">课程分类</th>
+        <th style="width:200px;"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <?php if(is_array($category)): $i = 0; $__LIST__ = $category;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+          <td class="center">
+            <label class="position-relative">
+              <input type="checkbox" class="ace" />
+              <span class="lbl"></span>
+            </label>
+          </td>
+
+          <td><?php echo ($v["c_id"]); ?></td>
+          <td><?php echo str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',$v['list']-1); echo ($v["c_name"]); ?></td>
+          <td>
+            <div class="hidden-sm hidden-xs btn-group">
+              <?php if($v['c_pid'] == 0): ?><span style="cursor:pointer;color:deepskyblue;" class="add">添加课程方向</span>/
+                <input type="hidden" value="<?php echo ($v["c_id"]); ?>">
+                <input type="hidden" value="<?php echo ($v["c_name"]); ?>"><?php endif; ?>
+              <span style="cursor:pointer;color:deepskyblue;" class="del">删除</span>/
+              <input type="hidden" value="<?php echo ($v["c_id"]); ?>">
+              <a style="color:deepskyblue;text-decoration:none;" href="<?php echo U('updateCategory',['c_id'=>$v['c_id']]);?>">修改</a>
+
+            </div>
+
+            <div class="hidden-md hidden-lg">
+              <div class="inline position-relative">
+                <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                  <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                </button>
+
+                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                  <li>
+                    <a href="#" class="tooltip-info" data-rel="tooltip" title="Check">
+                      <span class="blue">
+                        <?php if($v['c_pid'] == 0): ?><span style="cursor:pointer;color:deepskyblue;" class="add">添加课程方向</span>/
+                          <input type="hidden" value="<?php echo ($v["c_id"]); ?>">
+                          <input type="hidden" value="<?php echo ($v["c_name"]); ?>"><?php endif; ?>
+                        <span style="cursor:pointer;color:deepskyblue;" class="del">删除</span>/
+                        <input type="hidden" value="<?php echo ($v["c_id"]); ?>">
+                        <a style="color:deepskyblue;text-decoration:none;" href="<?php echo U('updateCategory',['c_id'=>$v['c_id']]);?>">修改</a>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="tooltip-success" data-rel="tooltip" title="View">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-eye bigger-120"></i>
+                                        </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </td>
+        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
+      <!-- addModal -->
+      <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="addModalLabel">添加课程方向</h4>
+            </div>
+            <form action="<?php echo U('addForword');?>" method="post">
+              <div class="modal-body">
+                课程分类：<span class="cate"></span><br><br>
+                <input type="hidden" name="c_pid">
+                课程方向：<input type="text" name="c_name"><br><br>
+                别称：<input type="text" name="catdir">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- delModal -->
+      <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="delModalLabel">删除课程分类或方向</h4>
+            </div>
+            <form action="<?php echo U('delCategory');?>" method="post">
+              <div class="modal-body">
+                您确定要删除吗？
+                <input type="hidden" name="c_id">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                <input type="submit" class="btn btn-primary" value="确定">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      </tbody>
+    </table>
+  </div><!-- /.span -->
+</div><!-- /.row -->
+<script>
+  $(function(){
+    $('.add').click(function(){
+      var id = $(this).next().val();
+      var name = $(this).next().next().val();
+      $(".cate").text(name);
+      $("input[name='c_pid']").val(id);
+      $('#addModal').modal({});
+    })
+
+    $('.del').click(function(){
+      var id = $(this).next().val();
+      $("input[name='c_id']").val(id);
+      $('#delModal').modal({});
+    })
+  })
+</script>
 		</div>
 	</div>
 	</div><!-- /.main-content -->

@@ -40,10 +40,20 @@ class  CourseController extends BaseController{
 			$c = D('course');
 			$p = $this -> upload($_FILES['course_thumbnail']);
 			$_POST['course_thumbnail'] = $p;
-			$chapter['cp_name'] = $_POST['course_chapter'];
-			$chapter['course_id'] = 0;
-			$chapter['cp_thumbnail'] = '';
-			$_POST['course_chapter'] = $this -> addMyChapter($chapter);
+			$d = trim($_POST['course_chapter'],',');
+			$chapter = explode(',',$d);
+			foreach ($chapter as $k=>$v) {
+				$chapter[$k] = ['cp_name'=>$v];
+			}
+			$ch = $this -> addMyChapter($chapter,$d);
+			$_POST['course_chapter'] = '';
+			foreach ($ch as $v) {
+				foreach ($v as $item) {
+					$_POST['course_chapter'] .= $item.',';
+				}
+			}
+			$_POST['status'] = 'hide';
+			$_POST['u_id'] = $_SESSION['uid'];
 			if(($data = $c -> create(I('post.')))){
 				if($c -> add($data)){
 					$this -> success('添加课程成功！','myCourse');
@@ -61,13 +71,12 @@ class  CourseController extends BaseController{
 	}
 
 	//添加章节
-	public function addMyChapter($chapter){
+	public function addMyChapter($chapter,$d){
 		$cc = M('course_chapter');
-		if(($data = $cc -> create($chapter))){
-			if($cc -> add($data)){
-				$ch = $cc -> where(['cp_name'=>$chapter['cp_name']]) -> field('cp_id') -> find();
-				return $ch['cp_id'];
-			}
+		$where['cp_name'] = ['in',$d];
+		if($cc -> addAll($chapter)){
+			$ch = $cc -> where($where) -> field('cp_id') -> select();
+			return $ch;
 		}
 	}
 
@@ -149,6 +158,8 @@ class  CourseController extends BaseController{
 	public function addMyVideo(){
 		if (IS_POST){
 			$data = I("post.");
+			$_POST['status'] = 'hide';
+			$_POST['u_id'] = $_SESSION['uid'];
 			if (M('video')->add($data)){
 				$this->success("添加成功");
 			}else{
@@ -361,6 +372,15 @@ class  CourseController extends BaseController{
 		oss_upload($path);
 		// Return Success JSON-RPC response
 		die('{"jsonrpc" : "2.0", "result" : "'.$filePath.'", "id" : "id"}');
-
 	}
+
+    //删除视频
+    public function deleteMyVideo(){
+        $c = M('user_video');
+        if($c->delete(I('get.pv_id'))){
+            $this -> success('删除视频成功！',U('myVideo'));
+        }else{
+            $this -> error('删除视频失败！',U('myVideo'));
+        }
+    }
 }

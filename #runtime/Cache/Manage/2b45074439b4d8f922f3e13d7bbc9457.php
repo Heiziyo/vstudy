@@ -509,6 +509,38 @@
 				</li>
 			</ul>
 			</li>
+
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
+			<a href="#" class="dropdown-toggle">
+				<i class="menu-icon fa fa-calendar-o"></i>
+				<span class="menu-text">分类管理</span>
+
+				<b class="arrow fa fa-angle-down"></b>
+			</a>
+
+			<b class="arrow"></b>
+
+			<ul class="submenu">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/categoryList');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					分类列表
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+				<?php
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/addCategory');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					添加分类
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+			</ul>
+			</li>
 		</ul><!-- /.nav-list -->
 
 		<!-- #section:basics/sidebar.layout.minimize -->
@@ -641,7 +673,152 @@
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
 			</div><!-- /.ace-settings-container -->
-		
+		<div class="row">
+    <div class="col-xs-12">
+        <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th class="center">
+                    <label class="position-relative">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl"></span>
+                    </label>
+                </th>
+                <th>课程名称</th>
+                <th>讲师</th>
+                <th>课程分类</th>
+                <th>课程方向</th>
+                <th>课程简介</th>
+                <th>状态</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+                    <td class="center">
+                        <label class="position-relative">
+                            <input type="checkbox" class="ace" />
+                            <span class="lbl"></span>
+                        </label>
+                    </td>
+
+                    <td>
+                        <a href="<?php echo U('chapterList',['course_chapter'=>$v['course_chapter'],'course_name'=>$v['course_name'],'course_id'=>$v['course_id']]);?>"><?php echo ($v["course_name"]); ?></a>
+                    </td>
+                    <td><?php echo ($v["u_id"]); ?></td>
+                    <td><?php echo ($v["course_type"]); ?></td>
+                    <td><?php echo ($v["course_forword"]); ?></td>
+                    <td><?php echo (mb_substr($v["course_desc"],0,15,'utf-8')); ?></td>
+                    <td class="hidden-480">
+                        <?php if($v["status"] == show): ?><span class="label label-sm label-success arrowed-in"><?php echo ($v["status"]); ?></span>
+                            <?php else: ?>
+                            <span class="label label-sm label-danger arrowed-in"><?php echo ($v["status"]); ?></span><?php endif; ?>
+                    </td>
+                    <td>
+                        <div class="hidden-sm hidden-xs btn-group">
+                            <!--<button class="btn btn-xs btn-success">-->
+                            <?php if($v["status"] == hide): ?><a href="<?php echo U('changeStatus',['id'=>$v['course_id']]);?>">显示</a>
+                                <!--<i class="ace-icon fa fa-check bigger-120"></i>-->
+                                <?php else: ?>
+                                <a href="<?php echo U('changeStatus',['id'=>$v['course_id']]);?>">隐藏</a>
+                                <!--<i class="ace-icon fa fa-cross bigger-120"></i>--><?php endif; ?>
+                            <!--</button>-->
+
+                            /<span style="cursor:pointer;" class="view">预览</span>
+                            <input type="hidden" value="<?php echo ($v["course_id"]); ?>">
+                            <!--<button class="btn btn-xs btn-info">-->
+                            <!--<i class="ace-icon fa fa-eye bigger-120"></i>-->
+                            <!--</button>-->
+                        </div>
+
+                        <div class="hidden-md hidden-lg">
+                            <div class="inline position-relative">
+                                <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                    <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                </button>
+
+                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                    <li>
+                                        <a href="#" class="tooltip-info" data-rel="tooltip" title="Check">
+                                        <span class="blue">
+                                            <?php if($v["status"] == hide): ?><a href="<?php echo U('changeStatus',['id'=>$v['course_id']]);?>">显示</a>
+                                                <!--<i class="ace-icon fa fa-check bigger-120"></i>-->
+                                                <?php else: ?>
+                                                <a href="<?php echo U('changeStatus',['id'=>$v['course_id']]);?>">隐藏</a>
+                                                <!--<i class="ace-icon fa fa-cross bigger-120"></i>--><?php endif; ?>
+                                        </span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="View">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-eye bigger-120"></i>
+                                        </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">课程信息</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p><img src="" class="thumbnail"></p>
+                            <p class="name"></p>
+                            <p class="uid"></p>
+                            <p class="type"></p>
+                            <p class="forword"></p>
+                            <p class="difficulty"></p>
+                            <p class="time"></p>
+                            <p class="score"></p>
+                            <p class="chapter"></p>
+                            <p class="desc"></p>
+                            <p class="status"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </tbody>
+        </table>
+    </div><!-- /.span -->
+</div><!-- /.row -->
+<script>
+    $(function(){
+        $('.view').click(function(){
+            var id = $(this).next().val();
+            var url = "<?php echo U('view');?>";
+            $.post(url,{id:id},
+                    function(data){
+                        $(".thumbnail").attr('src',data.data.course_thumbnail);
+                        $('.name').text('课程：'+data.data.course_name);
+                        $('.uid').text('讲师：'+data.data.u_id);
+                        $('.type').text('课程分类：'+data.data.course_type);
+                        $('.forword').text('课程方向：'+data.data.course_forword);
+                        $('.difficulty').text('课程难度：'+data.data.course_difficulty);
+                        $('.time').text('课程时长：'+data.data.course_time);
+                        $('.score').text('课程分数：'+data.data.course_score);
+                        $('.chapter').text('课程章节：'+data.data.course_chapter);
+                        $('.desc').text('课程简介：'+data.data.course_desc);
+                        $('.status').text('状态：'+data.data.status);
+                    });
+            $('#myModal').modal({});
+        })
+    })
+</script>
 		</div>
 	</div>
 	</div><!-- /.main-content -->

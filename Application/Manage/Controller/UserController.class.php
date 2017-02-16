@@ -3,7 +3,7 @@ namespace Manage\Controller;
 use Think\Controller;
 class UserController extends Controller {
     public function _initialize(){
-        if(!session('?manager_name')){
+        if(!session('?manager_id')){
             $this->display('Index/login');
             die();
         }

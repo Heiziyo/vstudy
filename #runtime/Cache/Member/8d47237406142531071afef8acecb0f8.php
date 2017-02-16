@@ -740,21 +740,21 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="name" class="col-sm-2">课程名称</label>
+                        <label class="col-sm-2">课程名称</label>
                         <select class="col-sm-10 col-xs-12 course" id="select-type" name="v_coursename">
                             <option value="0">请选择课程</option>
                             <?php if(is_array($course)): $i = 0; $__LIST__ = $course;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["course_id"]); ?>" ><?php echo ($vo["course_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="name" class="col-sm-2">课程章节</label>
+                        <label class="col-sm-2">课程章节</label>
                         <select class="col-sm-10 col-xs-12" id="select-fx" name="v_coursechapter">
                             <option class="chapter" value="0">请选择章节</option>
                         </select>
                     </div>
                     <div class="space-4"></div>
                     <div class="form-group">
-                        <label for="name"  class="col-sm-2" >视频封面</label>
+                        <label class="col-sm-2" >视频封面</label>
                         <div class="edit-input col-sm-10 col-xs-12" id="poster-con">
                             <img class="video-poster" src="http://p1.pstatp.com/large/9777/4010962160">
                             <button type="button" class="new-btn modify-poster" ga="2视频封面-纯视频">设置视频封面</button>
@@ -787,7 +787,7 @@
     var uploader= new plupload.Uploader({
         runtimes : 'html5,flash,silverlight,html4',
         browse_button : ['select-v'], //触发文件选择对话框的按钮，为那个元素id
-        url : '<?php echo U("Manage/Video/upVideo");?>', //服务器端的上传页面地址
+        url : '<?php echo U("upVideo");?>', //服务器端的上传页面地址
         filters : {
             max_file_size : '1000G',
             mime_types: [
@@ -849,7 +849,6 @@
 //				$("#html5_1b4b3dte35rk1182mp6s5317p74_container").show();
             }
         });
-
     });
     uploader.init();
 </script>
@@ -860,7 +859,7 @@
     var uploader_poster= new plupload.Uploader({
         runtimes : 'html5,flash,silverlight',
         browse_button : ['uploader-poster'], //触发文件选择对话框的按钮，为那个元素id
-        url : '<?php echo U("Manage/Video/upCover");?>', //服务器端的上传页面地址
+        url : '<?php echo U("upCover");?>', //服务器端的上传页面地址
         filters : {
             max_file_size : '100m',
             mime_types: [

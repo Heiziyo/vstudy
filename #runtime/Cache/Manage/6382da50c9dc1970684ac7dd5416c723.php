@@ -509,6 +509,38 @@
 				</li>
 			</ul>
 			</li>
+
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
+			<a href="#" class="dropdown-toggle">
+				<i class="menu-icon fa fa-file"></i>
+				<span class="menu-text">分类管理</span>
+
+				<b class="arrow fa fa-angle-down"></b>
+			</a>
+
+			<b class="arrow"></b>
+
+			<ul class="submenu">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/categoryList');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					分类列表
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+				<?php
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/addCategory');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					添加分类
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+			</ul>
+			</li>
 		</ul><!-- /.nav-list -->
 
 		<!-- #section:basics/sidebar.layout.minimize -->
@@ -641,7 +673,42 @@
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
 			</div><!-- /.ace-settings-container -->
-		
+		<style>
+    th,td{
+        padding-bottom:10px;
+    }
+    th{
+        padding-left:200px;
+        padding-right:20px;
+    }
+</style>
+<h1 style="display:inline;color:lightskyblue;">添加课程分类</h1>
+&nbsp;<i class="ace-icon fa fa-angle-double-right"></i>&nbsp;
+<hr>
+<form method="post" action="<?php echo U('addCategory');?>">
+    <table style="margin-left:100px">
+        <tr class="tr">
+            <th>所属课程分类：</th>
+            <td><select name="c_pid" class="form-control type">
+                <option value="">请选择课程分类</option>
+                <option value="0">顶级分类</option>
+                <?php if(is_array($cate)): $i = 0; $__LIST__ = $cate;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><option value="<?php echo ($v["c_id"]); ?>"><?php echo ($v["c_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+            </select></td>
+        </tr>
+        <tr class="tr">
+            <th>课程分类名称：</th>
+            <td style="width:500px"><input type="text" name="c_name" class="form-control" placeholder="课程分类"></td>
+        </tr>
+        <tr class="tr">
+            <th>别称：</th>
+            <td style="width:500px"><input type="text" name="catdir" class="form-control" placeholder="别称"></td>
+        </tr>
+        <tr class="tr">
+            <th></th>
+            <td><input type="submit" value="submit" class="btn btn-default"></td>
+        </tr>
+    </table>
+</form>
 		</div>
 	</div>
 	</div><!-- /.main-content -->

@@ -641,7 +641,118 @@
 					</div><!-- /.pull-left -->
 				</div><!-- /.ace-settings-box -->
 			</div><!-- /.ace-settings-container -->
-		
+		<div class="row">
+    <div class="col-xs-12">
+        <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th class="center">
+                    <label class="position-relative">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl"></span>
+                    </label>
+                </th>
+                <th>章节名称</th>
+                <th>所属课程</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <?php if(is_array($chapter)): $i = 0; $__LIST__ = $chapter;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+                    <td class="center">
+                        <label class="position-relative">
+                            <input type="checkbox" class="ace" />
+                            <span class="lbl"></span>
+                        </label>
+                    </td>
+
+                    <td><?php echo ($v["cp_name"]); ?></td>
+                    <td><?php echo ($v["course_name"]); ?></td>
+                    <td>
+                        <div class="hidden-sm hidden-xs btn-group">
+                            <a href="<?php echo U('deleteChapter',['cp_id'=>$v['cp_id'],'cid'=>$cid]);?>">删除</a>/
+                            <span style="cursor:pointer;" class="update">修改</span>
+                            <input type="hidden" value="<?php echo ($v["cp_id"]); ?>">
+                            <input type="hidden" value="<?php echo ($v["cp_name"]); ?>">
+                        </div>
+
+                        <div class="hidden-md hidden-lg">
+                            <div class="inline position-relative">
+                                <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                    <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                </button>
+
+                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                    <li>
+                                        <a href="#" class="tooltip-info" data-rel="tooltip" title="Check">
+                                        <span class="blue">
+                                            <a href="<?php echo U('deleteChapter',['cp_id'=>$v['cp_id'],'cid'=>$cid]);?>">删除</a>/
+                                            <span style="cursor:pointer;" class="update">修改</span>
+                                            <input type="hidden" value="<?php echo ($v["cp_id"]); ?>">
+                                            <input type="hidden" value="<?php echo ($v["cp_name"]); ?>">
+                                        </span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="View">
+                                        <span class="green">
+                                            <i class="ace-icon fa fa-eye bigger-120"></i>
+                                        </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">修改章节</h4>
+                        </div>
+                        <form action="<?php echo U('updateChapter');?>" method="get">
+                            <div class="modal-body">
+                                <input type="hidden" name="cp_id">
+                                课程章节：<input type="text" name="cp_name" style="width:75%">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                <input type="submit" class="btn btn-primary" value="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            </tbody>
+        </table>
+        <form action="<?php echo U('addCChapter');?>" method="post">
+            <input type="hidden" name="cid" value="<?php echo ($cid); ?>">
+            章节名称：<input type="text" name="cp_name">
+            <input type="submit" class="btn btn-default" value="添加章节">
+        </form>
+    </div><!-- /.span -->
+</div><!-- /.row -->
+<script>
+    $(function(){
+        $('.update').click(function(){
+            var id = $(this).next().val();
+            var url = "<?php echo U('updateChapter');?>";
+            $.post(url,{id:id},
+                    function(data){
+                        $("input[name='cp_name']").val(data.data.cp_name);
+                        $("input[name='cp_id']").val(data.data.cp_id);
+                    });
+            $('#myModal').modal({});
+        })
+    })
+</script>
 		</div>
 	</div>
 	</div><!-- /.main-content -->

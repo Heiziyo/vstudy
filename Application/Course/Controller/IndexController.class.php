@@ -79,7 +79,6 @@ class IndexController extends Controller {
         $topca = M('Course_chapter')->where('cp_id = '.$info['v_coursechapter'])->find();
         $this->assign('topca',$topca);
         $this->assign('info',$info);
-        $this->assign('info',$info);
         $this->display();
     }
 }
