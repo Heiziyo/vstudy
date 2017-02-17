@@ -76,9 +76,7 @@
 									<?php if(is_array($vo)): $i = 0; $__LIST__ = $vo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vvo): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Course/Index/index',array('cid'=>$vvo['c_id']));?>"><?php echo ($vvo["c_name"]); ?></a>/<?php endforeach; endif; else: echo "" ;endif; ?>
 								</p>
 								<h1 class="fenlei">推荐</h1>
-								<p>课程 | 前端工程师必备的PS技能--切图</p>
-								<p>课程 | 拍摄与剪辑“怀孕日记”</p>
-								<p>课程 | PS入门（二）--进阶篇-图层、矢量、路径</p>
+								<?php if(is_array($arr)): $ke = 0; $__LIST__ = $arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($ke % 2 );++$ke; if($ke == $k): if(is_array($v)): $i = 0; $__LIST__ = array_slice($v,0,3,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vv): $mod = ($i % 2 );++$i;?><p>课程 | <a href="<?php echo U('Course/Index/courseChapter',['cvdid'=>$vv['course_id']]);?>"><?php echo ($vv["course_name"]); ?></a></p><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; else: echo "" ;endif; ?>
 							</div>
 						</div><?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -93,120 +91,40 @@
 		<div class="main clear">
 			<h3 class="main-title clearfix">
 				<span class="box-left">实战推荐</span>
-				<span class="box-right"><a href="">更多 ></a></span>
+				<span class="box-right"><a href="<?php echo U('Course/Index/index');?>">更多 ></a></span>
 			</h3>
 			<div class="clearfix">
-				<div class="content1">
-					<img src="/Public/images/pic.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3>贯穿全栈 React Native开发</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
+				<volist>
+					<div class="content1">
+						<img src="/Public/images/pic.jpg" style="width: 100%; height: 124px;"/>
+						<div class="text1">
+							<h3>贯穿全栈 React Native开发</h3>
+							<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
+						</div>
+						<h3 class="bottom_text">
+							<span class="box-left">￥: 368.00</span>
+							<span class=" box-right">255人在学</span>
+						</h3>
 					</div>
-					<h3 class="bottom_text">
-						<span class="box-left">￥: 368.00</span>
-						<span class=" box-right">255人在学</span>
-					</h3>
-				</div>
-				<div class="content1">
-					<img src="/Public/images/pic.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3>贯穿全栈 React Native开发</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
-					</div>
-					<h3 class="bottom_text">
-						<span class="box-left">￥: 368.00</span>
-						<span class=" box-right">255人在学</span>
-					</h3>
-				</div>
-				<div class="content1">
-					<img src="/Public/images/pic.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3>贯穿全栈 React Native开发</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
-					</div>
-					<h3 class="bottom_text">
-						<span class="box-left">￥: 368.00</span>
-						<span class=" box-right">255人在学</span>
-					</h3>
-				</div>
-				<div class="content1">
-					<img src="/Public/images/pic.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3>贯穿全栈 React Native开发</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
-					</div>
-					<h3 class="bottom_text">
-						<span class="box-left">￥: 368.00</span>
-						<span class=" box-right">255人在学</span>
-					</h3>
-				</div>
-				<div class="content1">
-					<img src="/Public/images/pic.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3>贯穿全栈 React Native开发</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
-					</div>
-					<h3 class="bottom_text">
-						<span class="box-left">￥: 368.00</span>
-						<span class=" box-right">255人在学</span>
-					</h3>
-				</div>
+				</volist>
 			</div>
 			<h3 class="main-title clearfix">
 				<span class="box-left">免费好课</span>
-				<span class="box-right"><a href="">更多 ></a></span>
+				<span class="box-right"><a href="<?php echo U('Course/Index/index');?>">更多 ></a></span>
 			</h3>
 			<div class="clearfix">
-				<div class="content1">
-					<img src="/Public/images/pic2.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3><span>初</span>JavaScript入门篇</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
+				<volist>
+					<div class="content1">
+						<img src="/Public/images/pic2.jpg" style="width: 100%; height: 124px;"/>
+						<div class="text1">
+							<h3><span>初</span>JavaScript入门篇</h3>
+							<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
+						</div>
+						<h3 class="bottom_text">
+							<span class="study">255123人在学</span>
+						</h3>
 					</div>
-					<h3 class="bottom_text">
-						<span class="study">255123人在学</span>
-					</h3>
-				</div>
-				<div class="content1">
-					<img src="/Public/images/pic2.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3><span>初</span>JavaScript入门篇</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
-					</div>
-					<h3 class="bottom_text">
-						<span class="study">255123人在学</span>
-					</h3>
-				</div>
-				<div class="content1">
-					<img src="/Public/images/pic2.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3><span>初</span>JavaScript入门篇</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
-					</div>
-					<h3 class="bottom_text">
-						<span class="study">255123人在学</span>
-					</h3>
-				</div>
-				<div class="content1">
-					<img src="/Public/images/pic2.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3><span>初</span>JavaScript入门篇</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
-					</div>
-					<h3 class="bottom_text">
-						<span class="study">255123人在学</span>
-					</h3>
-				</div>
-				<div class="content1">
-					<img src="/Public/images/pic2.jpg" style="width: 100%; height: 124px;"/>
-					<div class="text1">
-						<h3><span>初</span>JavaScript入门篇</h3>
-						<p>18小时纯干货讲解前沿技术React Native,以全栈角度学习前端到后端</p>
-					</div>
-					<h3 class="bottom_text">
-						<span class="study">255123人在学</span>
-					</h3>
-				</div>
+				</volist>
 			</div>
 			<br />
 		</div>

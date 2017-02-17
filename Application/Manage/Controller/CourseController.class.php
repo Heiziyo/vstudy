@@ -104,18 +104,6 @@ class CourseController extends BaseController
         die(json_encode( $courseforword));
     }
 
-    //获取子分类
-    public function getCourseChapter(){
-        $mod = M("Course_chapter");
-        $pid = I("get.pid");
-        $vchapter = M('Course')->where("course_id = ".$pid)->find();
-        //章节
-        $cid = rtrim($vchapter['course_chapter'],",");
-        $vchapter= M('Course_chapter')->where("cp_id in (".$cid.")")->order("cp_id asc")->select();
-        echo json_encode($vchapter);
-
-    }
-
     //修改课程状态
     public function changeStatus(){
         $c = M('course');

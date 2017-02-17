@@ -12,6 +12,14 @@ use Common\Controller\BaseController;
 
 class IndexController extends BaseController{
 
+    public function _initialize()
+    {
+        if (!session('?uid')) {
+            $this->display('Public/login');
+            die();
+        }
+    }
+
     public function getUserInfo(){
         $uid=$_SESSION['uid'];
         $nc=D('user')->where("user_id=$uid")->select();

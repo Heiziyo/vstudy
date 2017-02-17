@@ -12,6 +12,14 @@ use Common\Controller\BaseController;
 
 class  CourseController extends BaseController{
 
+	public function _initialize()
+	{
+		if (!session('?uid')) {
+			$this->display('Public/login');
+			die();
+		}
+	}
+
 
     public function index()
     {
@@ -157,9 +165,9 @@ class  CourseController extends BaseController{
 	//添加视频
 	public function addMyVideo(){
 		if (IS_POST){
-			$data = I("post.");
 			$_POST['status'] = 'hide';
 			$_POST['u_id'] = $_SESSION['uid'];
+			$data = I("post.");
 			if (M('video')->add($data)){
 				$this->success("添加成功");
 			}else{
@@ -177,7 +185,8 @@ class  CourseController extends BaseController{
 	public function getCourseChapter(){
 		if(IS_AJAX){
 			$cid = I('get.cid');
-			$chapter = M('course_chapter') -> where(['course_id'=>$cid]) -> select();
+			$course = M('course') ->find($cid);
+			$chapter = M('course_chapter') -> where(['cp_id'=>['in',$course['course_chapter']]]) -> select();
 			$this -> assign('chapter',$chapter);
 			$fw = $this -> fetch('chapterAjax');
 			if($fw){

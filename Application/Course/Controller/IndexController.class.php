@@ -41,7 +41,7 @@ class IndexController extends Controller {
         if (!empty($catid)){
             $where = "course_type = ".$catid;
         }
-        if (!empty($catid) && !empty($cid)){
+        if (!empty($cid)){
             $where = "course_forword = ".$cid;
         }
         $data = $mod->where($where)->select();

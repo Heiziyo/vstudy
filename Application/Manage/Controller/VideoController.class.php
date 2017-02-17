@@ -104,6 +104,18 @@ class VideoController extends BaseController {
         return $course;
     }
 
+    //获取子分类
+    public function getCourseChapter(){
+        $mod = M("Course_chapter");
+        $pid = I("get.pid");
+        $vchapter = M('Course')->where("course_id = ".$pid)->find();
+        //章节
+        $cid = rtrim($vchapter['course_chapter'],",");
+        $vchapter= M('Course_chapter')->where("cp_id in (".$cid.")")->order("cp_id asc")->select();
+        echo json_encode($vchapter);
+
+    }
+
     public function addVideo(){
         if (IS_POST){
             $_POST['u_id'] = session('manager_id');

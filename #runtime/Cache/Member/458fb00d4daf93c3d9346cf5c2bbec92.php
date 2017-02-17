@@ -41,7 +41,7 @@ Purchase: http://wrapbootstrap.com
     <div class="login-container animated fadeInDown">
         <div class="loginbox bg-white">
             <div class="loginbox-title">登录</div>
-            <form action="" method="post" onsubmit="return checkForm(this);">
+            <form action="<?php echo U('Public/login');?>" method="post" onsubmit="return checkForm(this);">
             <div class="loginbox-textbox">
                 <input type="text" class="form-control" name="user_name" id="username" placeholder="用户名" maxlength="20" />
             </div>
@@ -51,13 +51,13 @@ Purchase: http://wrapbootstrap.com
             <div class="check">
                     <input type="text" name="code" placeholder="验证码" id="code" maxlength="4" />
                     <!-- 点击切换 -->
-                    <img src="/Member/Public/code" onclick="this.src='/Member/Public/code/' + Math.random();"/>
+                    <img src="<?php echo U('Public/code');?>" onclick='this.src="/Member/Public/code/" + Math.random();'/>
             </div>
             <div class="checkbox">
                 <label>
                     <input type="checkbox" name="remember" value="on" id="remember">
                     <label class="text darkgray" for="remember">记住密码</label>
-                    <a href="found.html">忘记密码？</a>
+                    <a href="<?php echo U('Public/found');?>">忘记密码？</a>
                 </label>
             </div>
             <div class="loginbox-submit">
@@ -65,7 +65,7 @@ Purchase: http://wrapbootstrap.com
             </div>
             </form>
             <div class="loginbox-submit" >
-                <a href="register.html" class="btn btn-primary btn-block" >注册</a>
+                <a href="<?php echo U('Public/register');?>" class="btn btn-primary btn-block" >注册</a>
             </div>
             <div class="foot">
                 <span class="bigger-120">

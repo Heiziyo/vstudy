@@ -10,6 +10,13 @@ namespace Member\Controller;
 use Common\Controller\BaseController;
 
 class UserController extends BaseController{
+    public function _initialize()
+    {
+        if (!session('?uid')) {
+            $this->display('Public/login');
+            die();
+        }
+    }
 
     //账号绑定
     public function setBindSNS(){

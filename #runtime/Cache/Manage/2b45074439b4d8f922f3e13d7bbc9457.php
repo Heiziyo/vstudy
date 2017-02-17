@@ -512,7 +512,7 @@
 
 			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
 			<a href="#" class="dropdown-toggle">
-				<i class="menu-icon fa fa-calendar-o"></i>
+				<i class="menu-icon fa fa-file"></i>
 				<span class="menu-text">分类管理</span>
 
 				<b class="arrow fa fa-angle-down"></b>

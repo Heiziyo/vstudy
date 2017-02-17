@@ -9,8 +9,19 @@ class IndexController extends Controller {
     }
 
     public function index(){
-        
-        $this->assign('topCategory',$this->getTopCategory());
+        $topCategory = $this -> getTopCategory();
+        $arr = [];
+        foreach ($topCategory as $k=>$v) {
+            $course = M('course') -> where(['course_type'=>$v['c_id'],'status'=>'show']) -> select();
+            foreach ($course as $item) {
+                if($v['c_id'] == $item['course_type']){
+                    $arr[$v['c_id']][] = $item;
+                }
+            }
+        }
+
+        $this->assign('topCategory',$topCategory);
+        $this->assign('arr',$arr);
         $this->assign('childCategory',$this->getChildCategory());
         $this->display();
     }
@@ -28,7 +39,7 @@ class IndexController extends Controller {
         $topCategory = $this->getTopCategory();
         $data = '';
         foreach ($topCategory as $k=>$v){
-            $data[] = M('Class_type')->where("c_pid = ".$v['c_id'])->select();
+            $data[$v['c_id']] = M('Class_type')->where("c_pid = ".$v['c_id'])->select();
         }
         return $data;
     }

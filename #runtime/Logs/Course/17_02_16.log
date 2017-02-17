@@ -1715,3 +1715,885 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2017-02-16T15:26:21+08:00 ] 127.0.0.1 /Course/Index/courseChapter/cvdid/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_id = 5 ) LIMIT 1   [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course_chapter` WHERE ( cp_id in (22,23,24) ) ORDER BY cp_id asc  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_video` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_video` WHERE `v_coursechapter` = 22 AND `status` = 'show'  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_video` WHERE `v_coursechapter` = 23 AND `status` = 'show'  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_video` WHERE `v_coursechapter` = 24 AND `status` = 'show'  [ RunTime:0.0210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.118007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-16T15:26:26+08:00 ] 127.0.0.1 /Course/Index/courseChapter/cvdid/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_id = 10 ) LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course_chapter` WHERE ( cp_id in (40,41) ) ORDER BY cp_id asc  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_video` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_video` WHERE `v_coursechapter` = 40 AND `status` = 'show'  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_video` WHERE `v_coursechapter` = 41 AND `status` = 'show'  [ RunTime:0.0220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-16T15:26:29+08:00 ] 127.0.0.1 /Course/Index/index/cid/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0240s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-16T15:26:33+08:00 ] 127.0.0.1 /Course/Index/index/catid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE ( c_pid = 2 and  c_pid != 0 )  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_type = 2 )  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T15:26:36+08:00 ] 127.0.0.1 /Course/Index/index/cid/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0240s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0240s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-16T15:27:11+08:00 ] 127.0.0.1 /Course/Index/index/catid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0200s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE ( c_pid = 1 and  c_pid != 0 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_type = 1 )  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-16T15:27:14+08:00 ] 127.0.0.1 /Course/Index/index/catid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE ( c_pid = 2 and  c_pid != 0 )  [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_type = 2 )  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T15:27:16+08:00 ] 127.0.0.1 /Course/Index/index/catid/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0200s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE ( c_pid = 3 and  c_pid != 0 )  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_type = 3 )  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T15:27:18+08:00 ] 127.0.0.1 /Course/Index/index/cid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_forword = 4 )  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T15:27:22+08:00 ] 127.0.0.1 /Course/Index/index/cid/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_forword = 6 )  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T15:27:57+08:00 ] 127.0.0.1 /Course/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-16T15:28:35+08:00 ] 127.0.0.1 /Course/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-16T15:28:38+08:00 ] 127.0.0.1 /Course/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0200s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T16:25:30+08:00 ] 127.0.0.1 /course/course/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Course
+
+[ 2017-02-16T17:24:11+08:00 ] 127.0.0.1 /Course/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0230s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0230s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T17:24:31+08:00 ] 127.0.0.1 /Course/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T17:31:41+08:00 ] 127.0.0.1 /Course/Index/index/cid/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_forword = 9 )  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T17:31:44+08:00 ] 127.0.0.1 /Course/Index/index/catid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0190s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE ( c_pid = 1 and  c_pid != 0 )  [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_type = 1 )  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T17:31:45+08:00 ] 127.0.0.1 /Course/Index/index/catid/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0230s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE ( c_pid = 2 and  c_pid != 0 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_type = 2 )  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-16T17:31:47+08:00 ] 127.0.0.1 /Course/Index/index/catid/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0200s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE ( c_pid = 3 and  c_pid != 0 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_type = 3 )  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-16T17:31:47+08:00 ] 127.0.0.1 /Course/Index/index/catid/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0230s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE ( c_pid = 1 and  c_pid != 0 )  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `vs_course` WHERE ( course_type = 1 )  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-16T17:31:48+08:00 ] 127.0.0.1 /Course/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT c_name as name,c_id as id FROM `vs_class_type` WHERE ( c_pid = 0 )  [ RunTime:0.0230s ]
+SQL: SELECT c_name as name,c_id as id,c_pid as pid FROM `vs_class_type` WHERE (  c_pid != 0 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: catid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 61 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Undefined index: cid C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 74 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 120 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 128 行.
+NOTIC: [8] Undefined index: course duration C:\wamp\www\vstudy\#runtime\Cache\Course\0b0804ffb41c4ff74c52cb03a2859ee0.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
