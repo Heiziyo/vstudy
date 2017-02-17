@@ -126,11 +126,20 @@ class  CourseController extends BaseController{
 
 	//删除课程
 	public function deleteMyCourse(){
-		$c = M('user_course');
-		if($c->delete(I('get.pc_id'))){
-			$this -> success('删除课程成功！',U('myCourse'));
+		$uc = M('user_course');
+		$c = M('course');
+		$pc_id = I('get.pc_id');
+		$course_id = $uc -> find($pc_id)['course_id'];
+		$course = $c -> find($course_id);
+		$course['status'] = 'hide';
+		if($uc->delete($pc_id)){
+			if($c -> where(['course_id'=>$course_id]) -> save($course)){
+				$this -> success('删除课程成功！',U('myCourse'));
+			}else{
+				$this -> error('删除课程失败！',U('myCourse'));
+			}
 		}else{
-			$this -> error('删除课程失败！',U('myCourse'));
+			$this -> error('删除我的课程失败！',U('myCourse'));
 		}
 	}
 
@@ -385,11 +394,20 @@ class  CourseController extends BaseController{
 
     //删除视频
     public function deleteMyVideo(){
-        $c = M('user_video');
-        if($c->delete(I('get.pv_id'))){
-            $this -> success('删除视频成功！',U('myVideo'));
+        $uv = M('user_video');
+		$v = M('video');
+		$pv_id = I('get.pv_id');
+		$v_id = $uv -> find($pv_id)['course_id'];
+		$video = $v -> find($v_id);
+		$video['status'] = 'hide';
+        if($uv->delete($pv_id)){
+			if($v -> where(['course_id'=>$v_id]) -> save($video)){
+				$this -> success('删除视频成功！',U('myVideo'));
+			}else{
+				$this -> error('删除视频失败！',U('myVideo'));
+			}
         }else{
-            $this -> error('删除视频失败！',U('myVideo'));
+            $this -> error('删除我的视频失败！',U('myVideo'));
         }
     }
 }

@@ -509,6 +509,38 @@
 				</li>
 			</ul>
 			</li>
+
+			<li <?php if(in_array(ACTION_NAME,$act)): ?>class="active open hsub"<?php endif; ?>>
+			<a href="#" class="dropdown-toggle">
+				<i class="menu-icon fa fa-file"></i>
+				<span class="menu-text">分类管理</span>
+
+				<b class="arrow fa fa-angle-down"></b>
+			</a>
+
+			<b class="arrow"></b>
+
+			<ul class="submenu">
+				<li <?php if(ACTION_NAME == ''): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/categoryList');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					分类列表
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+				<?php
+ ?>
+				<li <?php if(ACTION_NAME == 'addVideo'): ?>class="active"<?php endif; ?>>
+				<a href="<?php echo U('Category/addCategory');?>">
+					<i class="menu-icon fa fa-caret-right"></i>
+					添加分类
+				</a>
+
+				<b class="arrow"></b>
+				</li>
+			</ul>
+			</li>
 		</ul><!-- /.nav-list -->
 
 		<!-- #section:basics/sidebar.layout.minimize -->
