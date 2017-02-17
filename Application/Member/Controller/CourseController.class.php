@@ -35,7 +35,7 @@ class  CourseController extends BaseController{
     	$data=$pc->alias('pc')
     			->field('pc_id,user_id,course_name,c.course_id,course_time,course_difficulty')
     			->join('vs_course as c on c.course_id=pc.course_id')
-    			->where("pc.user_id=$uid")
+    			->where(['pc.user_id'=>$uid,'c.status'=>'show'])
     			->select();
 	//		dump($data);exit;
     	$this->assign('myCourse',$data);
@@ -152,7 +152,7 @@ class  CourseController extends BaseController{
 				->field('pv_id,v_name,v_url,v.v_id')
 				->join('vs_video as v on v.v_id=pv.v_id')
 				->join('vs_user as p on p.user_id=pv.user_id')
-				->where("pv.user_id=$uid")
+				->where(['pv.user_id'=>$uid,'v.status'=>'show'])
 				->select();
 		$arr = array();
 		foreach ($data1 as $k=>$v) {
@@ -397,11 +397,11 @@ class  CourseController extends BaseController{
         $uv = M('user_video');
 		$v = M('video');
 		$pv_id = I('get.pv_id');
-		$v_id = $uv -> find($pv_id)['course_id'];
+		$v_id = $uv -> find($pv_id)['v_id'];
 		$video = $v -> find($v_id);
 		$video['status'] = 'hide';
         if($uv->delete($pv_id)){
-			if($v -> where(['course_id'=>$v_id]) -> save($video)){
+			if($v -> where(['v_id'=>$v_id]) -> save($video)){
 				$this -> success('删除视频成功！',U('myVideo'));
 			}else{
 				$this -> error('删除视频失败！',U('myVideo'));
