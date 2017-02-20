@@ -22,6 +22,7 @@ class IndexController extends Controller {
         if($n){
             if(md5($login['pwd']) == $n['manager_pwd']){
                 session('manager_id',$n['manager_id']);
+                session('manager_name',$n['manager_name']);
                 $this -> success('登录成功！','index');
             }else{
                 $this -> error('密码错误！');

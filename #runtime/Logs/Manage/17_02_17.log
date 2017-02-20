@@ -2970,3 +2970,1745 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
 
+[ 2017-02-17T11:34:19+08:00 ] 127.0.0.1 /Manage/Video/videoList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_video` [ RunTime:0.0210s ]
+SQL: SELECT `v_id`,`v_name`,`user_name`,`course_name`,`cp_name`,`v_url`,v.status FROM vs_video v INNER JOIN vs_course as c on c.course_id=v.v_coursename INNER JOIN vs_course_chapter as cc on cc.cp_id=v.v_coursechapter INNER JOIN vs_user as u on u.user_id=v.u_id   [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-17T11:44:50+08:00 ] 127.0.0.1 /Manage/Category/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 1  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 4  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 5  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 6  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 7  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 2  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 8  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 9  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 13  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 3  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 10  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 11  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-17T11:49:19+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-17T11:58:50+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0230s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-17T13:37:55+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2017-02-17T14:34:32+08:00 ] 127.0.0.1 /Manage/Course/chapterList/course_chapter/16%2C17%2C18%2C/course_name/PHP%E8%BF%9B%E9%98%B6%E7%AF%87-%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0/course_id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course_chapter` WHERE `cp_id` IN ('16','17','18','')  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\371667d19c3856c63ee653dd27f37f4d.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\371667d19c3856c63ee653dd27f37f4d.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\371667d19c3856c63ee653dd27f37f4d.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\371667d19c3856c63ee653dd27f37f4d.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\371667d19c3856c63ee653dd27f37f4d.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\371667d19c3856c63ee653dd27f37f4d.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\371667d19c3856c63ee653dd27f37f4d.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\371667d19c3856c63ee653dd27f37f4d.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-17T14:34:37+08:00 ] 127.0.0.1 /Manage/Category/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 1  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 4  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 5  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 6  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 7  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 2  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 8  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 9  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 13  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 3  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 10  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 11  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-02-17T14:34:45+08:00 ] 127.0.0.1 /Manage/Category/updateCategory/c_id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\b0f65c14998d4a789cb3c5aed2be8400.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\b0f65c14998d4a789cb3c5aed2be8400.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\b0f65c14998d4a789cb3c5aed2be8400.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\b0f65c14998d4a789cb3c5aed2be8400.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\b0f65c14998d4a789cb3c5aed2be8400.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\b0f65c14998d4a789cb3c5aed2be8400.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\b0f65c14998d4a789cb3c5aed2be8400.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\b0f65c14998d4a789cb3c5aed2be8400.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-17T14:34:48+08:00 ] 127.0.0.1 /Manage/Category/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0230s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 1  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 4  [ RunTime:0.0230s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 5  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 6  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 7  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 2  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 8  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 9  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 13  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 3  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 10  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 11  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-17T14:34:52+08:00 ] 127.0.0.1 /Manage/Category/addCategory.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\6382da50c9dc1970684ac7dd5416c723.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\6382da50c9dc1970684ac7dd5416c723.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\6382da50c9dc1970684ac7dd5416c723.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\6382da50c9dc1970684ac7dd5416c723.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\6382da50c9dc1970684ac7dd5416c723.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\6382da50c9dc1970684ac7dd5416c723.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\6382da50c9dc1970684ac7dd5416c723.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\6382da50c9dc1970684ac7dd5416c723.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2017-02-17T14:35:03+08:00 ] 127.0.0.1 /Manage/User/userList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_user`  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-17T14:35:04+08:00 ] 127.0.0.1 /Manage/User/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0220s ]
+
+[ 2017-02-17T14:35:06+08:00 ] 127.0.0.1 /Manage/User/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_user` WHERE `user_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+
+[ 2017-02-17T14:35:09+08:00 ] 127.0.0.1 /Manage/Video/videoList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_video` [ RunTime:0.0200s ]
+SQL: SELECT `v_id`,`v_name`,`user_name`,`course_name`,`cp_name`,`v_url`,v.status FROM vs_video v INNER JOIN vs_course as c on c.course_id=v.v_coursename INNER JOIN vs_course_chapter as cc on cc.cp_id=v.v_coursechapter INNER JOIN vs_user as u on u.user_id=v.u_id   [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-17T14:35:15+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-17T14:35:16+08:00 ] 127.0.0.1 /Manage/Course/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course` WHERE `course_id` = 4 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0180s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0190s ]
+SQL: SELECT `cp_name` FROM `vs_course_chapter` WHERE `cp_id` IN ('19','20','21','')  [ RunTime:0.0190s ]
+
+[ 2017-02-17T14:35:20+08:00 ] 127.0.0.1 /Manage/Course/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `vs_course` WHERE `course_id` = 11 LIMIT 1   [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0250s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0230s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0230s ]
+SQL: SELECT `cp_name` FROM `vs_course_chapter` WHERE `cp_id` IN ('42','43','44','45','46','')  [ RunTime:0.0220s ]
+
+[ 2017-02-17T14:35:55+08:00 ] 127.0.0.1 /Manage/Course/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `vs_course` WHERE `course_id` = 11 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0200s ]
+SQL: SELECT `cp_name` FROM `vs_course_chapter` WHERE `cp_id` IN ('42','43','44','45','46','')  [ RunTime:0.0190s ]
+
+[ 2017-02-17T14:36:01+08:00 ] 127.0.0.1 /Manage/Course/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course` WHERE `course_id` = 7 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0190s ]
+SQL: SELECT `cp_name` FROM `vs_course_chapter` WHERE `cp_id` IN ('27','28','')  [ RunTime:0.0180s ]
+
+[ 2017-02-17T14:37:43+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-17T14:37:49+08:00 ] 127.0.0.1 /Manage/User/userList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `vs_user`  [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 714 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 721 行.
+NOTIC: [8] Use of undefined constant none - assumed 'none' C:\wamp\www\vstudy\#runtime\Cache\Manage\f4bfb398e6e5869fe865bbe1f6b2fb61.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-02-17T14:37:52+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-02-17T14:38:03+08:00 ] 127.0.0.1 /Manage/Course/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course` WHERE `course_id` = 11 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0190s ]
+SQL: SELECT `cp_name` FROM `vs_course_chapter` WHERE `cp_id` IN ('42','43','44','45','46','')  [ RunTime:0.0200s ]
+
+[ 2017-02-17T14:38:05+08:00 ] 127.0.0.1 /Manage/Course/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_course` WHERE `course_id` = 6 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0200s ]
+SQL: SELECT `cp_name` FROM `vs_course_chapter` WHERE `cp_id` IN ('25','26','')  [ RunTime:0.0200s ]
+
+[ 2017-02-17T14:38:07+08:00 ] 127.0.0.1 /Manage/Course/view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_course` WHERE `course_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0220s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_course_chapter` [ RunTime:0.0200s ]
+SQL: SELECT `cp_name` FROM `vs_course_chapter` WHERE `cp_id` IN ('13','14','')  [ RunTime:0.0190s ]
+
+[ 2017-02-17T14:38:54+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2017-02-17T14:41:29+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-17T15:31:55+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-02-17T16:58:56+08:00 ] 127.0.0.1 /Manage/Course/courseList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_course` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_course`  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0580s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `vs_user` [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 0 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 6 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 18 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 1 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 5 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 2 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 9 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0210s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0580s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 3 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `c_name` FROM `vs_class_type` WHERE `c_id` = 10 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `user_name` FROM `vs_user` WHERE `user_id` = 19 LIMIT 1   [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 714 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 721 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\2b45074439b4d8f922f3e13d7bbc9457.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-17T16:58:59+08:00 ] 127.0.0.1 /Manage/Video/videoList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `vs_video` [ RunTime:0.0190s ]
+SQL: SELECT `v_id`,`v_name`,`user_name`,`course_name`,`cp_name`,`v_url`,v.status FROM vs_video v INNER JOIN vs_course as c on c.course_id=v.v_coursename INNER JOIN vs_course_chapter as cc on cc.cp_id=v.v_coursechapter INNER JOIN vs_user as u on u.user_id=v.u_id   [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 513 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+NOTIC: [8] Use of undefined constant show - assumed 'show' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 712 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 719 行.
+NOTIC: [8] Use of undefined constant hide - assumed 'hide' C:\wamp\www\vstudy\#runtime\Cache\Manage\8b00195edd69599004faa0fb0b9bffaa.php 第 740 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-17T16:59:03+08:00 ] 127.0.0.1 /Manage/Category/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 1  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 4  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 5  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 6  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 7  [ RunTime:0.0640s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 2  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 8  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 9  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 13  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 3  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 10  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 11  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-17T16:59:21+08:00 ] 127.0.0.1 /Manage/Category/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 1  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 4  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 5  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 6  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 7  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 2  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 8  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 9  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 13  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 3  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 10  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 11  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2017-02-17T17:27:03+08:00 ] 127.0.0.1 /Manage/Category/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 1  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 4  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 5  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 6  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 7  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 2  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 8  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 9  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 13  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 3  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 10  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 11  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-02-17T17:30:40+08:00 ] 127.0.0.1 /Manage/Category/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 1  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 4  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 5  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 6  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 7  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 2  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 8  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 9  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 13  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 3  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 10  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 11  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-17T17:32:01+08:00 ] 127.0.0.1 /Manage/Category/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `vs_class_type` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 0  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 1  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 4  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 5  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 6  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 7  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 2  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 8  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 9  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 13  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 3  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 10  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `vs_class_type` WHERE `c_pid` = 11  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 428 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 460 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 492 行.
+NOTIC: [8] Undefined variable: act C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given C:\wamp\www\vstudy\#runtime\Cache\Manage\0dc30fb1f7f873ad454efbd5dce1b80f.php 第 513 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013000s ]
+
